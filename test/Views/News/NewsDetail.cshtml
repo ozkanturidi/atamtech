@@ -1,0 +1,17 @@
+﻿@using test.Models
+@model List<News>
+@{
+    ViewBag.Title = "NewsDetail";
+}
+
+<h2>NewsDetail</h2>
+
+@foreach (var item in Model)
+{
+    <img src="@item.fotoUrl" style="margin-bottom:20px" width="300px" height="300px" />
+
+    <h2>@item.title</h2>
+    <h2>@item.content</h2>
+    <h3>@item.date.ToString("dd.mm.yyyy")</h3>
+
+}
