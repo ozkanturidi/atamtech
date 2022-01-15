@@ -12,15 +12,37 @@ namespace test.Controllers
         public ActionResult NewsList()
         {
 
-            var news = c.Newses.ToList();
+            var news = c.News.ToList();
             return View(news);
         }
+        NewComment nc = new NewComment();
 
         public ActionResult NewsDetail(int id)
         {
-            var findNew = c.Newses.Where(x => x.id == id).ToList();
-
-            return View(findNew);
+            //var findNew = c.News.Where(x => x.id == id).ToList();
+            nc.Value1 = c.News.Where(x => x.id == id).ToList();
+            nc.Value2 = c.Comments.Where(x => x.NewId == id).ToList();
+            return View(nc);
         }
+
+        [HttpGet]
+        public PartialViewResult MakeComment(int id)
+        {
+
+            @ViewBag.deger = id;
+            return PartialView();
+        }
+
+        [HttpPost]
+        public PartialViewResult MakeComment(Comment com )
+        {
+
+            c.Comments.Add(com);
+            c.SaveChanges();
+
+
+            return PartialView();
+        }
+
     }
 }

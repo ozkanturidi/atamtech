@@ -1,0 +1,39 @@
+﻿@model test.Models.Comment
+<h3>Bir yorum yap</h3>
+@using (Html.BeginForm("MakeComment", "News", FormMethod.Post))
+{
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th colspan="2" align="center">Person Details</th>
+        </tr>
+        <tr>
+            
+            <td>
+               <input type="text" placeholder="id" name="NewId" value="@ViewBag.deger" required />
+            </td>
+        </tr>
+        <tr>
+            <td>Name: </td>
+            <td>
+                @Html.TextBoxFor(m => m.name)
+            </td>
+        </tr>
+        <tr>
+            <td>Mail: </td>
+            <td>
+                @Html.TextBoxFor(m => m.Mail)
+            </td>
+        </tr>
+        <tr>
+            <td>Comment: </td>
+            <td>
+                @Html.TextAreaFor(m=>m.comment)
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+}
+

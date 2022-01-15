@@ -1,17 +1,42 @@
-﻿@using test.Models
-@model List<News>
+﻿@model test.Models.NewComment
 @{
     ViewBag.Title = "NewsDetail";
 }
 
 <h2>NewsDetail</h2>
 
-@foreach (var item in Model)
+@foreach (var x in Model.Value1)
 {
-    <img src="@item.fotoUrl" style="margin-bottom:20px" width="300px" height="300px" />
+    <img src="@x.fotoUrl" style="margin-bottom:20px" width="300px" height="300px" />
 
-    <h2>@item.title</h2>
-    <h2>@item.content</h2>
-    <h3>@item.date.ToString("dd.mm.yyyy")</h3>
+    <h2>@x.title</h2>
+    <h2>@x.content</h2>
+    <h3>@x.date.ToString("dd MMMM yyyy")</h3>
+
+
+    
 
 }
+
+@foreach(var x in Model.Value2)
+            {
+    <ul class="comment-list">
+
+        <li>
+            <div class="desc">
+
+                <h2>Name: @x.name</h2>
+                <h2>Comment:@x.comment</h2>
+            </div>
+            <div class="clearfix"></div>
+        </li>
+
+    </ul>
+
+ 
+
+            }
+
+@Html.Action("MakeComment","News")
+
+

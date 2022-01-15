@@ -139,7 +139,8 @@
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\Context.cs" />
-    <Compile Include="Models\News.cs" />
+    <Compile Include="Models\New.cs" />
+    <Compile Include="Models\NewComment.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -236,6 +237,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\News\NewsList.cshtml" />
     <Content Include="Views\News\NewsDetail.cshtml" />
+    <Content Include="Views\News\MakeComment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

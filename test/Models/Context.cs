@@ -16,7 +16,7 @@ namespace test.Models
         public DbSet<Comment> Comments { get; set; }
 
         public DbSet<Contact> Contacts { get; set; }
-        public DbSet<News> Newses { get; set; }
+        public DbSet<New> News { get; set; }
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Service> Services { get; set; }

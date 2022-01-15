@@ -6,7 +6,7 @@ using System.Web;
 
 namespace test.Models
 {
-    public class News
+    public class New
     {
         [Key]
         public int id { get; set; }

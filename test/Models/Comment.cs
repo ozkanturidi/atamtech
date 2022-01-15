@@ -13,8 +13,8 @@ namespace test.Models
         public string name { get; set; }
         public string Mail { get; set; }
         public string comment { get; set; }
-
-        public News News { get; set; }
+        public int NewId { get; set; }
+        public virtual New New { get; set; }
 
     }
 }
