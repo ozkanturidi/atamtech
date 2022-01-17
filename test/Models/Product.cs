@@ -10,7 +10,21 @@ namespace test.Models
     {
         [Key]
         public int id { get; set; }
-        public int name { get; set; }
+        public string name { get; set; }
+
+        public string flightTime { get; set; }
+        public string maxFlightrouteLength { get; set; }
+        public string  windSpeedTolerance { get; set; }
+        public string flightSpeed { get; set; }
+        public string weight { get; set; }
+        public string wingSpan { get; set; }
+        public string minSafeFlightAltitude { get; set; }
+        public string maxFlightAltitude { get; set; }
+
+        public string motor { get; set; }
+        public string takeOffLanding { get; set; }
+
+
 
     }
 }
