@@ -13810,9 +13810,13 @@ h4.inner-text-title {
     padding-bottom: 20px;
 }
 
+.me-3 {
+    margin-right: 0.5rem !important;
+}
+
 .cont-left.text-center i {
-    color: var(--secondary-color);
-    font-size: 26px;
+    color: #2C3E50;
+    font-size: 20px;
 }
 
 .cont-details a, p {
@@ -13860,5 +13864,6 @@ h4.inner-text-title {
     -o-filter: var(--iframe-filter);
     filter: var(--iframe-filter);
 }
+
 
 /* //contact section */
