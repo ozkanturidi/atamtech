@@ -26,6 +26,8 @@ namespace test.Models
 
         public string motor2 { get; set; }
 
+        public string motor3 { get; set; }
+
 
 
     }
