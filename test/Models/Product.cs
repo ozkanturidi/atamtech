@@ -24,6 +24,8 @@ namespace test.Models
         public string motor { get; set; }
         public string takeOffLanding { get; set; }
 
+        public string motor2 { get; set; }
+
 
 
     }
