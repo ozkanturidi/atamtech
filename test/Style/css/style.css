@@ -10956,7 +10956,7 @@ a.text-dark:focus {
 }
 
 :root {
-    --theme-color: #e40000;
+    --theme-color: #9FADBD;
     --primary-color: #ffc845;
     --secondary-color: #d83030;
     --font-color: #707070;
@@ -10977,25 +10977,6 @@ a.text-dark:focus {
     --heading-color-2: #fff;
 }
 
-[data-theme="dark"] {
-    --theme-color: #e40000;
-    --primary-color: #ffc845;
-    --secondary-color: #d83030;
-    --font-color: #b7b7b7;
-    --bg-color: #171717;
-    --heading-color: #fdfffc;
-    --footer-color: #0e0e0e;
-    --footer-cpy-color: #060606;
-    --border-color-light: rgba(255, 255, 255, 0.2);
-    --iframe-filter: grayscale(100%);
-    --bg-grey: #0b0d0e;
-    --bg-light: #0c0b0b;
-    --bg-dark-color: #27282b;
-    --footer-sub-color: #b7b7b7;
-    --disable-color: #5d5d5d;
-    --box-shadow-color: rgb(14 13 13);
-    --heading-color-2: #060606;
-}
 
 .noscroll {
     overflow: hidden;
@@ -13830,16 +13811,19 @@ h4.inner-text-title {
 
     .contact-block input:focus,
     .contact-block textarea:focus {
-        border: 2px solid var(--secondary-color);
+        border: 2px solid #9FADBD;
         background: var(--bg-color);
     }
 
 .contact-left {
-    padding-top: 70px;
+    padding-top: 50px;
     padding-left: 40px;
     padding-right: 40px;
 }
 
+.contact-left h5{
+    margin-bottom:20px;
+}
 .contact-right {
     padding-top: 25px;
     padding-left: 20px;
