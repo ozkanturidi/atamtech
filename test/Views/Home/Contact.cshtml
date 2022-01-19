@@ -44,6 +44,12 @@
                             <a class="nav-link" href="@Url.Action("Index", "Home")">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="collaborations">Collaborations</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="@Url.Action("About","Home")">About</a>
                         </li>
                         <li class="nav-item">
@@ -67,23 +73,24 @@
             </div>
             <div class="row contact-block">
                 <div class="col-md-7 contact-left">
-                    <form method="post" class="signin-form">
+                    <h5>You can send a message to us.</h5>
+                    <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="signin-form">
                         <div class="input-grids">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <input type="text" name="nameSurname" id="w3lName" placeholder="Your Name"
+                                    <input type="text" name="Name" id="Name" placeholder="Your Name"
                                            class="contact-input" required="" />
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="email" name="mail" id="w3lSender" placeholder="Your Email"
+                                    <input type="email" name="Sender" id="Sender" placeholder="Your Email"
                                            class="contact-input" required="" />
                                 </div>
                             </div>
-                            <input type="text" name="subject" id="w3lSubect" placeholder="Subject"
+                            <input type="text" name="Subect" id="Subect" placeholder="Subject"
                                    class="contact-input" required="" />
                         </div>
                         <div class="form-input">
-                            <textarea name="message" id="w3lMessage" placeholder="Type your message here"
+                            <textarea name="Message" id="Message" placeholder="Type your message here"
                                       required=""></textarea>
                         </div>
                         <div class="text-start">
@@ -97,7 +104,7 @@
                             <div class="d-flex contact-grid">
                                 <div class="map">
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317718.69319292053!2d-0.3817765050863085!3d51.528307984912544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C+UK!5e0!3m2!1sen!2spl!4v1562654563739!5m2!1sen!2spl"
-                                            width="100%" height="200" frameborder="0" style="border: 0px;" allowfullscreen=""></iframe>
+                                            width="110%" height="200" frameborder="0" style="border: 0px;" allowfullscreen=""></iframe>
                                 </div>
                             </div>
                             <div class="d-flex contact-grid mt-4 pt-lg-2">
