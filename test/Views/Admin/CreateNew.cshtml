@@ -1,0 +1,26 @@
+﻿@model test.Models.New
+
+@{
+    ViewBag.Title = "CreateNew";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Create New</h2>
+
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.title)
+    @Html.TextBoxFor(x => x.title, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.date)
+    @Html.TextBoxFor(x => x.date, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.fotoUrl)
+    @Html.TextBoxFor(x => x.fotoUrl, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.content)
+    @Html.TextAreaFor(x => x.content, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Add New</button>
+</form>

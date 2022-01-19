@@ -12,22 +12,21 @@ namespace test.Models
         public int id { get; set; }
         public string name { get; set; }
 
+        public string content { get; set; }
+
         public string flightTime { get; set; }
-        public string maxFlightrouteLength { get; set; }
-        public string  windSpeedTolerance { get; set; }
-        public string flightSpeed { get; set; }
-        public string weight { get; set; }
-        public string wingSpan { get; set; }
-        public string minSafeFlightAltitude { get; set; }
-        public string maxFlightAltitude { get; set; }
+        public string flightRange { get; set; }
+        
+        public string cruiseSpeed { get; set; }
+        public string payload { get; set; }
+        public string setupTime  { get; set; }      
 
-        public string motor { get; set; }
-        public string takeOffLanding { get; set; }
 
-        public string motor2 { get; set; }
 
-        public string motor3 { get; set; }
 
+
+
+        public string motor4 { get; set; }
 
 
     }
