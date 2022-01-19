@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using test.Models;
 
 namespace test.Controllers
 {
+    
+
     public class HomeController : Controller
     {
+
+        Context c = new Context();
         public ActionResult Index()
         {
             return View();
@@ -19,10 +24,20 @@ namespace test.Controllers
 
             return View();
         }
-
+        [HttpGet]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Contact(Contact cont)
+        {
+            c.Contacts.Add(cont);
+            c.SaveChanges();
+
+
 
             return View();
         }
