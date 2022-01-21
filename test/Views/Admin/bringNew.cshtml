@@ -1,0 +1,32 @@
+﻿@model test.Models.New
+@{
+    ViewBag.Title = "bringNew";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Haber Getirme</h2>
+
+@using (Html.BeginForm("UpdateNew", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.id)
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control" , @readonly="readonly" })
+
+    <br />
+
+    @Html.LabelFor(x => x.title)
+    @Html.TextBoxFor(x => x.title, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.date)
+    @Html.TextBoxFor(x => x.date, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.fotoUrl)
+    @Html.TextBoxFor(x => x.fotoUrl, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.content)
+    @Html.TextAreaFor(x => x.content,15,1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Add New</button>
+
+
+}
