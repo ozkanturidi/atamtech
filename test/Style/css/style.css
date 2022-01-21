@@ -4616,7 +4616,7 @@ input[type="button"].btn-block {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 1.2rem 1rem;
+    padding: .5rem 1rem;
 }
 
     .navbar .container,
@@ -4699,6 +4699,40 @@ input[type="button"].btn-block {
     content: "";
     background: no-repeat center center;
     background-size: 100% 100%;
+}
+
+#headerMenuTop {
+    background: rgba(0,0,0,0.2);
+    height:30px;
+}
+    #headerMenuTop ul {
+        margin-bottom: 0;
+    }
+        #headerMenuTop ul li {
+            padding-right: 12px;
+            font-size: 14px;
+        }
+    #headerMenuTop .container {
+        padding: 5px 15px;
+    }
+
+    #headerMenuTop ul {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 0px;
+    }
+
+#headerMenu a:hover {
+    color: #6c757d !important;
+}
+#headerMenuBottom {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
 }
 
 @media (max-width: 575.98px) {
@@ -4814,6 +4848,19 @@ input[type="button"].btn-block {
         padding-right: 0;
         padding-left: 0;
     }
+
+    #headerMenuTop {
+        position: relative;
+        min-height: 34px;
+    }
+
+    #headerMenu {
+        padding: 0 !important;
+    }
+
+    #headerMenuTop ul {
+        margin-block-start: 0em;
+    }
 }
 
 @media (min-width: 992px) {
@@ -4866,8 +4913,11 @@ input[type="button"].btn-block {
         padding-right: 0;
         padding-left: 0;
     }
-}
 
+    #headerMenuTop ul li {
+        font-size: 12px;
+    }
+}
 @media (min-width: 1200px) {
     .navbar-expand-xl {
         flex-flow: row nowrap;
@@ -11825,7 +11875,7 @@ header {
         z-index: 9 !important;
         background-color: #2C3E50;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.10);
-        height: 70px;
+        height: 90px;
         /* for z-index:10 to display gallery popup */
     }
 
@@ -11997,7 +12047,7 @@ nav ul li {
 
     header.nav-fixed {
         height: auto;
-        padding: 14px 0;
+        padding: 0px 0;
     }
 
     .navbar-expand-lg .navbar-nav .nav-link {
@@ -12032,6 +12082,10 @@ nav ul li {
     .navbar-expand-lg .navbar-nav .nav-link:hover {
         color: #fff;
     }
+    .navbar-expand-lg > .container-fluid{
+        padding-right:0;
+        padding-left:0;
+    }
 }
 
 @media only screen and (max-width: 991px) {
@@ -12064,10 +12118,6 @@ nav ul li {
 
     .navbar {
         padding: 0;
-    }
-
-    .w3l-top-header {
-        display: none;
     }
 
     .fixed-top {
