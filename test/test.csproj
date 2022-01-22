@@ -186,7 +186,6 @@
     <Content Include="Style\js\jquery.magnific-popup.min.js" />
     <Content Include="Style\js\owl.carousel.js" />
     <Content Include="Style\js\theme-change.js" />
-    <Content Include="Style\videos\video.mp4" />
     <Content Include="Style\webfonts\fa-brands-400.svg" />
     <Content Include="Style\webfonts\fa-regular-400.svg" />
     <Content Include="Style\webfonts\fa-solid-900.svg" />
