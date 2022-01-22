@@ -1,0 +1,72 @@
+﻿@model IEnumerable<test.Models.Product>
+
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Product</h2>
+
+<p>
+    <a href="/Admin/CreateProduct/" class="btn btn-primary">Create</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.flightTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.flightRange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cruiseSpeed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.payload)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.setupTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motor)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.content)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.flightTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.flightRange)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cruiseSpeed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.payload)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.setupTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.motor)
+        </td>
+        
+    </tr>
+}
+
+</table>

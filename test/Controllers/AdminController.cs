@@ -16,12 +16,26 @@ namespace test.Controllers
             var values = c.News.ToList();
             return View(values);
         }
+
+        public ActionResult Product()
+        {
+            var values = c.Products.ToList();
+            return View(values);
+        }
+
         [HttpGet]
         public ActionResult CreateNew()
         {
 
             return View();
         }
+
+        [HttpGet]
+        public ActionResult CreateProduct()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult CreateNew(New n)
         {
@@ -29,6 +43,14 @@ namespace test.Controllers
             c.SaveChanges();
 
             return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public ActionResult CreateProduct(Product p)
+        {
+            c.Products.Add(p);
+            c.SaveChanges();
+
+            return RedirectToAction("Product");
         }
 
         public ActionResult DeleteNew(int id)
@@ -60,6 +82,8 @@ namespace test.Controllers
             return RedirectToAction("Index");
         }
 
+        
 
+        
     }
 }

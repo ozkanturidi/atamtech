@@ -20,13 +20,7 @@ namespace test.Models
         public string cruiseSpeed { get; set; }
         public string payload { get; set; }
         public string setupTime  { get; set; }      
-
-
-
-
-
-
-        public string motor4 { get; set; }
+        public string motor { get; set; }
 
 
     }
