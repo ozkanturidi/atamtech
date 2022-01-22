@@ -1,7 +1,4 @@
-﻿@model test.Models.Home
-
-
-@{ Layout = null;}
+﻿@{ Layout = null;}
 
 <!doctype html>
 <html lang="en">
@@ -140,48 +137,6 @@
             </div>
         </div>
     </section>
-
-
-    <div id="slider">
-        <input type="radio" name="slider" id="slide2" checked>
-        <input type="radio" name="slider" id="slide3">
-        <input type="radio" name="slider" id="slide4">
-        <input type="radio" name="slider" id="slide1">
-        <div id="slides">
-            <div id="overflow">
-                <div class="inner">
-                    @foreach (var x in Model.Value1)
-                    {
-                        <div class="slide slide_@x.id">
-                            <div class="slide-content">
-                                <h2>@x.title</h2>
-                                <p> @x.content</p>
-                            </div>
-                        </div>
-
-
-                    }
-
-
-                </div>
-            </div>
-        </div>
-        <div id="controls">
-            @foreach (var x in Model.Value1)
-            {
-                <label for="slide1"></label>
-
-            }
-
-
-        </div>
-        <div id="bullets">
-            <label for="slide1"></label>
-           
-        </div>
-    </div>
-
-
     <!-- products block -->
     <!-- footer -->
     <footer class="w3l-footer-22 py-5">
