@@ -18,57 +18,69 @@
 </head>
 
 <body>
-    <!--header-->
+        <!--header-->
     <header id="site-header" class="fixed-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg stroke">
-                <h1>
-                    <a class="navbar-brand d-flex align-items-center" href="index.html">
-                        <i class="fas fa-space-shuttle"></i><span class="appname">Atam</span>Tech
-                    </a>
-                </h1>
-                <!-- if logo is image enable this
-                <a class="navbar-brand" href="#index.html">
-                    <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-                </a> -->
-                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
-                        data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarToggler">
-                    <ul class="navbar-nav ml-lg-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="@Url.Action("Index", "Home")">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="products">Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="collaborations">Collaborations</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="@Url.Action("About","Home")">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="@Url.Action("Contact","Home")">Contact</a>
-                        </li>
-                    </ul>
+                <div id="headerMenuTop" class="container-fluid fixed-top">
+                    <div class="container">
+                        <div class="row w-100 mx-auto">
+                            <div class="headerMenuTopContact">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><a href="tel:+7 812 363-33-87"><i class="fa fa-phone"></i> +7 812 363-33-87</a></li>
+                                    <li class="list-inline-item"><a href="@Url.Action("Contact","Home")"><i class="far fa-envelope"></i> info@atamtechnology.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div id="headerMenuBottom" class="container mt-lg-4">
+                    <h1>
+                        <a class="navbar-brand d-flex align-items-center" href="index.html">
+                            <i class="fas fa-space-shuttle"></i><span class="appname">Atam</span>Tech
+                        </a>
+                    </h1>
+                    <!-- if logo is image enable this
+                    <a class="navbar-brand" href="#index.html">
+                        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+                    </a> -->
+                    <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                            data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                        <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                    </button>
 
+                    <div class="collapse navbar-collapse" id="navbarToggler">
+                        <ul class="navbar-nav ml-lg-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="@Url.Action("Index", "Home")">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="products">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="collaborations">Collaborations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("About","Home")">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Contact","Home")">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
     <!--//header-->
-    
-    <!--about--> 
+    <!--//header-->
     <!--about-->
-
+    <!--about-->
     <!-- footer -->
     <footer class="w3l-footer-22 py-5">
         <div class="container py-md-5 py-4">
