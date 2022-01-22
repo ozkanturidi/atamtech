@@ -11,6 +11,8 @@ namespace test.Controllers
     {
         Context c = new Context();
         // GET: Admin
+
+       [Authorize]
         public ActionResult Index()
         {
             var values = c.News.ToList();

@@ -129,6 +129,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -140,6 +141,7 @@
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\Context.cs" />
+    <Compile Include="Models\Homepage.cs" />
     <Compile Include="Models\New.cs" />
     <Compile Include="Models\NewComment.cs" />
     <Compile Include="Models\Product.cs" />
@@ -211,6 +213,10 @@
     <Content Include="Style\webfonts\fa-solid-900.ttf" />
     <Content Include="Style\webfonts\fa-solid-900.woff" />
     <Content Include="Style\webfonts\fa-solid-900.woff2" />
+    <Content Include="weblogin Tema\css\style.css" />
+    <Content Include="weblogin Tema\images\b4.jpg" />
+    <Content Include="weblogin Tema\index.html" />
+    <Content Include="weblogin Tema\w3layouts-License.txt" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -243,6 +249,9 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\CreateNew.cshtml" />
     <Content Include="Views\Admin\bringNew.cshtml" />
+    <Content Include="weblogin Tema\fonts\Asap-Regular.ttf" />
+    <Content Include="weblogin Tema\fonts\Audiowide-Regular.ttf" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

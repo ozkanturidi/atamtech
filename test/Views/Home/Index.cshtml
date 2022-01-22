@@ -1,4 +1,7 @@
-﻿@{ Layout = null;}
+﻿@model test.Models.Homepage
+
+
+@{ Layout = null;}
 
 <!doctype html>
 <html lang="en">
@@ -112,89 +115,27 @@
             <div class="col-lg-12">
                 <div id="news-slider" class="owl-carousel">
                     <!-- 1 -->
-                    <div class="news-grid">
-                        <div class="news-grid-image">
-                            <img src="~/Style/images/img.jpg" alt="">
+                    @foreach (var x in Model.Value1)
+                    {
+                        <div class="news-grid">
+                            <div class="news-grid-image">
+                                <img src="@x.fotoUrl" alt="">
+                            </div>
+                            <div class="news-grid-txt">
+                                <h2>@x.title</h2>
+                                <ul>
+                                    <li><i class="fa fa-calendar" aria-hidden="true"></i> @x.date</li>
+                                </ul>
+                                <p>@x.content</p>
+                                <a href="#">Read More</a>
+                            </div>
                         </div>
-                        <div class="news-grid-txt">
-                            <h2>Heading Will Be Here</h2>
-                            <ul>
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> Sep 19, 2020</li>
-                            </ul>
-                            <p>Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur aspernatur reprehenderit velit est voluptatum, voluptas amet quasi dicta consectetur.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                    <!-- 2 -->
-                    <div class="news-grid">
-                        <div class="news-grid-image">
-                            <img src="images/2.jpg" alt="">
-                        </div>
-                        <div class="news-grid-txt">
-                            <h2>Heading Will Be Here</h2>
-                            <ul>
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> Sep 19, 2020</li>
-                            </ul>
-                            <p>Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur aspernatur reprehenderit velit est voluptatum, voluptas amet quasi dicta consectetur.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                    <!-- 3 -->
-                    <div class="news-grid">
-                        <div class="news-grid-image">
-                            <img src="~/Style/images/blog3.jpg" alt="">
-                        </div>
-                        <div class="news-grid-txt">
-                            <h2>Heading Will Be Here</h2>
-                            <ul>
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> Sep 19, 2020</li>
-                            </ul>
-                            <p>Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur aspernatur reprehenderit velit est voluptatum, voluptas amet quasi dicta consectetur.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                    <!-- 4 -->
-                    <div class="news-grid">
-                        <div class="news-grid-image">
-                            <img src="images/4.jpg" alt="">
-                        </div>
-                        <div class="news-grid-txt">
-                            <h2>Heading Will Be Here</h2>
-                            <ul>
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> Sep 19, 2020</li>
-                            </ul>
-                            <p>Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur aspernatur reprehenderit velit est voluptatum, voluptas amet quasi dicta consectetur.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                    <!-- 5 -->
-                    <div class="news-grid">
-                        <div class="news-grid-image">
-                            <img src="images/5.jpg" alt="">
-                        </div>
-                        <div class="news-grid-txt">
-                            <h2>Heading Will Be Here</h2>
-                            <ul>
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> Sep 19, 2020</li>
-                            </ul>
-                            <p>Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur aspernatur reprehenderit velit est voluptatum, voluptas amet quasi dicta consectetur.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                    <!-- 6 -->
-                    <div class="news-grid">
-                        <div class="news-grid-image">
-                            <img src="images/6.jpg" alt="">
-                        </div>
-                        <div class="news-grid-txt">
-                            <h2>Heading Will Be Here</h2>
-                            <ul>
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> Sep 19, 2020</li>
-                            </ul>
-                            <p>Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur aspernatur reprehenderit velit est voluptatum, voluptas amet quasi dicta consectetur.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
+
+
+                    }
+
+
+
                 </div>
             </div>
         </div>
