@@ -1,104 +1,133 @@
 ﻿@model test.Models.Product
 
 @{
-    ViewBag.Title = "CreateNew";
+    ViewBag.Title = "CreateProduct";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
+
     <title>CreateProduct</title>
-</head>
-<body>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryval")
+<br />
+
+
+
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.name)
+    @Html.TextBoxFor(x => x.name, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.title)
+    @Html.TextBoxFor(x => x.title, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.content)
+    @Html.TextBoxFor(x => x.content, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.photoUrl)
+    @Html.TextBoxFor(x => x.shortdef, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.Deploymenttime)
+    @Html.TextBoxFor(x => x.autonomousflight, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.landingmethod)
+    @Html.TextBoxFor(x => x.landingmethod, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.cruisespeed)
+    @Html.TextBoxFor(x => x.cruisespeed, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.tolerablewindspeed)
+    @Html.TextBoxFor(x => x.tolerablewindspeed, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.flighttime)
+    @Html.TextBoxFor(x => x.flighttime, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.flightdistance)
+    @Html.TextBoxFor(x => x.flightdistance, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.flightspeed)
+    @Html.TextBoxFor(x => x.flightspeed, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.flightaltitude)
+    @Html.TextBoxFor(x => x.flightaltitude, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.operatingtemp)
+    @Html.TextBoxFor(x => x.operatingtemp, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.weathercond)
+    @Html.TextBoxFor(x => x.weathercond, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.gcps)
+    @Html.TextBoxFor(x => x.gcps, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.aircrafttype)
+    @Html.TextBoxFor(x => x.wingspan, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.rotorsNum)
+    @Html.TextBoxFor(x => x.rotorsNum, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.takeoffweight)
+    @Html.TextBoxFor(x => x.payloadweight, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.telemetryrange)
+    @Html.TextBoxFor(x => x.telemetryrange, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.controlmethod)
+    @Html.TextBoxFor(x => x.controlmethod, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.operatingsystem)
+    @Html.TextBoxFor(x => x.operatingsystem, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.inputfiles)
+    @Html.TextBoxFor(x => x.inputfiles, new { @class = "form-control"})
+
+    <br />
+    @Html.LabelFor(x => x.updates)
+    @Html.TextBoxFor(x => x.updates, new { @class = "form-control"})
+
+    <br />
     
+    @Html.LabelFor(x => x.dataloggingsystem)
+    @Html.TextBoxFor(x => x.dataloggingsystem, new { @class = "form-control"})
+
+    <br />
     
-    @using (Html.BeginForm()) 
-    {
-        @Html.AntiForgeryToken()
-        
-        <div class="form-horizontal">
-            <h4>Product</h4>
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                @Html.LabelFor(model => model.name, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
-                </div>
-            </div>
+    @Html.LabelFor(x => x.optionalmodules)
+    @Html.TextBoxFor(x => x.optionalmodules, new { @class = "form-control"})
+
+    <br />
     
-            <div class="form-group">
-                @Html.LabelFor(model => model.content, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.content, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.content, "", new { @class = "text-danger" })
-                </div>
-            </div>
+    @Html.LabelFor(x => x.variouspayloads)
+    @Html.TextBoxFor(x => x.variouspayloads, new { @class = "form-control"})
+
+    <br />
     
-            <div class="form-group">
-                @Html.LabelFor(model => model.flightTime, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.flightTime, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.flightTime, "", new { @class = "text-danger" })
-                </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.flightRange, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.flightRange, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.flightRange, "", new { @class = "text-danger" })
-                </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.cruiseSpeed, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.cruiseSpeed, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.cruiseSpeed, "", new { @class = "text-danger" })
-                </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.payload, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.payload, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.payload, "", new { @class = "text-danger" })
-                </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.setupTime, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.setupTime, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.setupTime, "", new { @class = "text-danger" })
-                </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.motor, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.motor, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.motor, "", new { @class = "text-danger" })
-                </div>
-            </div>
-    
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
-                </div>
-            </div>
-        </div>
-    }
-    
-    <div>
-        @Html.ActionLink("Back to List", "Product")
-    </div>
-</body>
-</html>
+    @Html.LabelFor(x => x.transportCase)
+    @Html.TextBoxFor(x => x.transportCase, new { @class = "form-control"})
+
+    <br />
+
+    <button class="btn-primary">Add Product</button>
+
+
+</form>
