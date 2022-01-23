@@ -10,7 +10,7 @@ namespace test.Controllers
     public class ProductController : Controller
     {
         Context c = new Context();
-        NewProduct np = new NewProduct();
+        
  
         public ActionResult ProductList()
         {

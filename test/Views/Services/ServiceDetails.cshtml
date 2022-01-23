@@ -1,0 +1,17 @@
+﻿@model test.Models.Service
+@{
+    ViewBag.Title = "ServiceDetails";
+}
+
+<h2>ServiceDetail</h2>
+
+@foreach (var x in Model)
+{
+    <img src="@x.photoUrl" style="margin-bottom:20px" width="300px" height="300px" />
+
+    <h2>@x.title</h2>
+    <h2>@x.content</h2>
+    
+
+
+}
