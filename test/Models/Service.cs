@@ -11,6 +11,7 @@ namespace test.Models
         [Key]
         public int id { get; set; }
         public string title { get; set; }
+        public string photoUrl { get; set; }
         public string content { get; set; }
     }
 }
