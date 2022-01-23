@@ -1,0 +1,140 @@
+﻿@model test.Models.Product
+@{
+    ViewBag.Title = "bringProduct";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@using (Html.BeginForm("UpdateProduct", "Admin", FormMethod.Post))
+{
+
+    @Html.LabelFor(x => x.id)
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = "readonly" })
+
+    <br />
+    @Html.LabelFor(x => x.name)
+    @Html.TextBoxFor(x => x.name, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.title)
+    @Html.TextBoxFor(x => x.title, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.content)
+    @Html.TextBoxFor(x => x.content, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.photoUrl)
+    @Html.TextBoxFor(x => x.shortdef, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.Deploymenttime)
+    @Html.TextBoxFor(x => x.autonomousflight, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.landingmethod)
+    @Html.TextBoxFor(x => x.landingmethod, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.cruisespeed)
+    @Html.TextBoxFor(x => x.cruisespeed, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.tolerablewindspeed)
+    @Html.TextBoxFor(x => x.tolerablewindspeed, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.flighttime)
+    @Html.TextBoxFor(x => x.flighttime, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.flightdistance)
+    @Html.TextBoxFor(x => x.flightdistance, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.flightspeed)
+    @Html.TextBoxFor(x => x.flightspeed, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.flightaltitude)
+    @Html.TextBoxFor(x => x.flightaltitude, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.operatingtemp)
+    @Html.TextBoxFor(x => x.operatingtemp, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.weathercond)
+    @Html.TextBoxFor(x => x.weathercond, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.gcps)
+    @Html.TextBoxFor(x => x.gcps, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.aircrafttype)
+    @Html.TextBoxFor(x => x.wingspan, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.rotorsNum)
+    @Html.TextBoxFor(x => x.rotorsNum, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.takeoffweight)
+    @Html.TextBoxFor(x => x.payloadweight, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.telemetryrange)
+    @Html.TextBoxFor(x => x.telemetryrange, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.controlmethod)
+    @Html.TextBoxFor(x => x.controlmethod, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.operatingsystem)
+    @Html.TextBoxFor(x => x.operatingsystem, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.inputfiles)
+    @Html.TextBoxFor(x => x.inputfiles, new { @class = "form-control" })
+
+    <br />
+    @Html.LabelFor(x => x.updates)
+    @Html.TextBoxFor(x => x.updates, new { @class = "form-control" })
+
+    <br />
+
+    @Html.LabelFor(x => x.dataloggingsystem)
+    @Html.TextBoxFor(x => x.dataloggingsystem, new { @class = "form-control" })
+
+    <br />
+
+    @Html.LabelFor(x => x.optionalmodules)
+    @Html.TextBoxFor(x => x.optionalmodules, new { @class = "form-control" })
+
+    <br />
+
+    @Html.LabelFor(x => x.variouspayloads)
+    @Html.TextBoxFor(x => x.variouspayloads, new { @class = "form-control" })
+
+    <br />
+
+    @Html.LabelFor(x => x.transportCase)
+    @Html.TextBoxFor(x => x.transportCase, new { @class = "form-control" })
+
+    <br />
+
+    <button class="btn-primary">Add Product</button>
+}
