@@ -25,15 +25,15 @@
                 <div id="headerMenuTop" class="container-fluid fixed-top">
                     <div class="container">
                         <div class="row w-100 mx-auto">
-                                <div class="headerMenuTopContact">
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item"><a href="tel:+7 812 363-33-87"><i class="fa fa-phone"></i> +7 812 363-33-87</a></li>
-                                        <li class="list-inline-item"><a href="@Url.Action("Contact","Home")"><i class="far fa-envelope"></i> info@atamtechnology.com</a></li>
-                                    </ul>
-                                </div>
+                            <div class="headerMenuTopContact">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><a href="tel:+7 812 363-33-87"><i class="fa fa-phone"></i> +7 812 363-33-87</a></li>
+                                    <li class="list-inline-item"><a href="@Url.Action("Contact","Home")"><i class="far fa-envelope"></i> info@atamtechnology.com</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                </div>
                 <div id="headerMenuBottom" class="container mt-lg-4">
                     <h1>
                         <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -41,9 +41,9 @@
                         </a>
                     </h1>
                     <!-- if logo is image enable this
-        <a class="navbar-brand" href="#index.html">
-            <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-        </a> -->
+                    <a class="navbar-brand" href="#index.html">
+                        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+                    </a> -->
                     <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
                             data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -57,23 +57,23 @@
                                 <a class="nav-link" href="@Url.Action("Index", "Home")">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="products">Products</a>
+                                <a class="nav-link" href="@Url.Action("ProductList", "Product")">Products</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="collaborations">Collaborations</a>
+                                <a class="nav-link" href="@Url.Action("Collist", "Collaboration")">Collaborations</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("About","Home")">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="services.html">Services</a>
+                                <a class="nav-link" href="@Url.Action("ServiceList", "Services")">Services</a>
                             </li>
                             <li class="nav-item active">
                                 <a class="nav-link" href="@Url.Action("Contact","Home")">Contact</a>
                             </li>
                         </ul>
                     </div>
-                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -155,52 +155,10 @@
     </section>
     <!-- //contact block -->
     <!-- footer -->
-    <footer class="w3l-footer-22 py-5">
+    <footer class="footer py-5">
         <div class="container py-md-5 py-4">
             <div class="row sub-columns">
                 <div class="col-lg-4 col-sm-6 sub-one-left">
-                    <h6>About </h6>
-                    <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                        doloremque
-                        laudantium, totam rem aperiam, eaque ipsa quae ab.
-                    </p>
-                    <div class="columns-2">
-                        <ul class="social">
-                            <li>
-                                <a href="#facebook" title="facebook">
-                                    <span class="fab fa-facebook-f"
-                                          aria-hidden="true"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#linkedin" title="linkedin">
-                                    <span class="fab fa-linkedin-in"
-                                          aria-hidden="true"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#twitter" title="twitter">
-                                    <span class="fab fa-twitter"
-                                          aria-hidden="true"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#google" title="google">
-                                    <span class="fab fa-google-plus-g"
-                                          aria-hidden="true"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#instagram" title="instagram">
-                                    <span class="fab fa-instagram"
-                                          aria-hidden="true"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-5">
                     <h6>Our Services</h6>
                     <ul>
                         <li>
@@ -217,28 +175,18 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-sm-6 sub-two-right mt-lg-0 mt-sm-5 mt-4">
+                <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-5">
                     <h6>Quick links</h6>
                     <ul>
-                        <li><a href="index.html"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
-                        <li>
-                            <a href="about.html"><span class="fas fa-angle-right mr-2"></span>About</a>
-                        </li>
-                        <li>
-                            <a href="#blog"><span class="fas fa-angle-right mr-2"></span>Blog Posts</a>
-                        </li>
-                        <li><a href="contact.html"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
+                        <li><a href="@Url.Action("Index","Home")"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
+                        <li><a href="@Url.Action("About","Home")"><span class="fas fa-angle-right mr-2"></span>About</a></li>
+                        <li><a href="@Url.Action("Contact","Home")"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
                     </ul>
+
                 </div>
-                <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-lg-0 mt-sm-5 mt-4">
+                <div class="col-lg-2 col-sm-6 sub-two-right mt-lg-0 mt-sm-5 mt-4">
                     <h6>Help & Support</h6>
                     <ul>
-                        <li>
-                            <a href="#live">
-                                <span class="fas fa-angle-right mr-2"></span>Live
-                                Chart
-                            </a>
-                        </li>
                         <li>
                             <a href="#faq"><span class="fas fa-angle-right mr-2"></span>Faq</a>
                         </li>
@@ -252,6 +200,41 @@
                             </a>
                         </li>
                     </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-lg-0 mt-sm-5 mt-4">
+                    <ul class="social">
+                        <li>
+                            <a href="#facebook" title="facebook">
+                                <span class="fab fa-facebook-f"
+                                      aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#linkedin" title="linkedin">
+                                <span class="fab fa-linkedin-in"
+                                      aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#twitter" title="twitter">
+                                <span class="fab fa-twitter"
+                                      aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#google" title="google">
+                                <span class="fab fa-google-plus-g"
+                                      aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#instagram" title="instagram">
+                                <span class="fab fa-instagram"
+                                      aria-hidden="true"></span>
+                            </a>
+                        </li>
+                    </ul>
+
                 </div>
             </div>
         </div>
@@ -288,44 +271,7 @@
     <!-- common jquery plugin -->
     <script src="~/Style/js/jquery-3.3.1.min.js"></script>
     <!-- //common jquery plugin -->
-    <!-- magnific popup -->
-    <script src="~/Style/js/jquery.magnific-popup.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.popup-with-zoom-anim').magnificPopup({
-                type: 'inline',
 
-                fixedContentPos: false,
-                fixedBgPos: true,
-
-                overflowY: 'auto',
-
-                closeBtnInside: true,
-                preloader: false,
-
-                midClick: true,
-                removalDelay: 300,
-                mainClass: 'my-mfp-zoom-in'
-            });
-
-            $('.popup-with-move-anim').magnificPopup({
-                type: 'inline',
-
-                fixedContentPos: false,
-                fixedBgPos: true,
-
-                overflowY: 'auto',
-
-                closeBtnInside: true,
-                preloader: false,
-
-                midClick: true,
-                removalDelay: 300,
-                mainClass: 'my-mfp-slide-bottom'
-            });
-        });
-    </script>
-    <!-- //magnific popup -->
     <!-- MENU-JS -->
     <script>
 
