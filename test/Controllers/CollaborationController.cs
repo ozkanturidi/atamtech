@@ -19,5 +19,13 @@ namespace test.Controllers
             var col = c.Collaborations.ToList();
             return View(col);
         }
+
+
+        public ActionResult ColDetails(int id)
+        {
+            var col = c.Collaborations.ToList();
+            col = c.Collaborations.Where(x => x.id == id).ToList();
+            return View(col);
+        }
     }
 }
