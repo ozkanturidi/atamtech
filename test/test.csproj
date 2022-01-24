@@ -128,8 +128,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CollaborationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -137,6 +140,7 @@
     <Compile Include="Models\AboutUs.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\AdressT.cs" />
+    <Compile Include="Models\Collaboration.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\Context.cs" />
@@ -243,6 +247,15 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\CreateNew.cshtml" />
     <Content Include="Views\Admin\bringNew.cshtml" />
+    <Content Include="Views\Admin\bringProduct.cshtml" />
+    <Content Include="Views\Admin\CreateProduct.cshtml" />
+    <Content Include="Views\Admin\Product.cshtml" />
+    <Content Include="Views\Product\ProductDetails.cshtml" />
+    <Content Include="Views\Product\ProductList.cshtml" />
+    <Content Include="Views\Services\ServiceDetails.cshtml" />
+    <Content Include="Views\Services\ServiceList.cshtml" />
+    <Content Include="Views\Collaboration\ColDetails.cshtml" />
+    <Content Include="Views\Collaboration\Collist.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

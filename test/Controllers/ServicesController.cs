@@ -11,7 +11,7 @@ namespace test.Controllers
         // GET: Services
 
         Context c = new Context();
-        
+
         public ActionResult ServiceList()
         {
             var service = c.Services.ToList();

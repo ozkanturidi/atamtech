@@ -1,9 +1,9 @@
 ﻿@using test.Models
-@model List<Product>
+@model List<Collaboration>
 
 
 @{
-    ViewBag.Title = "ProductList";
+    ViewBag.Title = "ColList";
 }
 
 
@@ -12,8 +12,8 @@
 {
     <img src="@item.photoUrl" style="margin-bottom:20px" width="300px" height="300px" />
 
-    <a href="/News/NewsDetail/@item.id">@item.name</a>
-    <h2>@item.shortdef</h2>
+    <a href="/News/NewsDetail/@item.id">@item.title</a>
+    <h2>@item.content</h2>
 
 
 }

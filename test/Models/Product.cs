@@ -15,7 +15,7 @@ namespace test.Models
         public string title { get; set; }
         public string content { get; set; }
         public string photoUrl { get; set; }
-        public string  shortdef { get; set; }
+        public string shortdef { get; set; }
 
 
         // -------Operations-------
@@ -23,7 +23,7 @@ namespace test.Models
         public string autonomousflight { get; set; }
         public string landingmethod { get; set; }
         public string cruisespeed { get; set; }
-        public string tolerablewindspeed { get; set; }      
+        public string tolerablewindspeed { get; set; }
         public string flighttime { get; set; }
         public string flightdistance { get; set; }
         public string flightspeed { get; set; }
