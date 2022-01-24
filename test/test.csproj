@@ -128,6 +128,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CollaborationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -139,6 +140,7 @@
     <Compile Include="Models\AboutUs.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\AdressT.cs" />
+    <Compile Include="Models\Collaboration.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\Context.cs" />
@@ -252,6 +254,8 @@
     <Content Include="Views\Product\ProductList.cshtml" />
     <Content Include="Views\Services\ServiceDetails.cshtml" />
     <Content Include="Views\Services\ServiceList.cshtml" />
+    <Content Include="Views\Collaboration\Collist.cshtml" />
+    <Content Include="Views\Collaboration\ColDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
