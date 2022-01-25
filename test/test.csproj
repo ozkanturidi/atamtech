@@ -147,6 +147,7 @@
     <Compile Include="Models\New.cs" />
     <Compile Include="Models\NewComment.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductandNew.cs" />
     <Compile Include="Models\Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

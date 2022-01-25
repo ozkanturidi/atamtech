@@ -13,5 +13,8 @@ namespace test.Models
         public string title { get; set; }
         public string photoUrl { get; set; }
         public string content { get; set; }
+
+
+        
     }
 }
