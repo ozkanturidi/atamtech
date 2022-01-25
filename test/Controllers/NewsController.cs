@@ -22,7 +22,7 @@ namespace test.Controllers
             //var findNew = c.News.Where(x => x.id == id).ToList();
             nc.Value1 = c.News.Where(x => x.id == id).ToList();
             nc.Value2 = c.Comments.Where(x => x.NewId == id).ToList();
-            return View(nc);
+            return View("NewsDetail",nc);
         }
 
         [HttpGet]
