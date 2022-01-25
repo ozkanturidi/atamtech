@@ -165,6 +165,8 @@
     <Content Include="Style\images\bg3.jpg" />
     <Content Include="Style\images\blog3.jpg" />
     <Content Include="Style\images\blog6.jpg" />
+    <Content Include="Style\images\fixar007_1.png" />
+    <Content Include="Style\images\fixar007_2.png" />
     <Content Include="Style\images\img.jpg" />
     <Content Include="Style\images\img2.jpg" />
     <Content Include="Style\images\inner-banner.jpg" />
