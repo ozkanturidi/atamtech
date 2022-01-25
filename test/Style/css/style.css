@@ -8493,7 +8493,7 @@ button.bg-dark:focus {
 
 .mt-4,
 .my-4 {
-    margin-top: 0rem !important;
+    margin-top: 1.5rem !important;
 }
 
 .mr-4,
@@ -12379,14 +12379,26 @@ a.popup-with-zoom-anim {
 /* //contact + product details section */
 .contact-block input,
 .contact-block textarea,
-.product-block textarea,
-.product-right
+.product-block textarea
 {
     width: 100%;
     color: var(--heading-color);
     background: var(--bg-grey);
     font-size: 16px;
     padding: 14px;
+    border: 2px solid var(--border-color-light);
+    outline: none;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.product-right {
+    width: 100%;
+    color: var(--heading-color);
+    background: var(--bg-grey);
+    font-size: 16px;
+    padding: 14px;
+    padding-bottom:20px;
     border: 2px solid var(--border-color-light);
     outline: none;
     margin-bottom: 20px;
@@ -12450,10 +12462,7 @@ a.popup-with-zoom-anim {
     padding-left: 20px;
     padding-right: 40px;
 }
-.product-right {
-    padding-left: 20px;
-    padding-right: 20px;
-}
+
 .cont-details p a:hover {
     color: var(--secondary-color);
 }
