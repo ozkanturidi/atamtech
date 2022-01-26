@@ -152,7 +152,11 @@
     <Compile Include="Models\New.cs" />
     <Compile Include="Models\NewComment.cs" />
     <Compile Include="Models\Product.cs" />
+
     <Compile Include="Models\Project.cs" />
+
+    <Compile Include="Models\ProductandNew.cs" />
+
     <Compile Include="Models\Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -170,6 +174,8 @@
     <Content Include="Style\images\bg3.jpg" />
     <Content Include="Style\images\blog3.jpg" />
     <Content Include="Style\images\blog6.jpg" />
+    <Content Include="Style\images\fixar007_1.png" />
+    <Content Include="Style\images\fixar007_2.png" />
     <Content Include="Style\images\img.jpg" />
     <Content Include="Style\images\img2.jpg" />
     <Content Include="Style\images\inner-banner.jpg" />
@@ -260,10 +266,13 @@
     <Content Include="Views\Product\ProductList.cshtml" />
     <Content Include="Views\Services\ServiceDetails.cshtml" />
     <Content Include="Views\Services\ServiceList.cshtml" />
-    <Content Include="Views\Collaboration\Collist.cshtml" />
-    <Content Include="Views\Collaboration\ColDetails.cshtml" />
+
     <Content Include="Views\Project\ProjectList.cshtml" />
     <Content Include="Views\Project\ProjectDetails.cshtml" />
+
+    <Content Include="Views\Collaboration\ColDetails.cshtml" />
+    <Content Include="Views\Collaboration\Collist.cshtml" />
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

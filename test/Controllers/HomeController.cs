@@ -13,9 +13,15 @@ namespace test.Controllers
     {
 
         Context c = new Context();
+
+        ProductandNew pn = new ProductandNew();
         public ActionResult Index()
         {
-            return View();
+            pn.Value1 = c.News.ToList();
+            pn.Value2 = c.Products.ToList();
+
+
+            return View(pn);
         }
 
         public ActionResult About()
