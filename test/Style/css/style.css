@@ -5038,7 +5038,7 @@ input[type="button"].btn-block {
     width: auto;
     position: relative;
     background: #fff;
-    border-radius: 5px;
+    border-radius: 8px;
     overflow: hidden;
     border: 1px solid #ddd; /*box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.16);*/
     margin: 10px;
@@ -8493,7 +8493,7 @@ button.bg-dark:focus {
 
 .mt-4,
 .my-4 {
-    margin-top: 0rem !important;
+    margin-top: 1.5rem !important;
 }
 
 .mr-4,
@@ -11043,7 +11043,7 @@ p.white {
 }
 
 .radius-image {
-    border-radius: var(--border-radius);
+    border-radius: 8px;
 }
 
 .radius-image-full {
@@ -11098,11 +11098,11 @@ p.white {
     width: 40px;
     height: 40px;
     background: #9FADBD;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -o-border-radius: 5px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -o-border-radius: 8px;
     -moz-border-radius:5px;
-    -ms-border-radius: 5px;
+    -ms-border-radius: 8px;
     padding: 0;
 }
 
@@ -11511,11 +11511,11 @@ nav ul li {
     border: none;
     background: #9FADBD;
     transition: all 1.8s ease-in-out;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -o-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -o-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
 }
 
 
@@ -11830,7 +11830,7 @@ h4.inner-text-title {
     transition: all 0.3s ease-in-out;
     text-align: center;
     border: 1px solid var(--bg-color);
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 h3.title-style {
@@ -11898,7 +11898,7 @@ h3.title-style {
 /* products block */
 
 /* content tabs section */
-.w3l-content-12-main .content-12 .content-heading {
+.content-12-main .content-12 .content-heading {
     line-height: 42px;
     font-size: 32px;
     text-transform: capitalize;
@@ -11906,24 +11906,34 @@ h3.title-style {
     margin-bottom: 20px;
 }
 
-.w3l-content-12-main .content-12 {
+.content-12 .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-bottom: 30px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+}
+.content-12-main .content-12 {
     align-items: center;
 }
 
-.w3l-content-12-main .column {
+.content-12-main .column {
     text-align: left;
 }
 
-.w3l-content-12-main .content-12 section.tab-content {
+.content-12-main .content-12 section.tab-content {
     display: none;
     padding: 38px 0 0;
 }
 
-.w3l-content-12-main .content-12 input {
+.content-12-main .content-12 input {
     display: none;
 }
 
-.w3l-content-12-main .content-12 label.tabtle {
+.content-12-main .content-12 label.tabtle {
     display: inline-block;
     padding: 10px 0px;
     font-weight: 600;
@@ -11935,57 +11945,57 @@ h3.title-style {
     margin: 0 35px 0px 0px;
 }
 
-    .w3l-content-12-main .content-12 label.tabtle:before {
+    .content-12-main .content-12 label.tabtle:before {
         font-family: fontawesome;
         font-weight: normal;
         margin-right: 10px;
     }
 
-.w3l-content-12-main label.tabtle:hover {
+.content-12-main label.tabtle:hover {
     opacity: 0.9;
     cursor: pointer;
 }
 
-.w3l-content-12-main .content-12 input:checked + label.tabtle {
+.content-12-main .content-12 input:checked + label.tabtle {
     border-bottom: 2px solid var(--primary-color);
     text-align: center;
     color: var(--primary-color);
 }
 
-.w3l-content-12-main .content-12 #tab1:checked ~ #content1,
-.w3l-content-12-main .content-12 #tab2:checked ~ #content2,
-.w3l-content-12-main .content-12 #tab3:checked ~ #content3,
-.w3l-content-12-main .content-12 #tab4:checked ~ #content4 {
+.content-12-main .content-12 #tab1:checked ~ #content1,
+.content-12-main .content-12 #tab2:checked ~ #content2,
+.content-12-main .content-12 #tab3:checked ~ #content3,
+.content-12-main .content-12 #tab4:checked ~ #content4 {
     display: block;
 }
 
 @media all and (max-width: 1024px) {
-    .w3l-content-12-main .content-12 label.tabtle {
+    .content-12-main .content-12 label.tabtle {
         font-size: 19px;
     }
 }
 
 @media screen and (max-width: 992px) {
-    .w3l-content-12-main .content-12 .content12 {
+    .content-12-main .content-12 .content12 {
         grid-template-columns: 1fr;
     }
 
-    .w3l-content-12-main .content-12 .content12 {
+    .content-12-main .content-12 .content12 {
         margin-top: 0px;
     }
 
-    .w3l-content-12-main .content-12 .content-para {
+    .content-12-main .content-12 .content-para {
         max-width: 100%;
     }
 }
 
 @media screen and (max-width: 800px) {
-    .w3l-content-12-main .content-12 label.tabtle:before {
+    .content-12-main .content-12 label.tabtle:before {
         margin: 0;
         font-size: 18px;
     }
 
-    .w3l-content-12-main .content-12 .content-heading {
+    .content-12-main .content-12 .content-heading {
         line-height: 40px;
         font-size: 30px;
         margin-bottom: 16px;
@@ -11993,33 +12003,33 @@ h3.title-style {
 }
 
 @media screen and (max-width: 480px) {
-    .w3l-content-12-main .content-12 .grid-col-4 {
+    .content-12-main .content-12 .grid-col-4 {
         grid-row-gap: 20px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .w3l-content-12-main .content-12 .grid-col-4 {
+    .content-12-main .content-12 .grid-col-4 {
         grid-row-gap: 10px;
         grid-column-gap: 10px;
     }
 
-    .w3l-content-12-main .content-12 section.tab-content {
+    .content-12-main .content-12 section.tab-content {
         padding: 28px 0 0;
     }
 
-    .w3l-content-12-main .content-12 .content-heading {
+    .content-12-main .content-12 .content-heading {
         line-height: 34px;
         font-size: 24px;
     }
 
-    .w3l-content-12-main .content-12 label.tabtle {
+    .content-12-main .content-12 label.tabtle {
         margin: 0 15px 0px 0px;
     }
 }
 
 @media screen and (max-width: 414px) {
-    .w3l-content-12-main .content-12 label.tabtle {
+    .content-12-main .content-12 label.tabtle {
         font-size: 16px;
     }
 }
@@ -12308,7 +12318,7 @@ h3.title-style {
     border: none;
     background: var(--bg-color);
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.70);
 }
 
@@ -12369,8 +12379,7 @@ a.popup-with-zoom-anim {
 /* //contact + product details section */
 .contact-block input,
 .contact-block textarea,
-.product-block textarea,
-.product-right
+.product-block textarea
 {
     width: 100%;
     color: var(--heading-color);
@@ -12380,7 +12389,20 @@ a.popup-with-zoom-anim {
     border: 2px solid var(--border-color-light);
     outline: none;
     margin-bottom: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
+}
+
+.product-right {
+    width: 100%;
+    color: var(--heading-color);
+    background: var(--bg-grey);
+    font-size: 16px;
+    padding: 14px;
+    padding-bottom:20px;
+    border: 2px solid var(--border-color-light);
+    outline: none;
+    margin-bottom: 20px;
+    border-radius: 8px;
 }
 .product-text
 {
@@ -12392,12 +12414,12 @@ a.popup-with-zoom-anim {
     border: 2px solid var(--border-color-light);
     outline: none;
     margin-bottom: 3px;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .contact-block, .product-block {
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.70);
     padding-bottom: 40px;
 }
@@ -12412,7 +12434,7 @@ a.popup-with-zoom-anim {
 }
 
 .cont-details a, p {
-    color: #2C3E50;
+    color: var(--font-color);
 }
 
 .contact-block textarea {
@@ -12440,10 +12462,7 @@ a.popup-with-zoom-anim {
     padding-left: 20px;
     padding-right: 40px;
 }
-.product-right {
-    padding-left: 20px;
-    padding-right: 20px;
-}
+
 .cont-details p a:hover {
     color: var(--secondary-color);
 }
