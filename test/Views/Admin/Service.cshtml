@@ -1,0 +1,38 @@
+﻿@using test.Models
+@model List<Service>
+@{
+    ViewBag.Title = "Service";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Service List</h2>
+
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+        <th>DETAILS</th>
+
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+
+            <td>@x.id</td>
+            <td>@x.title</td>
+            <td><a href="/Admin/DeleteService/@x.id" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Admin/bringService/@x.id" class="btn btn-success">Update</a></td>
+            <td><a href="#" class="btn btn-default">Details</a></td>
+
+        </tr>
+    }
+
+
+
+</table>
+<a href="/Admin/CreateService/" class="btn btn-primary">New Service</a>
