@@ -144,34 +144,18 @@
                 <h3 class="title-style">Our Products</h3>
             </div>
             <div class="row">
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+                @foreach(var item in Model.Value2)
+                {
+
+
+                <div class="col-md-6 col-lg-4 d-flex align-items-center">
                     <div class="product-box product-box-clr-1">
-                        <img class="d-block img-responsive" src="~/Style/images/1.jpg" alt="product-img" />
-                        <h4 class="title"><a href="#about">Lorem Ipsum</a></h4>
-                        <p>Ras effic itur metusga via suscipit consect eturerse adi unde omnis.</p>
+                        <img class="d-block img-responsive" src="@item.photoUrl" alt="product-img" />
+                        <h4 class="title"><a href="/Product/ProductDetails/@item.id">@item.name</a></h4>
+                        <p>The FIXAR 007 is a fully autonomous, VTOL (vertical take-off and landing) fixed-wing drone</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mt-md-0 mt-4">
-                    <div class="product-box product-box-clr-2">
-                        <img class="d-block img-responsive" src="~/Style/images/1.jpg" alt="product-img" />
-                        <h4 class="title"><a href="#about">Lorem Ipsum</a></h4>
-                        <p>Ras effic itur metusga via suscipit consect eturerse adi unde omnis.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mt-lg-0 mt-4">
-                    <div class="product-box product-box-clr-3">
-                        <img class="d-block img-responsive" src="~/Style/images/1.jpg" alt="product-img" />
-                        <h4 class="title"><a href="#about">Lorem Ipsum</a></h4>
-                        <p>Ras effic itur metusga via suscipit consect eturerse adi unde omnis.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mt-lg-0 mt-4">
-                    <div class="product-box product-box-clr-4">
-                        <img class="d-block img-responsive" src="~/Style/images/1.jpg" alt="product-img" />
-                        <h4 class="title"><a href="#about">Lorem Ipsum</a></h4>
-                        <p>Ras effic itur metusga via suscipit consect eturerse adi unde omnis.</p>
-                    </div>
-                </div>
+                }
             </div>
             <div class="text-center mt-sm-5 mt-4 pt-sm-0 pt-1">
                 <a class="btn btn-style btn-style-secondary mt-sm-3" href="@Url.Action("ProductList", "Product")">
