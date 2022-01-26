@@ -9528,7 +9528,7 @@ button.bg-dark:focus {
 
     .pt-md-5,
     .py-md-5 {
-        padding-top: 3rem !important;
+        padding-top: 5rem !important;
     }
 
     .pr-md-5,
@@ -11941,7 +11941,7 @@ h3.title-style {
     font-size: 20px;
     line-height: 25px;
     text-align: center;
-    color: #101d29;
+    color: #9FADBD;
     margin: 0 35px 0px 0px;
 }
 
@@ -11957,9 +11957,8 @@ h3.title-style {
 }
 
 .content-12-main .content-12 input:checked + label.tabtle {
-    border-bottom: 2px solid var(--primary-color);
     text-align: center;
-    color: var(--primary-color);
+    color: #fff;
 }
 
 .content-12-main .content-12 #tab1:checked ~ #content1,

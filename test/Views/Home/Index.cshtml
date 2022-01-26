@@ -64,6 +64,9 @@
                                 <a class="nav-link" href="@Url.Action("ProductList", "Product")">Products</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("ProjectList", "Project")">Projects</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Collist", "Collaboration")">Collaborations</a>
                             </li>
                             <li class="nav-item">
@@ -139,7 +142,7 @@
     <!--news-->
     <!-- products block -->
     <section class="products py-5" id="features">
-        <div class="container py-md-5 py-4">
+        <div class="container py-md-4 py-4">
             <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:500px;">
                 <h3 class="title-style">Our Products</h3>
             </div>
@@ -282,44 +285,6 @@
     <!-- common jquery plugin -->
     <script src="~/Style/js/jquery-3.3.1.min.js"></script>
     <!-- //common jquery plugin -->
-    <!-- magnific popup -->
-    <script src="~/Style/js/jquery.magnific-popup.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.popup-with-zoom-anim').magnificPopup({
-                type: 'inline',
-
-                fixedContentPos: false,
-                fixedBgPos: true,
-
-                overflowY: 'auto',
-
-                closeBtnInside: true,
-                preloader: false,
-
-                midClick: true,
-                removalDelay: 300,
-                mainClass: 'my-mfp-zoom-in'
-            });
-
-            $('.popup-with-move-anim').magnificPopup({
-                type: 'inline',
-
-                fixedContentPos: false,
-                fixedBgPos: true,
-
-                overflowY: 'auto',
-
-                closeBtnInside: true,
-                preloader: false,
-
-                midClick: true,
-                removalDelay: 300,
-                mainClass: 'my-mfp-slide-bottom'
-            });
-        });
-    </script>
-    <!-- //magnific popup -->
     <!-- MENU-JS -->
     <script>
         $(window).on("scroll", function () {
