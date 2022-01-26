@@ -95,101 +95,24 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-6 item">
+                    @foreach (var item in Model)
+                    {
                     <div class="card">
                         <div class="card-header p-0 position-relative border-0">
-                            <a href="services.html">
-                                <img class="d-block img-responsive" src="assets/images/s4.jpg" alt="card-image">
+                            <a href="/Product/ProductDetails/@item.id">
+                                <img class="d-block img-responsive" src="@item.photoUrl" alt="card-image">
                             </a>
                         </div>
                         <div class="card-body service-details">
-                            <a href="services.html" class="service-heading">Website Designing</a>
+                            <a href="/Product/ProductDetails/@item.id" class="service-heading">@item.name</a>
                             <p>
-                                Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque
-                                laudantium, totam rem aperiam
+                                 @item.content.Substring(0, 85)
                             </p>
                         </div>
                     </div>
+                    };
                 </div>
-                <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
-                    <div class="card">
-                        <div class="card-header p-0 position-relative border-0">
-                            <a href="services.html">
-                                <img class="d-block img-responsive" src="~/Style/images/about3.jpg" alt="card-image">
-                            </a>
-                        </div>
-                        <div class="card-body service-details">
-                            <a href="services.html" class="service-heading">Mobile Applications</a>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque
-                                laudantium, totam rem aperiam
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
-                    <div class="card">
-                        <div class="card-header p-0 position-relative border-0">
-                            <a href="services.html">
-                                <img class="d-block img-responsive" src="assets/images/s6.jpg" alt="card-image">
-                            </a>
-                        </div>
-                        <div class="card-body service-details">
-                            <a href="services.html" class="service-heading">Digital Marketing</a>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque
-                                laudantium, totam rem aperiam
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 item mt-lg-5 mt-4">
-                    <div class="card">
-                        <div class="card-header p-0 position-relative border-0">
-                            <a href="services.html">
-                                <img class="d-block img-responsive" src="assets/images/s1.jpg" alt="card-image">
-                            </a>
-                        </div>
-                        <div class="card-body service-details">
-                            <a href="services.html" class="service-heading">Marketing Services</a>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque
-                                laudantium, totam rem aperiam
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
-                    <div class="card">
-                        <div class="card-header p-0 position-relative border-0">
-                            <a href="services.html">
-                                <img class="d-block img-responsive" src="assets/images/s2.jpg" alt="card-image">
-                            </a>
-                        </div>
-                        <div class="card-body service-details">
-                            <a href="services.html" class="service-heading">Corporate Business</a>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque
-                                laudantium, totam rem aperiam
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
-                    <div class="card">
-                        <div class="card-header p-0 position-relative border-0">
-                            <a href="services.html">
-                                <img class="d-block img-responsive" src="assets/images/s3.jpg" alt="card-image">
-                            </a>
-                        </div>
-                        <div class="card-body service-details">
-                            <a href="services.html" class="service-heading">Creative Design</a>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque
-                                laudantium, totam rem aperiam
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
