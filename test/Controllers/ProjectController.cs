@@ -14,16 +14,16 @@ namespace test.Controllers
 
         public ActionResult ProjectList()
         {
-            var projects = c.Projects.ToList();
+            //var projects = c.Projects.ToList();
            
-            return View(projects);
+            return View();
         }
 
         public ActionResult ProjectDetails(int id)
         {
 
-            var projects = c.Projects.Where(x => x.id == id).ToList();
-            return View(projects);
+            //var projects = c.Projects.Where(x => x.id == id).ToList();
+            return View();
 
 
         }

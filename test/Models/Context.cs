@@ -21,7 +21,9 @@ namespace test.Models
         public DbSet<Product> Products { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<Collaboration> Collaborations { get; set; }
-        
-        
+
+        public DbSet<Project> Projects{ get; set; }
+
+
     }
 }
