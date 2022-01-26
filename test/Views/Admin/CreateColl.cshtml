@@ -1,0 +1,23 @@
+﻿@model test.Models.Collaboration
+
+@{
+    ViewBag.Title = "CreateColl";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Create Collaboration</h2>
+
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.title)
+    @Html.TextBoxFor(x => x.title, new { @class = "form-control" })
+
+
+    @Html.LabelFor(x => x.photoUrl)
+    @Html.TextBoxFor(x => x.photoUrl, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.content)
+    @Html.TextAreaFor(x => x.content, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Add Collaboration</button>
+</form>
