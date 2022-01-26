@@ -15,6 +15,9 @@ namespace test.Models
         public string title { get; set; }
         public string content { get; set; }
         public string photoUrl { get; set; }
+        public string photoUrl2 { get; set; }
+        public string photoUrl3 { get; set; }
+        public string photoUrl4 { get; set; }
         public string shortdef { get; set; }
 
 
