@@ -119,22 +119,22 @@
                     @foreach (var item in Model.Value1)
                     {
 
-                    <div class="news-grid">
-                        <div class="news-grid-image">
-                            <img src="@item.fotoUrl" alt="">
+                        <div class="news-grid">
+                            <div class="news-grid-image">
+                                <img src="@item.fotoUrl" alt="">
+                            </div>
+                            <div class="news-grid-txt">
+                                <h2>@item.title</h2>
+                                <ul>
+                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
+                                </ul>
+                                <p>@item.content.Substring(0, 60)</p>
+                                <a href="/News/NewsDetail/@item.id">Read More</a>
+                            </div>
                         </div>
-                        <div class="news-grid-txt">
-                            <h2>@item.title</h2>
-                            <ul>
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
-                            </ul>
-                            <p>@item.content.Substring(0,60)</p>
-                            <a href="/News/NewsDetail/@item.id">Read More</a>
-                        </div>
-                    </div>
 
                     }
-                   
+
                 </div>
             </div>
         </div>
@@ -147,17 +147,17 @@
                 <h3 class="title-style">Our Products</h3>
             </div>
             <div class="row">
-                @foreach(var item in Model.Value2)
+                @foreach (var item in Model.Value2)
                 {
 
 
-                <div class="col-md-6 col-lg-4 d-flex align-items-center">
-                    <div class="product-box product-box-clr-1">
-                        <img class="d-block img-responsive" src="@item.photoUrl" alt="product-img" />
-                        <h4 class="title"><a href="/Product/ProductDetails/@item.id">@item.name</a></h4>
-                        <p>The FIXAR 007 is a fully autonomous, VTOL (vertical take-off and landing) fixed-wing drone</p>
+                    <div class="col-md-6 col-lg-4 d-flex align-items-center">
+                        <div class="product-box product-box-clr-1">
+                            <img class="d-block img-responsive" src="@item.photoUrl" alt="product-img" />
+                            <h4 class="title"><a href="/Product/ProductDetails/@item.id">@item.name</a></h4>
+                            <p>The FIXAR 007 is a fully autonomous, VTOL (vertical take-off and landing) fixed-wing drone</p>
+                        </div>
                     </div>
-                </div>
                 }
             </div>
             <div class="text-center mt-sm-5 mt-4 pt-sm-0 pt-1">
@@ -168,11 +168,20 @@
         </div>
     </section>
     <!-- products block -->
+    <section class="logo-section py-0">
+        <div class="container py-md-3 py-0">
+            <div class="d-inline-block w-100">
+                <div class="py-3 float-left" style=" width: 50%;"><a href="https://www.eiturbanmobility.eu"><img style="max-width: 180px; width: 90%;" src="https://www.eiturbanmobility.eu/wp-content/uploads/2019/05/logo-EIT-Urban-Mobility.svg" /></a> </div>
+                <div class="py-3 float-right" style=" width: 50%;"><a href="https://europa.eu/european-union/index_en"><img style="max-width: 180px; width: 90%; float: right;" src="~/Style/images/Co-Funded_by_the_EU_logo_ok.png" /></a> </div>
+            </div>
+        </div>
+    </section>
+
     <!-- footer -->
-    <footer class="footer py-5">
-        <div class="container py-md-5 py-4">
+    <footer class="footer py-3">
+        <div class="container py-md-4 py-3">
             <div class="row sub-columns">
-                <div class="col-lg-4 col-sm-6 sub-one-left">
+                <div class="col-lg-3 col-sm-6 pl-lg-5 sub-one-left">
                     <h6>Our Services</h6>
                     <ul>
                         <li>

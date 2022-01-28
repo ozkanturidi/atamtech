@@ -175,7 +175,7 @@ a {
 }
 
     a:hover {
-        color: var(--primary-color);
+        color: #9FADBD;
         text-decoration: underline;
     }
 
@@ -12040,7 +12040,9 @@ h3.title-style {
 .footer {
     background: #252628;
 }
-
+section.logo-section.py-0 {
+    background: #fff;
+}
 
 .right-side {
     padding: 50px;
@@ -12387,7 +12389,7 @@ a.popup-with-zoom-anim {
     padding: 14px;
     border: 2px solid var(--border-color-light);
     outline: none;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     border-radius: 8px;
 }
 
@@ -12400,7 +12402,7 @@ a.popup-with-zoom-anim {
     padding-bottom:20px;
     border: 2px solid var(--border-color-light);
     outline: none;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     border-radius: 8px;
 }
 .product-text
@@ -12420,7 +12422,7 @@ a.popup-with-zoom-anim {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.70);
-    padding-bottom: 40px;
+    padding-bottom: 70px;
 }
 
 .me-3 {
