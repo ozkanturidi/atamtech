@@ -158,7 +158,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Style\css\contact.css" />
     <Content Include="Style\css\fontawesome-all.min.css" />
     <Content Include="Style\css\style.css" />
     <Content Include="Style\images\1.jpg" />

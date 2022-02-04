@@ -11428,7 +11428,7 @@ nav ul li {
             font-size: 20px;
             line-height: 1.2em;
             color: #fff;
-            background: #9FADBD;
+            background: transparent;
             line-height: 34px;
         }
 
@@ -11915,6 +11915,7 @@ h3.title-style {
     padding: 30px;
     background: #fff;
     border-radius: 8px;
+    box-shadow: 0 4px 7px 0 rgb(0 0 0 / 70%);
 }
 .content-12-main .content-12 {
     align-items: center;
@@ -12315,7 +12316,8 @@ section.logo-section.py-0 {
 
 
 /* services + productlist */
-.service-section .card {
+.service-section .card, 
+.product-section .card {
     border: none;
     background: var(--bg-color);
     padding: 20px;
@@ -12323,7 +12325,8 @@ section.logo-section.py-0 {
     box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.70);
 }
 
-.service-section span.label-style {
+.service-section span.label-style, 
+.product-section span.label-style {
     color: #f85a40;
     display: inline-block;
     background: rgb(248 90 64 / 5%);
@@ -12333,17 +12336,20 @@ section.logo-section.py-0 {
     font-size: 14px;
 }
 
-    .service-section span.label-style.label-style-2 {
+    .service-section span.label-style.label-style-2, 
+    .product-section span.label-style.label-style-2 {
         background: #037ef314;
         color: #037ef3;
     }
 
-    .service-section span.label-style.label-style-3 {
+    .service-section span.label-style.label-style-3, 
+    .product-section span.label-style.label-style-3, {
         color: #00c16e;
         background: rgb(0 193 110 / 8%);
     }
 
-.service-section .card img {
+.service-section .card img,
+.product-section .card img {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
@@ -12363,7 +12369,8 @@ a.service-heading {
 
 .service-details {
     background: var(--bg-color);
-    padding: 30px 20px;
+    padding: 30px 15px 10px 15px;
+    height: 300px;
 }
 
 a.popup-with-zoom-anim span {
