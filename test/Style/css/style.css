@@ -11632,7 +11632,7 @@ h3.title-main-2 {
         top: 0;
     }
 
-@media (min-width: 991px) {
+@media (min-width: 992px) {
     .banner {
         background: url(../images/banner2.jpg) no-repeat center;
     }
