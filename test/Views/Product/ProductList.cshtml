@@ -25,30 +25,30 @@
 <body>
     <!--header-->
     <header id="site-header" class="fixed-top nav-fixed">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg stroke">
-                <div id="headerMenuTop" class="container-fluid fixed-top">
-                    <div class="container">
-                        <div class="row w-100 mx-auto">
-                            <div class="headerMenuTopContact">
-                                <ul class="list-inline">
-                                    <li class="list-inline-item"><a href="tel:+7 812 363-33-87"><i class="fa fa-phone"></i> +7 812 363-33-87</a></li>
-                                    <li class="list-inline-item"><a href="@Url.Action("Contact","Home")"><i class="far fa-envelope"></i> info@atamtechnology.com</a></li>
-                                </ul>
-                            </div>
-                        </div>
+        <div id="headerMenuTop" class="container-fluid fixed-top">
+            <div class="container">
+                <div class="row w-100 mx-auto">
+                    <div class="headerMenuTopContact">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="tel:+7 812 363-33-87"><i class="fa fa-phone"></i> +7 812 363-33-87</a></li>
+                            <li class="list-inline-item"><a href="@Url.Action("Contact","Home")"><i class="far fa-envelope"></i> info@atamtechnology.com</a></li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
                 <div id="headerMenuBottom" class="container mt-lg-4">
                     <!--
-                     <h1>
-                         <a class="navbar-brand d-flex align-items-center" href="index.html">
-                             <i class="fas fa-space-shuttle"></i><span class="appname">Atam</span>Tech
-                         </a>
-                     </h1>
-                    -->
-                    <a class="navbar-brand" href="#index.html">
-                        <img src="~/Style/images/logo2.png" alt="Your logo" title="Your logo" style="height:45px;" />
+                 <h1>
+                     <a class="navbar-brand d-flex align-items-center" href="index.html">
+                         <i class="fas fa-space-shuttle"></i><span class="appname">Atam</span>Tech
+                     </a>
+                 </h1>
+                -->
+                    <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                        <img src="~/Style/images/ATAM_TECH_NORMAL_1080x350.png" alt="Your logo" title="Your logo" style="height:45px;" />
                     </a>
                     <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
                             data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
@@ -89,7 +89,7 @@
     <!--//header-->
     <!-- services section -->
     <div class="product-section py-4">
-        <div class="container py-md-5 py-4">
+        <div class="container py-md-5 py-5">
             <div class="row align-items-center mb-5">
                 <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:500px;">
                     <h3 class="title-style">

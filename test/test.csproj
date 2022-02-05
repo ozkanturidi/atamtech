@@ -162,8 +162,9 @@
     <Content Include="Style\css\style.css" />
     <Content Include="Style\images\1.jpg" />
     <Content Include="Style\images\about.jpg" />
+    <Content Include="Style\images\ATAM_TECH_NORMAL_1080x350.png" />
     <Content Include="Style\images\banner.jpg" />
-    <Content Include="Style\images\bg2.jpg" />
+    <Content Include="Style\images\banner2.jpg" />
     <Content Include="Style\images\bg3.jpg" />
     <Content Include="Style\images\blog3.jpg" />
     <Content Include="Style\images\blog6.jpg" />
@@ -172,7 +173,6 @@
     <Content Include="Style\images\fixar007_2.png" />
     <Content Include="Style\images\img.jpg" />
     <Content Include="Style\images\img2.jpg" />
-    <Content Include="Style\images\logo2.png" />
     <Content Include="Style\js\bootstrap.min.js" />
     <Content Include="Style\js\jquery-3.3.1.min.js" />
     <Content Include="Style\js\jquery.magnific-popup.min.js" />
