@@ -16,6 +16,7 @@ namespace test.Controllers
 
 
         //News Admin Page
+
         public ActionResult Index()
         {
             var values = c.News.ToList();
@@ -24,7 +25,9 @@ namespace test.Controllers
 
 
 
+
         //Product Admin Page
+
         public ActionResult Product()
         {
             var values = c.Products.ToList();
@@ -32,8 +35,39 @@ namespace test.Controllers
         }
 
 
-        //News Admin HTTP
+        
+        //Service Admin Page
 
+        public ActionResult Service()
+        {
+            var values = c.Services.ToList();
+            return View(values);
+        }
+        
+
+
+        //Collaboration Admin Page
+
+        public ActionResult Collaboration()
+        {
+            var values = c.Collaborations.ToList();
+            return View(values);
+        }
+
+
+
+         //Project Admin Page
+
+        public ActionResult Project()
+        {
+            var values = c.Projects.ToList();
+            return View(values);
+        }
+
+
+
+        //News Admin HTTP
+        //*************************************************************
         [HttpGet]
         public ActionResult CreateNew()
         {
@@ -82,7 +116,7 @@ namespace test.Controllers
 
 
 
-
+        //************************************************************
 
 
         //Product Admin HTTP
@@ -175,7 +209,152 @@ namespace test.Controllers
             return RedirectToAction("Product");
         }
 
+        //*************************************************************
 
 
+
+  //Service Admin HTTP
+
+        [HttpGet]
+        public ActionResult CreateService()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreateService(Service s)
+        {
+            c.Services.Add(s);
+            c.SaveChanges();
+
+            return RedirectToAction("Service");
+        }
+
+
+        public ActionResult DeleteService(int id)
+        {
+            var s = c.Services.Find(id);
+            c.Services.Remove(s);
+            c.SaveChanges();
+
+            return RedirectToAction("Service");
+        }
+
+        
+
+        public ActionResult bringService(int id)
+        {
+            var s = c.Services.Find(id);
+
+            return View("bringService", s);
+        }
+
+        public ActionResult UpdateService(Service serv)
+        {
+            var s = c.Services.Find(serv.id);
+            s.title = serv.title;      
+            s.content = serv.content;
+            s.photoUrl = serv.photoUrl;
+            c.SaveChanges();
+
+
+            return RedirectToAction("Service");
+        }
+        //*************************************************************
+ //Coll Admin HTTP
+
+        [HttpGet]
+        public ActionResult CreateColl()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreateColl(Collaboration col)
+        {
+            c.Collaborations.Add(col);
+            c.SaveChanges();
+
+            return RedirectToAction("Collaboration");
+        }
+
+
+        public ActionResult DeleteColl(int id)
+        {
+            var col = c.Collaborations.Find(id);
+            c.Collaborations.Remove(col);
+            c.SaveChanges();
+
+            return RedirectToAction("Collaboration");
+        }
+
+        public ActionResult bringColl(int id)
+        {
+            var col = c.Collaborations.Find(id);
+
+            return View("bringColl", col);
+        }
+
+        public ActionResult UpdateColl(Collaboration colla)
+        {
+            var col = c.Collaborations.Find(colla.id);
+            col.title = colla.title;
+            col.content = colla.content;
+            col.photoUrl = colla.photoUrl;
+            c.SaveChanges();
+
+
+            return RedirectToAction("Collaboration");
+        }
+        //*************************************************************
+ //Project Admin HTTP
+
+        [HttpGet]
+        public ActionResult CreateProject()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreateProject(Project p)
+        {
+            c.Projects.Add(p);
+            c.SaveChanges();
+
+            return RedirectToAction("Project");
+        }
+
+
+        public ActionResult DeleteProject(int id)
+        {
+            var p = c.Projects.Find(id);
+            c.Projects.Remove(p);
+            c.SaveChanges();
+
+            return RedirectToAction("Project");
+        }
+
+        public ActionResult bringProject(int id)
+        {
+            var p = c.Projects.Find(id);
+
+            return View("bringProject", p);
+        }
+
+        public ActionResult UpdateProject(Project pro)
+        {
+            var p = c.Projects.Find(pro.id);
+            p.title = pro.title;
+            p.content = pro.content;
+            p.photoUrl = pro.photoUrl;
+            c.SaveChanges();
+
+
+            return RedirectToAction("Project");
+        }
+        //*************************************************************
     }
 }
