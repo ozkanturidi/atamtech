@@ -26,30 +26,31 @@
 <body>
     <!--header-->
     <header id="site-header" class="fixed-top nav-fixed">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg stroke">
-                <div id="headerMenuTop" class="container-fluid fixed-top">
-                    <div class="container">
-                        <div class="row w-100 mx-auto">
-                            <div class="headerMenuTopContact">
-                                <ul class="list-inline">
-                                    <li class="list-inline-item"><a href="tel:+7 812 363-33-87"><i class="fa fa-phone"></i> +7 812 363-33-87</a></li>
-                                    <li class="list-inline-item"><a href="@Url.Action("Contact","Home")"><i class="far fa-envelope"></i> info@atamtechnology.com</a></li>
-                                </ul>
-                            </div>
-                        </div>
+        <div id="headerMenuTop" class="container-fluid fixed-top">
+            <div class="container">
+                <div class="row w-100 mx-auto">
+                    <div class="headerMenuTopContact">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="tel:+7 812 363-33-87"><i class="fa fa-phone"></i> +7 812 363-33-87</a></li>
+                            <li class="list-inline-item"><a href="@Url.Action("Contact","Home")"><i class="far fa-envelope"></i> info@atamtechnology.com</a></li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
                 <div id="headerMenuBottom" class="container mt-lg-4">
-                    <h1>
-                        <a class="navbar-brand d-flex align-items-center" href="index.html">
-                            <i class="fas fa-space-shuttle"></i><span class="appname">Atam</span>Tech
-                        </a>
-                    </h1>
-                    <!-- if logo is image enable this
-                    <a class="navbar-brand" href="#index.html">
-                        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-                    </a> -->
+                    <!--
+                 <h1>
+                     <a class="navbar-brand d-flex align-items-center" href="index.html">
+                         <i class="fas fa-space-shuttle"></i><span class="appname">Atam</span>Tech
+                     </a>
+                 </h1>
+                -->
+                    <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                        <img src="~/Style/images/ATAM_TECH_NORMAL_1080x350.png" alt="Your logo" title="Your logo" style="height:45px;" />
+                    </a>
                     <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
                             data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -91,6 +92,9 @@
     <section class="content-12-main">
         <div class="content-12 text-left py-5">
             <div class="container py-md-5 py-5">
+                <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:500px;">
+                    <h3 class="title-style">Our Projects</h3>
+                </div>
                 <div class="content-info-tabs text-center">
                     <input id="tab1" type="radio" name="tabs">
                     <label class="tabtle" for="tab1">PAST</label>
@@ -117,7 +121,6 @@
                         </div>
                     </section>
                     <!--past-->
-
                     <!--ongoing-->
                     <section id="content2" class="tab-content">
                         <div class="row content12 align-items-center">
@@ -130,7 +133,7 @@
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
                                     consequuntur
                                     ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
-                                    consequuntur                                    
+                                    consequuntur
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
                                     consequuntur
                                     ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
@@ -145,7 +148,6 @@
                         </div>
                     </section>
                     <!--ongoing-->
-
                     <!--future-->
                     <section id="content3" class="tab-content">
                         <div class="row content12 align-items-center">
@@ -156,7 +158,7 @@
                                     aperiam
                                     sequi optio consectetur.Ea consequuntur illum facere aperiam sequi optio consectetur
                                     adipisicing elitFuga, suscipit totam animi consequatur saepe blanditiis.
-                                </p>                               
+                                </p>
                             </div>
                             <div class="col-lg-6 column mt-lg-0 mt-4">
                                 <img src="~/Style/images/about.jpg" class="img-fluid radius-image" alt="">
@@ -169,11 +171,21 @@
         </div>
     </section>
     <!-- //content-6-section -->
+
+    <section class="logo-section py-0">
+        <div class="container py-md-3 py-0">
+            <div class="d-inline-block w-100">
+                <div class="py-3 float-left" style=" width: 50%;"><a href="https://www.eiturbanmobility.eu"><img style="max-width: 180px; width: 90%;" src="https://www.eiturbanmobility.eu/wp-content/uploads/2019/05/logo-EIT-Urban-Mobility.svg" /></a> </div>
+                <div class="py-3 float-right" style=" width: 50%;"><a href="https://europa.eu/european-union/index_en"><img style="max-width: 180px; width: 90%; float: right;" src="~/Style/images/Co-Funded_by_the_EU_logo_ok.png" /></a> </div>
+            </div>
+        </div>
+    </section>
+
     <!-- footer -->
-    <footer class="footer py-5">
-        <div class="container py-md-5 py-4">
+    <footer class="footer py-3">
+        <div class="container py-md-4 py-3">
             <div class="row sub-columns">
-                <div class="col-lg-4 col-sm-6 sub-one-left">
+                <div class="col-lg-3 col-sm-6 pl-lg-5 sub-one-left">
                     <h6>Our Services</h6>
                     <ul>
                         <li>

@@ -157,42 +157,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Style\css\contact.css" />
     <Content Include="Style\css\fontawesome-all.min.css" />
     <Content Include="Style\css\style.css" />
     <Content Include="Style\images\1.jpg" />
     <Content Include="Style\images\about.jpg" />
-    <Content Include="Style\images\about1.jpg" />
-    <Content Include="Style\images\about2.jpg" />
-    <Content Include="Style\images\about3.jpg" />
+    <Content Include="Style\images\ATAM_TECH_NORMAL_1080x350.png" />
     <Content Include="Style\images\banner.jpg" />
-    <Content Include="Style\images\bg2.jpg" />
+    <Content Include="Style\images\banner2.jpg" />
     <Content Include="Style\images\bg3.jpg" />
     <Content Include="Style\images\blog3.jpg" />
     <Content Include="Style\images\blog6.jpg" />
+    <Content Include="Style\images\Co-Funded_by_the_EU_logo_ok.png" />
     <Content Include="Style\images\fixar007_1.png" />
     <Content Include="Style\images\fixar007_2.png" />
     <Content Include="Style\images\img.jpg" />
     <Content Include="Style\images\img2.jpg" />
-    <Content Include="Style\images\inner-banner.jpg" />
-    <Content Include="Style\images\logo1.png" />
-    <Content Include="Style\images\logo2.png" />
-    <Content Include="Style\images\logo3.png" />
-    <Content Include="Style\images\logo4.png" />
-    <Content Include="Style\images\logo5.png" />
-    <Content Include="Style\images\s1.jpg" />
-    <Content Include="Style\images\s2.jpg" />
-    <Content Include="Style\images\s3.jpg" />
-    <Content Include="Style\images\s4.jpg" />
-    <Content Include="Style\images\s5.jpg" />
-    <Content Include="Style\images\s6.jpg" />
-    <Content Include="Style\images\team1.jpg" />
-    <Content Include="Style\images\team2.jpg" />
-    <Content Include="Style\images\team3.jpg" />
-    <Content Include="Style\images\team4.jpg" />
-    <Content Include="Style\images\testi1.jpg" />
-    <Content Include="Style\images\testi2.jpg" />
-    <Content Include="Style\images\testi3.jpg" />
     <Content Include="Style\js\bootstrap.min.js" />
     <Content Include="Style\js\jquery-3.3.1.min.js" />
     <Content Include="Style\js\jquery.magnific-popup.min.js" />
@@ -266,6 +245,7 @@
     <Content Include="Views\Project\ProjectDetails.cshtml" />
     <Content Include="Views\Collaboration\ColDetails.cshtml" />
     <Content Include="Views\Collaboration\Collist.cshtml" />
+
     <Content Include="Views\Admin\Service.cshtml" />
     <Content Include="Views\Admin\bringService.cshtml" />
     <Content Include="Views\Admin\CreateService.cshtml" />
@@ -275,6 +255,7 @@
     <Content Include="Views\Admin\Project.cshtml" />
     <Content Include="Views\Admin\CreateProject.cshtml" />
     <Content Include="Views\Admin\bringProject.cshtml" />
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
