@@ -5190,7 +5190,7 @@ input[type="button"].btn-block {
     .owl-controls .owl-prev:after, .owl-controls .owl-next:after {
         content: '\f104';
         font-family: FontAwesome;
-        color: #fff;
+        color: #d42c24;
         font-size: 35px;
     }
 
@@ -5199,7 +5199,7 @@ input[type="button"].btn-block {
     }
 
     .owl-controls .owl-prev:hover, .owl-controls .owl-next:hover {
-        background: rgba(159,173,189,0.1);
+        background: rgba(36,52,132,0.2);
     }
 
 @media only screen and (max-width: 1199.98px){
