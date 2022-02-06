@@ -24,30 +24,32 @@
 <body>
     <!--header-->
     <header id="site-header" class="fixed-top nav-fixed">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg stroke">
-                <div id="headerMenuTop" class="container-fluid fixed-top">
-                    <div class="container">
-                        <div class="row w-100 mx-auto">
-                            <div class="headerMenuTopContact">
-                                <ul class="list-inline">
-                                    <li class="list-inline-item"><a href="tel:+7 812 363-33-87"><i class="fa fa-phone"></i> +7 812 363-33-87</a></li>
-                                    <li class="list-inline-item"><a href="@Url.Action("Contact","Home")"><i class="far fa-envelope"></i> info@atamtechnology.com</a></li>
-                                </ul>
-                            </div>
-                        </div>
+        <div id="headerMenuTop" class="container-fluid fixed-top">
+            <div class="container">
+                <div class="row w-100 mx-auto">
+                    <div class="headerMenuTopContact">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="tel:+7 812 363-33-87"><i class="fa fa-phone"></i> +7 812 363-33-87</a></li>
+                            <li class="list-inline-item"><a href="@Url.Action("Contact","Home")"><i class="far fa-envelope"></i> info@atamtechnology.com</a></li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
                 <div id="headerMenuBottom" class="container mt-lg-4">
-                    <h1>
-                        <a class="navbar-brand d-flex align-items-center" href="index.html">
-                            <i class="fas fa-space-shuttle"></i><span class="appname">Atam</span>Tech
-                        </a>
-                    </h1>
-                    <!-- if logo is image enable this
-                    <a class="navbar-brand" href="#index.html">
-                        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-                    </a> -->
+                    <!--
+                 <h1>
+                     <a class="navbar-brand d-flex align-items-center" href="index.html">
+                         <i class="fas fa-space-shuttle"></i><span class="appname">Atam</span>Tech
+                     </a>
+                 </h1>
+                -->
+                    <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                        <img src="~/Style/images/ATAM_TECH_NORMAL_1080x350.png" alt="Your logo" title="Your logo" style="height:45px;" />
+                    </a>
+
                     <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
                             data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -102,7 +104,7 @@
     {
         <!-- product details section -->
         <section class="product py-5" id="product">
-            <div class="container py-md-5 py-4">
+            <div class="container py-md-5 py-5">
                 <div class="row product-block">
 
 
@@ -115,14 +117,8 @@
                         </div>
                     </div>
 
-
                     <div class="col-md-5 ps-lg-5 mt-md-0 mt-5">
                         <div class="product-right">
-
-
-
-
-                           
 
                             <div class="d-flex contact-grid mt-2 pt-lg-2">
 
@@ -166,21 +162,30 @@
                                 </div>
                             </div>
                         </div>
-
+                        <div class="col-lg-12 column mt-lg-0 mt-4">
+                            <img src="~/Style/images/fixar007_2.png" class="img-fluid radius-image" alt="">
+                        </div>
                     </div>
-                    };
+
                 </div>
             </div>
         </section>
-
-
     };
     <!-- product details section -->
+    <section class="logo-section py-0">
+        <div class="container py-md-3 py-0">
+            <div class="d-inline-block w-100">
+                <div class="py-3 float-left" style=" width: 50%;"><a href="https://www.eiturbanmobility.eu"><img style="max-width: 180px; width: 90%;" src="https://www.eiturbanmobility.eu/wp-content/uploads/2019/05/logo-EIT-Urban-Mobility.svg" /></a> </div>
+                <div class="py-3 float-right" style=" width: 50%;"><a href="https://europa.eu/european-union/index_en"><img style="max-width: 180px; width: 90%; float: right;" src="~/Style/images/Co-Funded_by_the_EU_logo_ok.png" /></a> </div>
+            </div>
+        </div>
+    </section>
+
     <!-- footer -->
-    <footer class="footer py-5">
-        <div class="container py-md-5 py-4">
+    <footer class="footer py-3">
+        <div class="container py-md-4 py-3">
             <div class="row sub-columns">
-                <div class="col-lg-4 col-sm-6 sub-one-left">
+                <div class="col-lg-3 col-sm-6 pl-lg-5 sub-one-left">
                     <h6>Our Services</h6>
                     <ul>
                         <li>
@@ -206,7 +211,7 @@
                     </ul>
 
                 </div>
-                <div class="col-lg-2 col-sm-6 sub-two-right mt-lg-0 mt-sm-5 mt-2">
+                <div class="col-lg-2 col-sm-6 sub-two-right mt-lg-0 mt-sm-5 mt-4">
                     <h6>Help & Support</h6>
                     <ul>
                         <li>
