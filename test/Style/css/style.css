@@ -5057,17 +5057,18 @@ input[type="button"].btn-block {
     display: block;
     position: absolute;
     text-align: center;
-    background: #26ccca;
-    left: -80px;
-    top: 15px;
+    background: #d42c24;
+    left: -20px;
+    top: -20px;
     padding: 10px;
     transition: .5s;
+    border-radius: 8px 0px;
 }
 
     .news-grid-box h1 {
-        color: #fff;
+        color: #243484;
         font-size: 30px;
-        font-weight: 400;
+        font-weight: 600;
         letter-spacing: 2px;
         padding-bottom: 5px;
         border-bottom: 1px solid rgba(255, 255, 255, .3);
@@ -11619,7 +11620,7 @@ h3.title-main-2 {
     min-height: 100vh;
     position: relative;
     z-index: 1;
-    background: url(../images/banner.jpg) no-repeat center;
+    background:no-repeat center;
 }
 
     .banner:before {
@@ -11631,12 +11632,6 @@ h3.title-main-2 {
         z-index: -1;
         top: 0;
     }
-
-@media (min-width: 992px) {
-    .banner {
-        background: url(../images/banner2.jpg) no-repeat center;
-    }
-}
 
 .banner .banner-layer {
     position: relative;

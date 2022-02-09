@@ -87,7 +87,7 @@
     </header>
     <!--//header-->
     <!-- banner section -->
-    <section class="banner">
+    <section class="banner" style="background-image:url(/Style/images/banner.jpg)">
         <div class="banner-layer">
 
             <!-- if bg is a video enable this
@@ -119,7 +119,6 @@
                     <!-- 1 -->
                     @foreach (var item in Model.Value1)
                     {
-
                         <div class="news-grid">
                             <div class="news-grid-image">
                                 <img src="@item.fotoUrl" alt="">
@@ -131,11 +130,101 @@
                                 </ul>
                                 <p>@item.content.Substring(0, 60)</p>
                                 <a href="/News/NewsDetail/@item.id">Read More</a>
+
                             </div>
                         </div>
+                    }
+                    @foreach (var item in Model.Value1)
+                    {
+                        <div class="news-grid">
+                            <div class="news-grid-image">
+                                <img src="@item.fotoUrl" alt="">
+                            </div>
+                            <div class="news-grid-txt">
+                                <h2>@item.title</h2>
+                                <ul>
+                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
+                                </ul>
+                                <p>@item.content.Substring(0, 60)</p>
+                                <a href="/News/NewsDetail/@item.id">Read More</a>
 
+                            </div>
+                        </div>
+                    }
+                    @foreach (var item in Model.Value1)
+                    {
+                        <div class="news-grid">
+                            <div class="news-grid-image">
+                                <img src="@item.fotoUrl" alt="">
+                            </div>
+                            <div class="news-grid-txt">
+                                <h2>@item.title</h2>
+                                <ul>
+                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
+                                </ul>
+                                <p>@item.content.Substring(0, 60)</p>
+                                <a href="/News/NewsDetail/@item.id">Read More</a>
+
+                            </div>
+                        </div>
+                    }
+                    @foreach (var item in Model.Value1)
+                    {
+                        <div class="news-grid">
+                            <div class="news-grid-image">
+                                <img src="@item.fotoUrl" alt="">
+                            </div>
+                            <div class="news-grid-txt">
+                                <h2>@item.title</h2>
+                                <ul>
+                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
+                                </ul>
+                                <p>@item.content.Substring(0, 60)</p>
+                                <a href="/News/NewsDetail/@item.id">Read More</a>
+
+                            </div>
+                        </div>
+                    }
+                    @foreach (var item in Model.Value1)
+                    {
+                        <div class="news-grid">
+                            <div class="news-grid-image">
+                                <img src="@item.fotoUrl" alt="">
+                            </div>
+                            <div class="news-grid-txt">
+                                <h2>@item.title</h2>
+                                <ul>
+                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
+                                </ul>
+                                <p>@item.content.Substring(0, 60)</p>
+                                <a href="/News/NewsDetail/@item.id">Read More</a>
+
+                            </div>
+                        </div>
+                    }
+                    @foreach (var item in Model.Value1)
+                    {
+                        <div class="news-grid">
+                            <div class="news-grid-image">
+                                <img src="@item.fotoUrl" alt="">
+                            </div>
+                            <div class="news-grid-txt">
+                                <h2>@item.title</h2>
+                                <ul>
+                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
+                                </ul>
+                                <p>@item.content.Substring(0, 60)</p>
+                                <a href="/News/NewsDetail/@item.id">Read More</a>
+
+                            </div>
+                        </div>
                     }
 
+                </div>
+                <div class="text-center mt-sm-5 mt-4 pt-sm-0 pt-1">
+                    <a class="btn btn-style btn-style-secondary mt-sm-3" href="@Url.Action("NewsList", "News")">
+                        Browse More
+                    </a>
                 </div>
             </div>
         </div>
@@ -151,10 +240,9 @@
                 @foreach (var item in Model.Value2)
                 {
 
-
                     <div class="col-md-6 col-lg-4 d-flex align-items-center">
                         <div class="product-box product-box-clr-1">
-                            <img class="d-block img-responsive" src="@item.photoUrl" alt="product-img" />
+                            <a href="/Product/ProductDetails/@item.id"><img class="d-block img-responsive" src="@item.photoUrl" alt="product-img"></a>
                             <h4 class="title"><a href="/Product/ProductDetails/@item.id">@item.name</a></h4>
                             <p>The FIXAR 007 is a fully autonomous, VTOL (vertical take-off and landing) fixed-wing drone</p>
                         </div>
