@@ -119,106 +119,26 @@
                     <!-- 1 -->
                     @foreach (var item in Model.Value1)
                     {
+
                         <div class="news-grid">
                             <div class="news-grid-image">
-                                <img src="@item.fotoUrl" alt="">
+                                <a href="/News/NewsDetail/@item.id">
+    <img src="@item.fotoUrl" alt="">
+</a>
+                               
                             </div>
                             <div class="news-grid-txt">
                                 <h2>@item.title</h2>
                                 <ul>
                                     <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
                                 </ul>
-                                <p>@item.content.Substring(0, 60)</p>
+                                <p>@item.content.Substring(0, 60)...</p>
                                 <a href="/News/NewsDetail/@item.id">Read More</a>
 
                             </div>
                         </div>
                     }
-                    @foreach (var item in Model.Value1)
-                    {
-                        <div class="news-grid">
-                            <div class="news-grid-image">
-                                <img src="@item.fotoUrl" alt="">
-                            </div>
-                            <div class="news-grid-txt">
-                                <h2>@item.title</h2>
-                                <ul>
-                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
-                                </ul>
-                                <p>@item.content.Substring(0, 60)</p>
-                                <a href="/News/NewsDetail/@item.id">Read More</a>
-
-                            </div>
-                        </div>
-                    }
-                    @foreach (var item in Model.Value1)
-                    {
-                        <div class="news-grid">
-                            <div class="news-grid-image">
-                                <img src="@item.fotoUrl" alt="">
-                            </div>
-                            <div class="news-grid-txt">
-                                <h2>@item.title</h2>
-                                <ul>
-                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
-                                </ul>
-                                <p>@item.content.Substring(0, 60)</p>
-                                <a href="/News/NewsDetail/@item.id">Read More</a>
-
-                            </div>
-                        </div>
-                    }
-                    @foreach (var item in Model.Value1)
-                    {
-                        <div class="news-grid">
-                            <div class="news-grid-image">
-                                <img src="@item.fotoUrl" alt="">
-                            </div>
-                            <div class="news-grid-txt">
-                                <h2>@item.title</h2>
-                                <ul>
-                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
-                                </ul>
-                                <p>@item.content.Substring(0, 60)</p>
-                                <a href="/News/NewsDetail/@item.id">Read More</a>
-
-                            </div>
-                        </div>
-                    }
-                    @foreach (var item in Model.Value1)
-                    {
-                        <div class="news-grid">
-                            <div class="news-grid-image">
-                                <img src="@item.fotoUrl" alt="">
-                            </div>
-                            <div class="news-grid-txt">
-                                <h2>@item.title</h2>
-                                <ul>
-                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
-                                </ul>
-                                <p>@item.content.Substring(0, 60)</p>
-                                <a href="/News/NewsDetail/@item.id">Read More</a>
-
-                            </div>
-                        </div>
-                    }
-                    @foreach (var item in Model.Value1)
-                    {
-                        <div class="news-grid">
-                            <div class="news-grid-image">
-                                <img src="@item.fotoUrl" alt="">
-                            </div>
-                            <div class="news-grid-txt">
-                                <h2>@item.title</h2>
-                                <ul>
-                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
-                                </ul>
-                                <p>@item.content.Substring(0, 60)</p>
-                                <a href="/News/NewsDetail/@item.id">Read More</a>
-
-                            </div>
-                        </div>
-                    }
+                   
 
                 </div>
                 <div class="text-center mt-sm-5 mt-4 pt-sm-0 pt-1">
