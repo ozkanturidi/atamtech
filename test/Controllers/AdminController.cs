@@ -64,6 +64,11 @@ namespace test.Controllers
             return View(values);
         }
 
+        public ActionResult Contact()
+        {
+            var values = c.Contacts.ToList();
+            return View(values);
+        }
 
 
         //News Admin HTTP

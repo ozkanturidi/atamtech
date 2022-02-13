@@ -88,6 +88,11 @@
     </header>
     <!--//header-->
     <!-- inner banner -->
+
+    @foreach(var item in Model)
+            {
+
+            
     <section class="inner-banner py-5" style="background-image:url(/Style/images/fixar007_1.png)">
         <div class="breadcrumb py-lg-5">
             <div class="container pt-4 pb-sm-4">
@@ -99,6 +104,7 @@
             </div>
         </div>
     </section>
+    }
     <!-- //inner banner -->
     @foreach (var item in Model)
     {
@@ -162,9 +168,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-12 column mt-lg-0 mt-4">
-                            <img src="~/Style/images/fixar007_2.png" class="img-fluid radius-image" alt="">
-                        </div>
+                        
                     </div>
 
                 </div>

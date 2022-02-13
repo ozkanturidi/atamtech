@@ -1,0 +1,42 @@
+﻿@using test.Models
+@model List<Contact>
+@{
+    ViewBag.Title = "Project";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Contact List</h2>
+
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>NAME SURNAME</th>
+        <th>MAIL</th>
+        <th>MESSAGE</th>
+        <th>SUBJECT</th>
+
+       
+
+    </tr>
+
+    @foreach (var x in Model)
+    {
+<tr>
+
+    <td>@x.id</td>
+    <td>@x.nameSurname</td>
+    <td>@x.mail</td>
+    <td>@x.message</td>
+    <td>@x.subject</td>
+  
+    
+  
+
+</tr>
+    }
+
+
+
+</table>

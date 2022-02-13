@@ -88,13 +88,21 @@
     </header>
     <!--//header-->
     <!-- inner banner -->
+    @foreach (var item in Model.Value1)
+    {
+
+
     <section class="inner-banner py-5" style="background-image:url(/Style/images/fixar007_1.png)">
         <div class="breadcrumb py-lg-5">
             <div class="container pt-4 pb-sm-4">
-                <h4 class="inner-text-title pt-5">Aerial Photography</h4>
+            
+                <h4 class="inner-text-title pt-5">@item.title</h4>
+            
+                
             </div>
         </div>
     </section>
+
     <!-- //inner banner -->
     <!-- content-6-section -->
     <section class="content-12-main">
@@ -103,19 +111,11 @@
                 <div class="content-info-tabs text-center">
                     <div class="row content12 align-items-center">
                         <div class="col-lg-6 column mt-lg-0 mt-4">
-                            <img src="~/Style/images/blog3.jpg" class="img-fluid radius-image" alt="">
+                            <img src="@item.fotoUrl" class="img-fluid radius-image" alt="">
                         </div>
                         <div class="col-lg-6 column">
                             <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
-                                consequuntur
-                                ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
-                                consequuntur
-                                ducimus neque, harum eos eligendi maiores ex cum nobis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
-                                consequuntur
-                                ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
-                                consequuntur
-                                ducimus neque, harum eos eligendi maiores ex cum nobis.
+                               @item.content
                             </p>
                         </div>
 
@@ -159,9 +159,9 @@
                 <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-5">
                     <h6>Quick links</h6>
                     <ul>
-                        <li><a href="@Url.Action("Index","Home")"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
-                        <li><a href="@Url.Action("About","Home")"><span class="fas fa-angle-right mr-2"></span>About</a></li>
-                        <li><a href="@Url.Action("Contact","Home")"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
+                        <li><a href="@Url.Action("Index", "Home")"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
+                        <li><a href="@Url.Action("About", "Home")"><span class="fas fa-angle-right mr-2"></span>About</a></li>
+                        <li><a href="@Url.Action("Contact", "Home")"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
                     </ul>
 
                 </div>
@@ -220,6 +220,7 @@
             </div>
         </div>
     </footer>
+    }
     <!-- //footer -->
     <!-- Js scripts -->
     <!-- move top -->
