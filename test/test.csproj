@@ -137,6 +137,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Language\Localization.tr.Designer.cs">
+      <DependentUpon>Localization.tr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Language\Localization.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Localization.resx</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202201261400266_Initial.cs" />
     <Compile Include="Migrations\202201261400266_Initial.designer.cs">
       <DependentUpon>202201261400266_Initial.cs</DependentUpon>
@@ -250,7 +260,6 @@
     <Content Include="Views\Project\ProjectDetails.cshtml" />
     <Content Include="Views\Collaboration\ColDetails.cshtml" />
     <Content Include="Views\Collaboration\Collist.cshtml" />
-
     <Content Include="Views\Admin\Service.cshtml" />
     <Content Include="Views\Admin\bringService.cshtml" />
     <Content Include="Views\Admin\CreateService.cshtml" />
@@ -260,12 +269,9 @@
     <Content Include="Views\Admin\Project.cshtml" />
     <Content Include="Views\Admin\CreateProject.cshtml" />
     <Content Include="Views\Admin\bringProject.cshtml" />
-
     <Content Include="weblogin Tema\fonts\Asap-Regular.ttf" />
     <Content Include="weblogin Tema\fonts\Audiowide-Regular.ttf" />
     <Content Include="Views\Login\Login.cshtml" />
-
-
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -284,6 +290,14 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Language\Localization.tr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Localization.tr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language\Localization.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202201261400266_Initial.resx">
       <DependentUpon>202201261400266_Initial.cs</DependentUpon>
     </EmbeddedResource>
