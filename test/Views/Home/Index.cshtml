@@ -7,8 +7,24 @@
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="Atam Technology">
+    <meta name="description" content="avrupa birliği tto projesi">
+    <meta name="keywords" content="drone, avrupa birliği, fixar007, fixar , urban air mobility, european union">
+    <meta name="robots" content="index, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="revisit-after" content="7 days">
+    <meta name="author" content="IKU ASIMOV HELLO WORLD">
+
+    @*@@if (lang == "en")
+        {
+        <meta name="language" content="English">
+        }
+        else
+        {
+        <meta name="language" content="Turkish">
+        }*@
+
     <!-- google-fonts -->
     <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
@@ -40,12 +56,12 @@
             <nav class="navbar navbar-expand-lg stroke">
                 <div id="headerMenuBottom" class="container mt-lg-4">
                     <!--
-                 <h1>
-                     <a class="navbar-brand d-flex align-items-center" href="index.html">
-                         <i class="fas fa-space-shuttle"></i><span class="appname">Atam</span>Tech
-                     </a>
-                 </h1>
-                -->
+                     <h1>
+                         <a class="navbar-brand d-flex align-items-center" href="index.html">
+                             <i class="fas fa-space-shuttle"></i><span class="appname">Atam</span>Tech
+                         </a>
+                     </h1>
+                    -->
                     <a class="navbar-brand" href="@Url.Action("Index", "Home")">
                         <img src="~/Style/images/ATAM_TECH_NORMAL_1080x350.png" alt="Your logo" title="Your logo" style="height:45px;" />
                     </a>
@@ -116,43 +132,50 @@
     </section>
     <!-- //banner section -->
     <!--news-->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div id="news-slider" class="owl-carousel">
-                    <!-- 1 -->
-                    @foreach (var item in Model.Value1)
-                    {
-
-                        <div class="news-grid">
-                            <div class="news-grid-image">
-                                <a href="/News/NewsDetail/@item.id">
-    <img src="@item.fotoUrl" alt="">
-</a>
-                               
-                            </div>
-                            <div class="news-grid-txt">
-                                <h2>@item.title</h2>
-                                <ul>
-                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
-                                </ul>
-                                <p>@item.content.Substring(0, 60)...</p>
-                                <a href="/News/NewsDetail/@item.id">Read More</a>
-
-                            </div>
-                        </div>
-                    }
-                   
-
+    <section class="news py-5" id="news">
+        <div class="container py-md-2 py-4">
+            <div class="row">
+                <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:500px;">
+                    <h3 class="title-style">Latest News</h3>
                 </div>
-                <div class="text-center mt-sm-5 mt-4 pt-sm-0 pt-1">
-                    <a class="btn btn-style btn-style-secondary mt-sm-3" href="@Url.Action("NewsList", "News")">
-                        Browse More
-                    </a>
+                <div class="col-lg-12">
+                    <div id="news-slider" class="owl-carousel">
+                        <!-- 1 -->
+                        @foreach (var item in Model.Value1)
+                        {
+
+                            <div class="news-grid">
+                                <div class="news-grid-image">
+                                    <a href="/News/NewsDetail/@item.id">
+                                        <img src="@item.fotoUrl" alt="">
+                                    </a>
+
+                                </div>
+                                <div class="news-grid-txt">
+                                    <div class="news-grid-txt-1">
+                                        <h2>@item.title</h2>
+                                        <ul>
+                                            <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
+                                        </ul>
+                                        <p>@item.content.Substring(0, 60)...</p>
+                                    </div>
+                                    <a href="/News/NewsDetail/@item.id">Read More</a>
+
+                                </div>
+                            </div>
+                        }
+
+
+                    </div>
+                    <div class="text-center mt-sm-3 mt-4 pt-sm-0 pt-1">
+                        <a class="btn btn-style btn-style-secondary mt-sm-3" href="@Url.Action("NewsList", "News")">
+                            Browse More
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!--news-->
     <!-- products block -->
     <section class="products py-5" id="features">

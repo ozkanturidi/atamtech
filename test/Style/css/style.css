@@ -5038,6 +5038,8 @@ input[type="button"].btn-block {
     overflow: hidden;
     border: 1px solid #ddd; /*box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.16);*/
     margin: 10px;
+    height:639px;
+
 }
 
 .news-grid-image {
@@ -5058,20 +5060,20 @@ input[type="button"].btn-block {
     position: absolute;
     text-align: center;
     background: #d42c24;
-    left: -20px;
+    left: -17px;
     top: -20px;
     padding: 10px;
     transition: .5s;
     border-radius: 8px 0px;
+    box-shadow:0 4px 4px 0 rgba(0, 0, 0, 0.50)
 }
 
     .news-grid-box h1 {
-        color: #243484;
+        color: #fff;
         font-size: 30px;
-        font-weight: 600;
+        font-weight: 400;
         letter-spacing: 2px;
-        padding-bottom: 5px;
-        border-bottom: 1px solid rgba(255, 255, 255, .3);
+        padding-bottom: 3px;
         margin-bottom: 5px;
     }
 
@@ -5099,9 +5101,13 @@ input[type="button"].btn-block {
         font-size: 20px;
         font-weight: 500;
         letter-spacing: 1px;
-        margin: 10px 0px 5px 0px;
+        margin: 10px 0px 12px 0px;
     }
-
+.news-grid-txt-1 {
+    height: 240px;
+    border-bottom: 2px solid #ececec;
+    margin-bottom:12px;
+}
     .news-grid-txt ul {
         padding: 0;
         margin: 0;
@@ -5130,7 +5136,6 @@ input[type="button"].btn-block {
         font-weight: 300;
         line-height: 170%;
         letter-spacing: 1.5px;
-        border-bottom: 1px solid #ececec;
         padding-bottom: 15px;
         margin-bottom: 25px;
     }
@@ -11084,7 +11089,7 @@ p.white {
 /* movetop styling */
 #movetop {
     position: fixed;
-    bottom: 90px;
+    bottom: 70px;
     right: 17px;
     z-index: 9;
     font-size: 16px;
@@ -12421,16 +12426,19 @@ a.popup-with-zoom-anim {
     border-radius: 8px;
 }
 
-.contact-block, .product-block {
+.contact-block, .product-block, .about-block {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.50);
     padding-bottom: 70px;
 }
+    .about-block{
+        padding:70px;
+    }
 
-.me-3 {
-    margin-right: 0.5rem !important;
-}
+    .me-3 {
+        margin-right: 0.5rem !important;
+    }
 
 .cont-left.text-center i , .product-left.text-center i {
     color: #2C3E50;
