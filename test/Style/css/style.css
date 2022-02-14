@@ -12366,7 +12366,7 @@ a.service-heading {
 .service-details {
     background: var(--bg-color);
     padding: 30px 15px 10px 15px;
-    height: 300px;
+    
 }
 
 a.popup-with-zoom-anim span {

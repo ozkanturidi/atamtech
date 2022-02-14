@@ -250,7 +250,6 @@
     <Content Include="Views\Project\ProjectDetails.cshtml" />
     <Content Include="Views\Collaboration\ColDetails.cshtml" />
     <Content Include="Views\Collaboration\Collist.cshtml" />
-
     <Content Include="Views\Admin\Service.cshtml" />
     <Content Include="Views\Admin\bringService.cshtml" />
     <Content Include="Views\Admin\CreateService.cshtml" />
@@ -260,12 +259,10 @@
     <Content Include="Views\Admin\Project.cshtml" />
     <Content Include="Views\Admin\CreateProject.cshtml" />
     <Content Include="Views\Admin\bringProject.cshtml" />
-
     <Content Include="weblogin Tema\fonts\Asap-Regular.ttf" />
     <Content Include="weblogin Tema\fonts\Audiowide-Regular.ttf" />
     <Content Include="Views\Login\Login.cshtml" />
-
-
+    <Content Include="Views\Admin\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
