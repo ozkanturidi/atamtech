@@ -107,17 +107,23 @@
     </header>
     <!--//header-->
     <!-- inner banner -->
+    @foreach (var item in Model)
+    {
+
+
+
     <section class="inner-banner py-5">
         <div class="breadcrumb py-lg-5">
             <div class="container pt-4 pb-sm-4">
-                <h4 class="inner-text-title pt-5">Aerial Photography</h4>
+                <h4 class="inner-text-title pt-5">@item.title</h4>
                 <ul class="breadcrumbs-custom-path">
                     <li><a href="@Url.Action("ServiceList", "Services")">Services</a></li>
-                    <li class="active"><i class="fas fa-angle-right"></i>Aerial Photography</li>
+                    <li class="active"><i class="fas fa-angle-right"></i>@item.title</li>
                 </ul>
             </div>
         </div>
     </section>
+    }
     <!-- //inner banner -->
     <!-- content-6-section -->
     <section class="content-12-main">
