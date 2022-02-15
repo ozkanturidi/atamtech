@@ -60,7 +60,7 @@
                     <div class="collapse navbar-collapse" id="navbarToggler">
                         <ul class="navbar-nav ml-lg-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="@Url.Action("Index", "Home")">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="@Url.Action("Index", "Home")">@test.Language.Localization.Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("ProductList", "Product")">@test.Language.Localization.Products</a>
@@ -72,7 +72,7 @@
                                 <a class="nav-link" href="@Url.Action("Collist", "Collaboration")">@test.Language.Localization.Collaborations</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("About","Home")">About</a>
+                                <a class="nav-link" href="@Url.Action("About","Home")">@test.Language.Localization.About</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("ServiceList", "Services")">@test.Language.Localization.Services</a>
@@ -81,10 +81,11 @@
                                 <a class="nav-link" href="@Url.Action("Contact","Home")">@test.Language.Localization.Contact</a>
                             </li>
                         <li class="nav-item">
-                                @Html.ActionLink("Local Language", "ChangeLanguage", "Home", new { selectedlanguage = "tr"}, new {@class = "btn btn-default"})
+                            
+                             @Html.ActionLink(" TR ", "ChangeLanguage", "Home", new { selectedlanguage = "tr" }, new { @class = "btn btn-default" }) 
                             </li>
                         <li class="nav-item">
-                                @Html.ActionLink("English Language", "ChangeLanguage", "Home", new { selectedlanguage = "en"}, new {@class = "btn btn-default"})
+                                @Html.ActionLink(" EN ", "ChangeLanguage", "Home", new { selectedlanguage = "en"}, new {@class = "btn btn-default"})
                             </li>
                         
                         </ul>
@@ -298,9 +299,9 @@
                 <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-5">
                     <h6>@test.Language.Localization.Quick_links</h6>
                     <ul>
-                        <li><a href="@Url.Action("Index","Home")"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
-                        <li><a href="@Url.Action("About","Home")"><span class="fas fa-angle-right mr-2"></span>About</a></li>
-                        <li><a href="@Url.Action("Contact","Home")"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
+                        <li><a href="@Url.Action("Index","Home")"><span class="fas fa-angle-right mr-2"></span>@test.Language.Localization.Home</a></li>
+                        <li><a href="@Url.Action("About","Home")"><span class="fas fa-angle-right mr-2"></span>@test.Language.Localization.About</a></li>
+                        <li><a href="@Url.Action("Contact","Home")"><span class="fas fa-angle-right mr-2"></span>@test.Language.Localization.Contact</a></li>
                     </ul>
 
                 </div>

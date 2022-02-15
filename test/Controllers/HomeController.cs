@@ -13,8 +13,11 @@ namespace test.Controllers
 
     public class HomeController : Controller
     {
+        string lang;
         public ActionResult ChangeLanguage(string selectedlanguage)
         {
+
+
             if(selectedlanguage != null)
             {
                 Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(selectedlanguage);
@@ -22,6 +25,7 @@ namespace test.Controllers
                 var cookie = new HttpCookie("Language");
                 cookie.Value = selectedlanguage;
                 Response.Cookies.Add(cookie);
+                lang = selectedlanguage;
             }
             return RedirectToAction("Index", "Home");
 
@@ -36,11 +40,11 @@ namespace test.Controllers
 
         ProductandNew pn = new ProductandNew();
         public ActionResult Index()
-        {
-            pn.Value1 = c.News.ToList();
-            pn.Value2 = c.Products.ToList();
+        {           
+                pn.Value1 = c.News.ToList();
+                pn.Value2 = c.Products.ToList();
 
-
+                 
             return View(pn);
         }
 

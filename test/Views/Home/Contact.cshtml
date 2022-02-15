@@ -57,25 +57,25 @@
                     <div class="collapse navbar-collapse" id="navbarToggler">
                         <ul class="navbar-nav ml-lg-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("Index", "Home")">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="@Url.Action("Index", "Home")">@test.Language.Localization.Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("ProductList", "Product")">Products</a>
+                                <a class="nav-link" href="@Url.Action("ProductList", "Product")">@test.Language.Localization.Products</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("ProjectList", "Project")">Projects</a>
+                                <a class="nav-link" href="@Url.Action("ProjectList", "Project")">@test.Language.Localization.Projects</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("Collist", "Collaboration")">Collaborations</a>
+                                <a class="nav-link" href="@Url.Action("Collist", "Collaboration")">@test.Language.Localization.Collaborations</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("About","Home")">About</a>
+                                <a class="nav-link" href="@Url.Action("About","Home")">@test.Language.Localization.About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("ServiceList", "Services")">Services</a>
+                                <a class="nav-link" href="@Url.Action("ServiceList", "Services")">@test.Language.Localization.Services</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="@Url.Action("Contact","Home")">Contact</a>
+                                <a class="nav-link" href="@Url.Action("Contact","Home")">@test.Language.Localization.Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -88,32 +88,32 @@
     <section class="contact py-5" id="contact">
         <div class="container py-md-5 py-5">
             <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:500px;">
-                <h3 class="title-style">Contact Us</h3>
+                <h3 class="title-style">@test.Language.Localization.Contact_Us</h3>
             </div>
             <div class="row contact-block">
                 <div class="col-md-7 contact-left">
-                    <h5>You can send a message to us.</h5>
+                    <h5>@test.Language.Localization.You_can</h5>
                     <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="signin-form">
                         <div class="input-grids">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <input type="text" name="nameSurname" id="Name" placeholder="Your Name"
+                                    <input type="text" name="nameSurname" id="Name" placeholder="@test.Language.Localization.Your_Name"
                                            class="contact-input" required="" />
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="email" name="mail" id="Sender" placeholder="Your Email"
+                                    <input type="email" name="mail" id="Sender" placeholder="@test.Language.Localization.Your_Email"
                                            class="contact-input" required="" />
                                 </div>
                             </div>
-                            <input type="text" name="subject" id="Subject" placeholder="Subject"
+                            <input type="text" name="subject" id="Subject" placeholder="@test.Language.Localization.Subject"
                                    class="contact-input" required="" />
                         </div>
                         <div class="form-input">
-                            <textarea name="message" id="Message" placeholder="Type your message here"
+                            <textarea name="message" id="Message" placeholder="@test.Language.Localization.Type"
                                       required=""></textarea>
                         </div>
                         <div class="text-start">
-                            <button class="btn btn-style btn-style-secondary btn-style-3">Send Message</button>
+                            <button class="btn btn-style btn-style-secondary btn-style-3">@test.Language.Localization.Send_Message</button>
                         </div>
                     </form>
                 </div>
@@ -131,7 +131,7 @@
                                     <i class="fas fa-building"></i>
                                 </div>
                                 <div class="cont-right">
-                                    <h6>Company Address</h6>
+                                    <h6>@test.Language.Localization.Company_Address</h6>
                                     <p>Ataköy 7-8-9-10, E5 Karayolu Üzeri Ataköy Yerleşkesi, 34158 Bakırköy</p>
                                 </div>
                             </div>
@@ -140,7 +140,7 @@
                                     <i class="fas fa-phone-alt"></i>
                                 </div>
                                 <div class="cont-right">
-                                    <h6>Call Us</h6>
+                                    <h6>@test.Language.Localization.Call_Us</h6>
                                     <p><a href="tel:+1(21) 234 4567">+1(21) 112 7368</a></p>
                                 </div>
                             </div>
@@ -149,7 +149,7 @@
                                     <i class="fas fa-envelope-open-text"></i>
                                 </div>
                                 <div class="cont-right">
-                                    <h6>Email Us</h6>
+                                    <h6>@test.Language.Localization.Email_Us</h6>
                                     <p><a href="mailto:example@mail.com" class="mail">example@mail.com</a></p>
                                 </div>
                             </div>
@@ -174,7 +174,7 @@
         <div class="container py-md-4 py-3">
             <div class="row sub-columns">
                 <div class="col-lg-3 col-sm-6 pl-lg-5 sub-one-left">
-                    <h6>Our Services</h6>
+                    <h6>@test.Language.Localization.Our_Services</h6>
                     <ul>
                         <li>
                             <a href="services.html"><span class="fas fa-angle-right mr-2"></span>Website Designing</a>
@@ -191,16 +191,16 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-5">
-                    <h6>Quick links</h6>
+                    <h6>@test.Language.Localization.Quick_links</h6>
                     <ul>
-                        <li><a href="@Url.Action("Index","Home")"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
-                        <li><a href="@Url.Action("About","Home")"><span class="fas fa-angle-right mr-2"></span>About</a></li>
-                        <li><a href="@Url.Action("Contact","Home")"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
+                        <li><a href="@Url.Action("Index","Home")"><span class="fas fa-angle-right mr-2"></span>@test.Language.Localization.Home</a></li>
+                        <li><a href="@Url.Action("About","Home")"><span class="fas fa-angle-right mr-2"></span>@test.Language.Localization.About</a></li>
+                        <li><a href="@Url.Action("Contact","Home")"><span class="fas fa-angle-right mr-2"></span>@test.Language.Localization.Contact</a></li>
                     </ul>
 
                 </div>
                 <div class="col-lg-2 col-sm-6 sub-two-right mt-lg-0 mt-sm-5 mt-4">
-                    <h6>Help & Support</h6>
+                    <h6>@test.Language.Localization.Help_Support</h6>
                     <ul>
                         <li>
                             <a href="#faq"><span class="fas fa-angle-right mr-2"></span>Faq</a>

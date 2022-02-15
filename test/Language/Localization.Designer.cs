@@ -79,6 +79,15 @@ namespace test.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Call Us.
+        /// </summary>
+        public static string Call_Us {
+            get {
+                return ResourceManager.GetString("Call_Us", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Collaborations.
         /// </summary>
         public static string Collaborations {
@@ -88,11 +97,47 @@ namespace test.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Company Address.
+        /// </summary>
+        public static string Company_Address {
+            get {
+                return ResourceManager.GetString("Company_Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Contact.
         /// </summary>
         public static string Contact {
             get {
                 return ResourceManager.GetString("Contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact Us.
+        /// </summary>
+        public static string Contact_Us {
+            get {
+                return ResourceManager.GetString("Contact_Us", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email Us.
+        /// </summary>
+        public static string Email_Us {
+            get {
+                return ResourceManager.GetString("Email_Us", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FUTURE.
+        /// </summary>
+        public static string FUTURE {
+            get {
+                return ResourceManager.GetString("FUTURE", resourceCulture);
             }
         }
         
@@ -115,6 +160,24 @@ namespace test.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ONGOING.
+        /// </summary>
+        public static string ONGOING {
+            get {
+                return ResourceManager.GetString("ONGOING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Our Collaborations.
+        /// </summary>
+        public static string Our_Collaborations {
+            get {
+                return ResourceManager.GetString("Our_Collaborations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Our Products.
         /// </summary>
         public static string Our_Products {
@@ -124,11 +187,29 @@ namespace test.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Our Projects.
+        /// </summary>
+        public static string Our_Projects {
+            get {
+                return ResourceManager.GetString("Our_Projects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to OUR SERVICES.
         /// </summary>
         public static string Our_Services {
             get {
                 return ResourceManager.GetString("Our_Services", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PAST.
+        /// </summary>
+        public static string PAST {
+            get {
+                return ResourceManager.GetString("PAST", resourceCulture);
             }
         }
         
@@ -169,11 +250,65 @@ namespace test.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Send Message.
+        /// </summary>
+        public static string Send_Message {
+            get {
+                return ResourceManager.GetString("Send_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Services.
         /// </summary>
         public static string Services {
             get {
                 return ResourceManager.GetString("Services", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subject.
+        /// </summary>
+        public static string Subject {
+            get {
+                return ResourceManager.GetString("Subject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type your message here.
+        /// </summary>
+        public static string Type {
+            get {
+                return ResourceManager.GetString("Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can send a message to us..
+        /// </summary>
+        public static string You_can {
+            get {
+                return ResourceManager.GetString("You_can", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your-Email.
+        /// </summary>
+        public static string Your_Email {
+            get {
+                return ResourceManager.GetString("Your_Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Name.
+        /// </summary>
+        public static string Your_Name {
+            get {
+                return ResourceManager.GetString("Your_Name", resourceCulture);
             }
         }
     }

@@ -123,11 +123,26 @@
   <data name="Browse_More" xml:space="preserve">
     <value>Browse More</value>
   </data>
+  <data name="Call_Us" xml:space="preserve">
+    <value>Call Us</value>
+  </data>
   <data name="Collaborations" xml:space="preserve">
     <value>Collaborations</value>
   </data>
+  <data name="Company_Address" xml:space="preserve">
+    <value>Company Address</value>
+  </data>
   <data name="Contact" xml:space="preserve">
     <value>Contact</value>
+  </data>
+  <data name="Contact_Us" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="Email_Us" xml:space="preserve">
+    <value>Email Us</value>
+  </data>
+  <data name="FUTURE" xml:space="preserve">
+    <value>FUTURE</value>
   </data>
   <data name="Help_Support" xml:space="preserve">
     <value>HELP&amp;SUPPORT</value>
@@ -135,11 +150,23 @@
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="ONGOING" xml:space="preserve">
+    <value>ONGOING</value>
+  </data>
+  <data name="Our_Collaborations" xml:space="preserve">
+    <value>Our Collaborations</value>
+  </data>
   <data name="Our_Products" xml:space="preserve">
     <value>Our Products</value>
   </data>
+  <data name="Our_Projects" xml:space="preserve">
+    <value>Our Projects</value>
+  </data>
   <data name="Our_Services" xml:space="preserve">
     <value>OUR SERVICES</value>
+  </data>
+  <data name="PAST" xml:space="preserve">
+    <value>PAST</value>
   </data>
   <data name="Products" xml:space="preserve">
     <value>Products</value>
@@ -153,7 +180,25 @@
   <data name="Read More" xml:space="preserve">
     <value>Read More</value>
   </data>
+  <data name="Send_Message" xml:space="preserve">
+    <value>Send Message</value>
+  </data>
   <data name="Services" xml:space="preserve">
     <value>Services</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type your message here</value>
+  </data>
+  <data name="Your_Email" xml:space="preserve">
+    <value>Your-Email</value>
+  </data>
+  <data name="Your_Name" xml:space="preserve">
+    <value>Your Name</value>
+  </data>
+  <data name="You_can" xml:space="preserve">
+    <value>You can send a message to us.</value>
   </data>
 </root>

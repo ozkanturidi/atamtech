@@ -123,11 +123,26 @@
   <data name="Browse_More" xml:space="preserve">
     <value>Daha Fazla</value>
   </data>
+  <data name="Call_Us" xml:space="preserve">
+    <value>Bizi Arayın</value>
+  </data>
   <data name="Collaborations" xml:space="preserve">
     <value>İşbirliklerimiz</value>
   </data>
+  <data name="Company_Address" xml:space="preserve">
+    <value>Şirket Adresi</value>
+  </data>
   <data name="Contact" xml:space="preserve">
     <value>İletişim</value>
+  </data>
+  <data name="Contact_Us" xml:space="preserve">
+    <value>Bize Ulaşın</value>
+  </data>
+  <data name="Email_Us" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="FUTURE" xml:space="preserve">
+    <value>GELECEK</value>
   </data>
   <data name="Help_Support" xml:space="preserve">
     <value>YARDIM&amp;DESTEK</value>
@@ -135,11 +150,23 @@
   <data name="Home" xml:space="preserve">
     <value>Anasayfa</value>
   </data>
+  <data name="ONGOING" xml:space="preserve">
+    <value>DEVAM EDEN</value>
+  </data>
+  <data name="Our_Collaborations" xml:space="preserve">
+    <value>İşbirliklerimiz</value>
+  </data>
   <data name="Our_Products" xml:space="preserve">
     <value>Ürünlerimiz</value>
   </data>
+  <data name="Our_Projects" xml:space="preserve">
+    <value>Projelerimiz</value>
+  </data>
   <data name="Our_Services" xml:space="preserve">
     <value>Hizmetlerimiz</value>
+  </data>
+  <data name="PAST" xml:space="preserve">
+    <value>GEÇMİŞ</value>
   </data>
   <data name="Products" xml:space="preserve">
     <value>Ürünler</value>
@@ -153,7 +180,25 @@
   <data name="Read More" xml:space="preserve">
     <value>Devamını Oku</value>
   </data>
+  <data name="Send_Message" xml:space="preserve">
+    <value>Bize Mesaj gönderin</value>
+  </data>
   <data name="Services" xml:space="preserve">
     <value>Hizmetler</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Konu</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Mesajınızı Buraya Giriniz.</value>
+  </data>
+  <data name="Your_Email" xml:space="preserve">
+    <value>E-posta adresiniz</value>
+  </data>
+  <data name="Your_Name" xml:space="preserve">
+    <value>İsminiz</value>
+  </data>
+  <data name="You_can" xml:space="preserve">
+    <value>Bize Mesaj Gönderebilirsiniz.</value>
   </data>
 </root>
