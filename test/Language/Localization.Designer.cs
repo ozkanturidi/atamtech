@@ -160,6 +160,15 @@ namespace test.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to News.
+        /// </summary>
+        public static string News {
+            get {
+                return ResourceManager.GetString("News", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ONGOING.
         /// </summary>
         public static string ONGOING {
@@ -223,7 +232,7 @@ namespace test.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to projects.
+        ///   Looks up a localized string similar to Projects.
         /// </summary>
         public static string Projects {
             get {

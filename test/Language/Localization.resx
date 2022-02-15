@@ -150,6 +150,9 @@
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="News" xml:space="preserve">
+    <value>News</value>
+  </data>
   <data name="ONGOING" xml:space="preserve">
     <value>ONGOING</value>
   </data>
@@ -172,7 +175,7 @@
     <value>Products</value>
   </data>
   <data name="Projects" xml:space="preserve">
-    <value>projects</value>
+    <value>Projects</value>
   </data>
   <data name="Quick_links" xml:space="preserve">
     <value>QUICK LINKS</value>
