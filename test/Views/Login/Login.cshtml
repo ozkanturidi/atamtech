@@ -27,6 +27,7 @@
             <div class="mail-form-agile">
                 @using (Html.BeginForm("Login", "Login", FormMethod.Post))
                 {
+                    @Html.AntiForgeryToken()
 
                     <input type="text" name="username" placeholder="User Name" required="" />
                     <input type="password" name="password" class="padding" placeholder="Password" required="" />

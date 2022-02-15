@@ -11,7 +11,7 @@ namespace test.Controllers
     {
         Context c = new Context();
 
-
+        [Route("ProductList")]
         public ActionResult ProductList()
         {
 
@@ -19,7 +19,7 @@ namespace test.Controllers
             return View(products);
         }
 
-
+        
         public ActionResult ProductDetails(int id)
         {
             var products = c.Products.ToList();

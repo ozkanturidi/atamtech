@@ -110,6 +110,7 @@
                 <div class="col-md-7 contact-left">
                     <h5>You can send a message to us.</h5>
                     <form action="/Home/Contact/" method="post" class="signin-form">
+                        @Html.AntiForgeryToken();
                         <div class="input-grids">
                             <div class="row">
                                 <div class="col-sm-6">
