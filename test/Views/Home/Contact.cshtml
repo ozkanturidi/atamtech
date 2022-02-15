@@ -93,6 +93,12 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="@Url.Action("Contact","Home")">@test.Language.Localization.Contact</a>
                             </li>
+                            <li class="nav-item">
+                                @Html.ActionLink(" TR ", "ChangeLanguage", "Home", new { selectedlanguage = "tr" }, new { @class = "btn nav-link" })
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink(" EN ", "ChangeLanguage", "Home", new { selectedlanguage = "en" }, new { @class = "btn nav-link" })
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -110,8 +116,9 @@
                 <div class="col-md-7 contact-left">
 
                     <h5>@test.Language.Localization.You_can</h5>
-                    <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="signin-form">
+                    <form action="/Home/Contact/" method="post" class="signin-form">
 
+                        @Html.AntiForgeryToken()
 
                         <div class="input-grids">
                             <div class="row">

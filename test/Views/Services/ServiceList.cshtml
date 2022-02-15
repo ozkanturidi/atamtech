@@ -96,6 +96,12 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Contact","Home")">@test.Language.Localization.Contact</a>
                             </li>
+                            <li class="nav-item">
+                                @Html.ActionLink(" TR ", "ChangeLanguage", "Home", new { selectedlanguage = "tr" }, new { @class = "btn nav-link" })
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink(" EN ", "ChangeLanguage", "Home", new { selectedlanguage = "en" }, new { @class = "btn nav-link" })
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -123,7 +129,7 @@
                     <div class="col-lg-4 col-md-6 item d-flex align-items-stretch">
                         <div class="card">
                             <div class="card-header p-0 position-relative border-0">
-                                <a href="services.html">
+                                <a href="/Services/ServiceDetails/@x.id">
                                     <img class="d-block img-responsive" src="@x.photoUrl" alt="card-image">
                                 </a>
                             </div>

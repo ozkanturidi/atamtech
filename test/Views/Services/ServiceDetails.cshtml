@@ -99,6 +99,12 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Contact","Home")">Contact</a>
                             </li>
+                            <li class="nav-item">
+                                @Html.ActionLink(" TR ", "ChangeLanguage", "Home", new { selectedlanguage = "tr" }, new { @class = "btn nav-link" })
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink(" EN ", "ChangeLanguage", "Home", new { selectedlanguage = "en" }, new { @class = "btn nav-link" })
+                            </li>
                         </ul>
                     </div>
                 </div>

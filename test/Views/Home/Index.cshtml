@@ -96,14 +96,13 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Contact","Home")">@test.Language.Localization.Contact</a>
                             </li>
-                        <li class="nav-item">
-                            
-                             @Html.ActionLink(" TR ", "ChangeLanguage", "Home", new { selectedlanguage = "tr" }, new { @class = "btn btn-default" }) 
+                            <li class="nav-item">
+                                @Html.ActionLink(" TR ", "ChangeLanguage", "Home", new { selectedlanguage = "tr" }, new { @class = "btn nav-link" })
                             </li>
-                        <li class="nav-item">
-                                @Html.ActionLink(" EN ", "ChangeLanguage", "Home", new { selectedlanguage = "en"}, new {@class = "btn btn-default"})
+                            <li class="nav-item">
+                                @Html.ActionLink(" EN ", "ChangeLanguage", "Home", new { selectedlanguage = "en" }, new { @class = "btn nav-link" })
                             </li>
-                        
+
                         </ul>
                     </div>
                 </div>
@@ -141,127 +140,48 @@
     </section>
     <!-- //banner section -->
     <!--news-->
-   <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div id="news-slider" class="owl-carousel">
-                    <!-- 1 -->
-                    @foreach (var item in Model.Value1)
-                    {
-                        <div class="news-grid">
-                            <div class="news-grid-image">
-                                <img src="@item.fotoUrl" alt="">
-                            </div>
-                            <div class="news-grid-txt">
-                                <h2>@item.title</h2>
-                                <ul>
-                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
-                                </ul>
-                                <p>@item.content.Substring(0, 60)</p>
-                                <a href="/News/NewsDetail/@item.id">@test.Language.Localization.Read_More</a>
-
-                            </div>
-                        </div>
-                    }
-                    @foreach (var item in Model.Value1)
-                    {
-                        <div class="news-grid">
-                            <div class="news-grid-image">
-                                <img src="@item.fotoUrl" alt="">
-                            </div>
-                            <div class="news-grid-txt">
-                                <h2>@item.title</h2>
-                                <ul>
-                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
-                                </ul>
-                                <p>@item.content.Substring(0, 60)</p>
-                                <a href="/News/NewsDetail/@item.id">@test.Language.Localization.Read_More</a>
-
-                            </div>
-                        </div>
-                    }
-                    @foreach (var item in Model.Value1)
-                    {
-                        <div class="news-grid">
-                            <div class="news-grid-image">
-                                <img src="@item.fotoUrl" alt="">
-                            </div>
-                            <div class="news-grid-txt">
-                                <h2>@item.title</h2>
-                                <ul>
-                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
-                                </ul>
-                                <p>@item.content.Substring(0, 60)</p>
-                                <a href="/News/NewsDetail/@item.id">@test.Language.Localization.Read_More</a>
-
-
-                                </div>
-                            </div>
-
-                        
-                    }
-                    @foreach (var item in Model.Value1)
-                    {
-                        <div class="news-grid">
-                            <div class="news-grid-image">
-                                <img src="@item.fotoUrl" alt="">
-                            </div>
-                            <div class="news-grid-txt">
-                                <h2>@item.title</h2>
-                                <ul>
-                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
-                                </ul>
-                                <p>@item.content.Substring(0, 60)</p>
-                                <a href="/News/NewsDetail/@item.id">@test.Language.Localization.Read_More</a>
-
-                            </div>
-                        </div>
-                    }
-                    @foreach (var item in Model.Value1)
-                    {
-                        <div class="news-grid">
-                            <div class="news-grid-image">
-                                <img src="@item.fotoUrl" alt="">
-                            </div>
-                            <div class="news-grid-txt">
-                                <h2>@item.title</h2>
-                                <ul>
-                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
-                                </ul>
-                                <p>@item.content.Substring(0, 60)</p>
-                                <a href="/News/NewsDetail/@item.id">@test.Language.Localization.Read_More</a>
-
-                            </div>
-                        </div>
-                    }
-                    @foreach (var item in Model.Value1)
-                    {
-                        <div class="news-grid">
-                            <div class="news-grid-image">
-                                <img src="@item.fotoUrl" alt="">
-                            </div>
-                            <div class="news-grid-txt">
-                                <h2>@item.title</h2>
-                                <ul>
-                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
-                                </ul>
-                                <p>@item.content.Substring(0, 60)</p>
-                                <a href="/News/NewsDetail/@item.id">@test.Language.Localization.Read_More</a>
-
-                            </div>
-                        </div>
-                    }
-
+    <section class="news py-5" id="news">
+        <div class="container py-md-2 py-4">
+            <div class="row">
+               <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:500px;">
+                    <h3 class="title-style">Latest News</h3>
                 </div>
-                <div class="text-center mt-sm-5 mt-4 pt-sm-0 pt-1">
-                    <a class="btn btn-style btn-style-secondary mt-sm-3" href="@Url.Action("NewsList", "News")">
-                        @test.Language.Localization.Browse_More
-                    </a>
+                    <div class="col-lg-12">
+                        <div id="news-slider" class="owl-carousel">
+                            <!-- 1 -->
+                            @foreach (var item in Model.Value1)
+                            {
+                                <div class="news-grid">
+                                    <div class="news-grid-image">
+                                        <a href="/News/NewsDetail/@item.id">
+                                        <img src="@item.fotoUrl" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="news-grid-txt">
+                                        <div class="news-grid-txt-1">
+                                            <h2>@item.title</h2>
+                                            <ul>
+                                                <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
+                                            </ul>
+                                            <p>@item.content.Substring(0, 60)...</p>
+                                            </div>
+                                            <a href="/News/NewsDetail/@item.id">@test.Language.Localization.Read_More</a>
 
+                                        </div>
+                                    </div>
+                            }
+
+
+                        </div>
+                        <div class="text-center mt-sm-3 mt-4 pt-sm-0 pt-1">
+                            <a class="btn btn-style btn-style-secondary mt-sm-3" href="@Url.Action("NewsList", "News")">
+                                @test.Language.Localization.Browse_More
+                            </a>
+                        </div>
+                    </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+</section>
     <!--news-->
     <!-- products block -->
     <section class="products py-5" id="features">
