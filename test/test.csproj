@@ -272,6 +272,11 @@
     <Content Include="weblogin Tema\fonts\Asap-Regular.ttf" />
     <Content Include="weblogin Tema\fonts\Audiowide-Regular.ttf" />
     <Content Include="Views\Login\Login.cshtml" />
+
+    <Content Include="Views\Admin\Contact.cshtml" />
+    <Content Include="Views\Admin\About.cshtml" />
+    <Content Include="Views\Admin\bringAbout.cshtml" />
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

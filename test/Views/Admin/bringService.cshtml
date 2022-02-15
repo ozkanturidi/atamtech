@@ -1,7 +1,7 @@
 ﻿@model test.Models.Service
 @{
     ViewBag.Title = "bringService";
-    
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <h2>Bring Service</h2>
@@ -16,14 +16,26 @@
     @Html.LabelFor(x => x.title)
     @Html.TextBoxFor(x => x.title, new { @class = "form-control" })
 
-   
+    @Html.LabelFor(x => x.servicedetail)
+    @Html.TextBoxFor(x => x.servicedetail, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.servicedetail2)
+    @Html.TextBoxFor(x => x.servicedetail2, new { @class = "form-control" })
+
+
     @Html.LabelFor(x => x.photoUrl)
     @Html.TextBoxFor(x => x.photoUrl, new { @class = "form-control" })
+    @Html.LabelFor(x => x.photoUrl2)
+    @Html.TextBoxFor(x => x.photoUrl2, new { @class = "form-control" })
+    @Html.LabelFor(x => x.photoUrl3)
+    @Html.TextBoxFor(x => x.photoUrl3, new { @class = "form-control" })
+
+
     <br />
     @Html.LabelFor(x => x.content)
     @Html.TextAreaFor(x => x.content, 15, 1, new { @class = "form-control" })
     <br />
-    <button class="btn btn-primary">Add New</button>
+    <button class="btn btn-success">Update</button>
 
 
 }

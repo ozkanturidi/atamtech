@@ -7,6 +7,7 @@ using test.Models;
 
 namespace test.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         Context c = new Context();
@@ -64,7 +65,18 @@ namespace test.Controllers
             return View(values);
         }
 
+        public ActionResult Contact()
+        {
+            var values = c.Contacts.ToList();
+            return View(values);
+        }
 
+
+        public ActionResult About()
+        {
+            var values = c.AboutUss.ToList();
+            return View(values);
+        }
 
         //News Admin HTTP
         //*************************************************************
@@ -356,5 +368,23 @@ namespace test.Controllers
             return RedirectToAction("Project");
         }
         //*************************************************************
+
+        public ActionResult bringAbout(int id)
+        {
+            var p = c.AboutUss.Find(id);
+
+            return View("bringAbout", p);
+        }
+        public ActionResult UpdateAbout(AboutUs about)
+        {
+            var p = c.AboutUss.Find(about.id);
+            p.aboutUs = about.aboutUs;
+            c.SaveChanges();
+
+
+            return RedirectToAction("Project");
+        }
+
+
     }
 }

@@ -31,6 +31,10 @@
     @Html.TextBoxFor(x => x.title, new { @class = "form-control" })
 
     <br />
+
+    @Html.Label("Banner")
+    @Html.TextBoxFor(x => x.photoUrl2, new { @class = "form-control" })
+    <br />
     @Html.LabelFor(x => x.content)
     @Html.TextBoxFor(x => x.content, new { @class = "form-control" })
 

@@ -8,8 +8,24 @@
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="Atam Technology">
+    <meta name="description" content="avrupa birliği tto projesi">
+    <meta name="keywords" content="drone, avrupa birliği, fixar007, fixar , urban air mobility, european union">
+    <meta name="robots" content="index, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="revisit-after" content="7 days">
+    <meta name="author" content="IKU ASIMOV HELLO WORLD">
+
+    @*@@if (lang == "en")
+        {
+        <meta name="language" content="English">
+        }
+        else
+        {
+        <meta name="language" content="Turkish">
+        }*@
+
     <!-- google-fonts -->
     <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
@@ -41,12 +57,12 @@
             <nav class="navbar navbar-expand-lg stroke">
                 <div id="headerMenuBottom" class="container mt-lg-4">
                     <!--
-                 <h1>
-                     <a class="navbar-brand d-flex align-items-center" href="index.html">
-                         <i class="fas fa-space-shuttle"></i><span class="appname">Atam</span>Tech
-                     </a>
-                 </h1>
-                -->
+                     <h1>
+                         <a class="navbar-brand d-flex align-items-center" href="index.html">
+                             <i class="fas fa-space-shuttle"></i><span class="appname">Atam</span>Tech
+                         </a>
+                     </h1>
+                    -->
                     <a class="navbar-brand" href="@Url.Action("Index", "Home")">
                         <img src="~/Style/images/ATAM_TECH_NORMAL_1080x350.png" alt="Your logo" title="Your logo" style="height:45px;" />
                     </a>
@@ -114,6 +130,10 @@
                             <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
                         </a> -->
                         <h4>Always Imagine Beyond Vision</h4>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                            consequuntur
+                        </p>
                     </div>
                 </div>
             </div>
@@ -121,7 +141,7 @@
     </section>
     <!-- //banner section -->
     <!--news-->
-    <div class="container">
+   <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div id="news-slider" class="owl-carousel">
@@ -174,7 +194,10 @@
                                 <p>@item.content.Substring(0, 60)</p>
                                 <a href="/News/NewsDetail/@item.id">@test.Language.Localization.Read_More</a>
 
+
+                                </div>
                             </div>
+
                         </div>
                     }
                     @foreach (var item in Model.Value1)
@@ -234,10 +257,11 @@
                     <a class="btn btn-style btn-style-secondary mt-sm-3" href="@Url.Action("NewsList", "News")">
                         @test.Language.Localization.Browse_More
                     </a>
+
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!--news-->
     <!-- products block -->
     <section class="products py-5" id="features">

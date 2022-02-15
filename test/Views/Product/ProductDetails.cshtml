@@ -7,8 +7,23 @@
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="Atam Technology">
+    <meta name="description" content="avrupa birliği tto projesi">
+    <meta name="keywords" content="drone, avrupa birliği, fixar007, fixar , urban air mobility, european union">
+    <meta name="robots" content="index, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="revisit-after" content="7 days">
+    <meta name="author" content="IKU ASIMOV HELLO WORLD">
+
+    @*@@if (lang == "en")
+        {
+        <meta name="language" content="English">
+        }
+        else
+        {
+        <meta name="language" content="Turkish">
+        }*@
     <!-- google-fonts -->
     <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
@@ -40,12 +55,12 @@
             <nav class="navbar navbar-expand-lg stroke">
                 <div id="headerMenuBottom" class="container mt-lg-4">
                     <!--
-                 <h1>
-                     <a class="navbar-brand d-flex align-items-center" href="index.html">
-                         <i class="fas fa-space-shuttle"></i><span class="appname">Atam</span>Tech
-                     </a>
-                 </h1>
-                -->
+                     <h1>
+                         <a class="navbar-brand d-flex align-items-center" href="index.html">
+                             <i class="fas fa-space-shuttle"></i><span class="appname">Atam</span>Tech
+                         </a>
+                     </h1>
+                    -->
                     <a class="navbar-brand" href="@Url.Action("Index", "Home")">
                         <img src="~/Style/images/ATAM_TECH_NORMAL_1080x350.png" alt="Your logo" title="Your logo" style="height:45px;" />
                     </a>
@@ -88,17 +103,24 @@
     </header>
     <!--//header-->
     <!-- inner banner -->
-    <section class="inner-banner py-5" style="background-image:url(/Style/images/fixar007_1.png)">
-        <div class="breadcrumb py-lg-5">
-            <div class="container pt-4 pb-sm-4">
-                <h4 class="inner-text-title pt-5">Fixar 007</h4>
-                <ul class="breadcrumbs-custom-path">
-                    <li><a href="@Url.Action("ProductList", "Product")">@test.Language.Localization.Products</a></li>
-                    <li class="active"><i class="fas fa-angle-right"></i>Fixar 007</li>
-                </ul>
+
+    @foreach (var item in Model)
+    {
+
+
+        <section class="inner-banner py-5" style="background-image:url(@item.photoUrl2)">
+            <div class="breadcrumb py-lg-5">
+                <div class="container pt-4 pb-sm-4">
+                    <h4 class="inner-text-title pt-5">Fixar 007</h4>
+                    <ul class="breadcrumbs-custom-path">
+                        <li><a href="@Url.Action("ProductList", "Product")">@test.Language.Localization.Products</a></li>
+                        <li class="active"><i class="fas fa-angle-right"></i>Fixar 007</li>
+                    </ul>
+                </div>
+
             </div>
-        </div>
-    </section>
+        </section>
+    }
     <!-- //inner banner -->
     @foreach (var item in Model)
     {
@@ -162,9 +184,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-12 column mt-lg-0 mt-4">
-                            <img src="~/Style/images/fixar007_2.png" class="img-fluid radius-image" alt="">
-                        </div>
+
                     </div>
 
                 </div>

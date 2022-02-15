@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 using test.Models;
@@ -39,37 +41,71 @@ namespace test.Controllers
         Context c = new Context();
 
         ProductandNew pn = new ProductandNew();
+        [Route("Home")]
+        [Route("")]
         public ActionResult Index()
-        {           
-                pn.Value1 = c.News.ToList();
-                pn.Value2 = c.Products.ToList();
+
+        {
+            pn.Value1 = c.News.OrderByDescending(x => x.id).Take(4).ToList();
+            pn.Value2 = c.Products.ToList();
+
 
                  
             return View(pn);
         }
-
+        [Route("About")]
+        [Route("Home/About")]
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            var about = c.AboutUss.ToList();
 
-            return View();
+            return View(about);
         }
         [HttpGet]
+        [Route("Contact")]
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            
 
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Contact(Contact cont)
         {
             c.Contacts.Add(cont);
             c.SaveChanges();
 
-
+            /*var name = Request["mail"];
+            Email(name);*/
+            
 
             return View();
         }
+
+
+      /*  public static void Email(string htmlString)
+        {
+            try
+            {
+                MailMessage message = new MailMessage();
+                SmtpClient smtp = new SmtpClient();
+                message.From = new MailAddress("FromMailAddress");
+                message.To.Add(new MailAddress("ToMailAddress"));
+                message.Subject = "Test";
+                message.IsBodyHtml = true; //to make message body as html  
+                message.Body = htmlString;
+                smtp.Port = 587;
+                smtp.Host = "smtp.gmail.com"; //for gmail host  
+                smtp.EnableSsl = true;
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = new NetworkCredential("FromMailAddress", "password");
+                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtp.Send(message);
+            }
+            catch (Exception) { }
+        }
+
+    */
     }
 }
