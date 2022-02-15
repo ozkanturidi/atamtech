@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using test.Models;
+using System.Globalization;
+using System.Threading;
 namespace test.Controllers
 {
     public class NewsController : Controller
@@ -12,9 +14,9 @@ namespace test.Controllers
         [Route("NewsList")]
         public ActionResult NewsList()
         {
-
-            var news = c.News.ToList();
-            return View(news);
+          
+                var news = c.News.ToList();
+                return View(news);
         }
         NewComment nc = new NewComment();
 
