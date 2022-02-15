@@ -13,7 +13,7 @@ namespace test.Controllers
     {
 
         Context c = new Context();
-        
+        [Route("CollaborationList")]
         public ActionResult ColList()
         {
             var col = c.Collaborations.ToList();

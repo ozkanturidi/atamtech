@@ -113,108 +113,35 @@
                     </h3>
                 </div>
             </div>
+          
+
+
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6 item">
-                    <div class="card">
-                        <div class="card-header p-0 position-relative border-0">
-                            <div class="news-grid-box">
-                                <h1>20</h1>
-                                <p>SEP</p>
+
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-4 col-md-6 item d-flex align-items-stretch" >
+                        <div class="card">
+                            <div class="card-header p-0 position-relative border-0">
+                                <div class="news-grid-box">
+                                    <h1>@item.date.ToString("dd")</h1>
+                                    <p>@item.date.ToString("MMM")</p>
+                                </div>
+                                <a href="services.html">
+                                    <img class="d-block img-responsive" src="@item.fotoUrl" alt="card-image">
+                                </a>
                             </div>
-                            <a href="services.html">
-                                <img class="d-block img-responsive" src="~/Style/images/about.jpg" alt="card-image">
-                            </a>
-                        </div>
-                        <div class="card-body service-details">
-                            <a href="services.html" class="service-heading">Website Designing</a>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque
-                                laudantium, totam rem aperiam
-                            </p>
+                            <div class="card-body service-details">
+                                <a href="/News/NewsDetail/@item.id" class="service-heading">@item.title</a>
+                                <p>
+                                   @item.content.Substring(0,75)...
+                                </p>
+                            </div>
                         </div>
                     </div>
+                }
                 </div>
-                <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
-                    <div class="card">
-                        <div class="card-header p-0 position-relative border-0">
-                            <a href="services.html">
-                                <img class="d-block img-responsive" src="~/Style/images/about.jpg" alt="card-image">
-                            </a>
-                        </div>
-                        <div class="card-body service-details">
-                            <a href="services.html" class="service-heading">Mobile Applications</a>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque
-                                laudantium, totam rem aperiam
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
-                    <div class="card">
-                        <div class="card-header p-0 position-relative border-0">
-                            <a href="services.html">
-                                <img class="d-block img-responsive" src="assets/images/s6.jpg" alt="card-image">
-                            </a>
-                        </div>
-                        <div class="card-body service-details">
-                            <a href="services.html" class="service-heading">Digital Marketing</a>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque
-                                laudantium, totam rem aperiam
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 item mt-lg-5 mt-4">
-                    <div class="card">
-                        <div class="card-header p-0 position-relative border-0">
-                            <a href="services.html">
-                                <img class="d-block img-responsive" src="assets/images/s1.jpg" alt="card-image">
-                            </a>
-                        </div>
-                        <div class="card-body service-details">
-                            <a href="services.html" class="service-heading">Marketing Services</a>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque
-                                laudantium, totam rem aperiam
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
-                    <div class="card">
-                        <div class="card-header p-0 position-relative border-0">
-                            <a href="services.html">
-                                <img class="d-block img-responsive" src="assets/images/s2.jpg" alt="card-image">
-                            </a>
-                        </div>
-                        <div class="card-body service-details">
-                            <a href="services.html" class="service-heading">Corporate Business</a>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque
-                                laudantium, totam rem aperiam
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
-                    <div class="card">
-                        <div class="card-header p-0 position-relative border-0">
-                            <a href="services.html">
-                                <img class="d-block img-responsive" src="assets/images/s3.jpg" alt="card-image">
-                            </a>
-                        </div>
-                        <div class="card-body service-details">
-                            <a href="services.html" class="service-heading">Creative Design</a>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus sit accusantium doloremque
-                                laudantium, totam rem aperiam
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
     <!-- //services section -->
@@ -383,12 +310,3 @@
 
 
 
-@foreach (var item in Model)
-{
-    <img src="@item.fotoUrl" style="margin-bottom:20px" width="300px" height="300px" />
-
-    <a href="/News/NewsDetail/@item.id">@item.title</a>
-    <h2>@item.content</h2>
-
-
-}

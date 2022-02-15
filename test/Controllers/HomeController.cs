@@ -17,29 +17,34 @@ namespace test.Controllers
         Context c = new Context();
 
         ProductandNew pn = new ProductandNew();
+        [Route("Home")]
+        [Route("")]
         public ActionResult Index()
         {
-            pn.Value1 = c.News.ToList();
+            pn.Value1 = c.News.OrderByDescending(x => x.id).Take(4).ToList();
             pn.Value2 = c.Products.ToList();
 
 
             return View(pn);
         }
-
+        [Route("About")]
+        [Route("Home/About")]
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            var about = c.AboutUss.ToList();
 
-            return View();
+            return View(about);
         }
         [HttpGet]
+        [Route("Contact")]
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            
 
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Contact(Contact cont)
         {
             c.Contacts.Add(cont);

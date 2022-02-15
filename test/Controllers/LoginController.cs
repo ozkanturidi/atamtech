@@ -12,11 +12,13 @@ namespace test.Controllers
         // GET: Login
 
         Context c = new Context();
+        
         public ActionResult Login()
         {
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Login(Admin ad)
         {
 

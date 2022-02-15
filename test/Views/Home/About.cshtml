@@ -1,4 +1,8 @@
-﻿@{ Layout = null;}
+﻿@using test.Models
+
+@model List<AboutUs> 
+
+@{ Layout = null;}
 
 <!doctype html>
 <html lang="en">
@@ -101,6 +105,11 @@
     </header>
     <!--//header-->
     <!--about-->
+    @foreach (var item in Model)
+    {
+
+
+
     <section class="about py-5" id="product">
         <div class="container py-md-5 py-5">
             <div class="title-main text-center mx-auto mb-md-5 mb-5" style="max-width:500px;">
@@ -108,19 +117,12 @@
             </div>
             <div class="row about-block">
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
-                    consequuntur
-                    ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
-                    consequuntur
-                    ducimus neque, harum eos eligendi maiores ex cum nobis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
-                    consequuntur
-                    ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
-                    consequuntur
-                    ducimus neque, harum eos eligendi maiores ex cum nobis.
+                  @item.aboutUs
                 </p>
             </div>
         </div>
     </section>
+    }
     <!--about-->
     <section class="logo-section py-0">
         <div class="container py-md-3 py-0">

@@ -10,8 +10,8 @@ namespace test.Controllers
 {
     public class ProjectController : Controller
     {
-        Context c = new Context();    
-
+        Context c = new Context();
+        [Route("ProjectList")]
         public ActionResult ProjectList()
         {
             var projects = c.Projects.ToList();

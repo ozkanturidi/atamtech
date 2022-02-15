@@ -9,6 +9,7 @@ namespace test.Controllers
     public class NewsController : Controller
     {
         Context c = new Context();
+        [Route("NewsList")]
         public ActionResult NewsList()
         {
 
