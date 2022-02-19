@@ -47,7 +47,7 @@
                     <div class="headerMenuTopContact">
                         <ul class="list-inline">
                             <li class="list-inline-item"><a href="tel:+7 812 363-33-87"><i class="fa fa-phone"></i> +7 812 363-33-87</a></li>
-                            <li class="list-inline-item"><a href="@Url.Action("Contact","Home")"><i class="far fa-envelope"></i> info@atamtechnology.com</a></li>
+                            <li class="list-inline-item"><a href="@Url.Action("Contact", "Home")"><i class="far fa-envelope"></i> info@atamtechnology.com</a></li>
                         </ul>
                     </div>
                 </div>
@@ -88,13 +88,13 @@
                                 <a class="nav-link" href="@Url.Action("Collist", "Collaboration")">@test.Language.Localization.Collaborations</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("About","Home")">@test.Language.Localization.About</a>
+                                <a class="nav-link" href="@Url.Action("About", "Home")">@test.Language.Localization.About</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("ServiceList", "Services")">@test.Language.Localization.Services</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("Contact","Home")">@test.Language.Localization.Contact</a>
+                                <a class="nav-link" href="@Url.Action("Contact", "Home")">@test.Language.Localization.Contact</a>
                             </li>
                             <li class="nav-item">
                                 @Html.ActionLink(" TR ", "ChangeLanguage", "Home", new { selectedlanguage = "tr" }, new { @class = "btn nav-link" })
@@ -125,69 +125,182 @@
                     <label class="tabtle" for="tab3">@test.Language.Localization.FUTURE</label>
 
                     <!--past-->
+                    @{ if (test.Language.Localization.Home == "Anasayfa")
+                        {
 
-                   
-                    <section id="content1" class="tab-content">
-                        <div class="row content12 align-items-center">
-                            <div class="col-lg-6 column">
-                                <h6 class="content-heading">Provide awesome services with our tools</h6>
-                                <p class="content-para mb-3">
-                                    Lorem ipsum dolor sit amet,Ea consequuntur illum facere
-                                    aperiam
-                                    sequi optio consectetur.Ea consequuntur illum facere aperiam sequi optio consectetur
-                                    adipisicing elitFuga, suscipit totam animi consequatur saepe blanditiis.
-                                </p>
-                            </div>
-                            <div class="col-lg-6 column mt-lg-0 mt-4">
-                                <img src="~/Style/images/about.jpg" class="img-fluid radius-image" alt="">
-                            </div>
-                        </div>
-                    </section>
-                    <!--past-->
-                    <!--ongoing-->
-                    <section id="content2" class="tab-content">
-                        <div class="row content12 align-items-center">
-                            <div class="col-lg-6 column mt-lg-0 mt-4">
-                                <img src="~/Style/images/about.jpg" class="img-fluid radius-image" alt="">
-                            </div>
-                            <div class="col-lg-6 column">
-                                <h6 class="content-heading">Powerful Solution for your Startup Business</h6>
-                                <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
-                                    consequuntur
-                                    ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
-                                    consequuntur
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
-                                    consequuntur
-                                    ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
-                                    consequuntur
-                                    ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
-                                    consequuntur
-                                    ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
-                                    consequuntur
-                                    ducimus neque, harum eos eligendi maiores ex cum nobis.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                    <!--ongoing-->
-                    <!--future-->
-                    <section id="content3" class="tab-content">
-                        <div class="row content12 align-items-center">
-                            <div class="col-lg-6 column">
-                                <h6 class="content-heading">Provide awesome services with our tools</h6>
-                                <p class="content-para mb-3">
-                                    Lorem ipsum dolor sit amet,Ea consequuntur illum facere
-                                    aperiam
-                                    sequi optio consectetur.Ea consequuntur illum facere aperiam sequi optio consectetur
-                                    adipisicing elitFuga, suscipit totam animi consequatur saepe blanditiis.
-                                </p>
-                            </div>
-                            <div class="col-lg-6 column mt-lg-0 mt-4">
-                                <img src="~/Style/images/about.jpg" class="img-fluid radius-image" alt="">
-                            </div>
-                        </div>
-                    </section>
+
+
+                            foreach (var item in Model.projectTr)
+                            {
+
+
+
+                                if (item.status == 0)
+                                {
+                                    <section id="content1" class="tab-content">
+                                        <div class="row content12 align-items-center">
+                                            <div class="col-lg-6 column">
+                                                <h6 class="content-heading">Provide awesome services with our tools</h6>
+                                                <p class="content-para mb-3">
+                                                    Lorem ipsum dolor sit amet,Ea consequuntur illum facere
+                                                    aperiam
+                                                    sequi optio consectetur.Ea consequuntur illum facere aperiam sequi optio consectetur
+                                                    adipisicing elitFuga, suscipit totam animi consequatur saepe blanditiis.
+                                                </p>
+                                            </div>
+                                            <div class="col-lg-6 column mt-lg-0 mt-4">
+                                                <img src="~/Style/images/about.jpg" class="img-fluid radius-image" alt="">
+                                            </div>
+                                        </div>
+                                    </section>
+                                }
+
+
+                                <!--past-->
+                                <!--ongoing-->
+                                if (item.status == 1)
+                                {
+                                    <section id="content2" class="tab-content">
+                                        <div class="row content12 align-items-center">
+                                            <div class="col-lg-6 column mt-lg-0 mt-4">
+                                                <img src="~/Style/images/about.jpg" class="img-fluid radius-image" alt="">
+                                            </div>
+                                            <div class="col-lg-6 column">
+                                                <h6 class="content-heading">Powerful Solution for your Startup Business</h6>
+                                                <p>
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.Atque quidem odit
+                                                    consequuntur
+                                                    ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                                    consequuntur
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                                    consequuntur
+                                                    ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                                    consequuntur
+                                                    ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                                    consequuntur
+                                                    ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                                    consequuntur
+                                                    ducimus neque, harum eos eligendi maiores ex cum nobis.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </section>
+                                }
+
+
+
+                                <!--ongoing--><!--future-->
+                                if (item.status == 2)
+                                {
+                                    <section id="content3" class="tab-content">
+                                        <div class="row content12 align-items-center">
+                                            <div class="col-lg-6 column">
+                                                <h6 class="content-heading">@item.title</h6>
+                                                <p class="content-para mb-3">
+                                                    @item.content
+                                                </p>
+                                            </div>
+                                            <div class="col-lg-6 column mt-lg-0 mt-4">
+                                                <img src="@item.photoUrl" class="img-fluid radius-image" alt="">
+                                            </div>
+                                        </div>
+                                    </section>
+                                }
+
+                            }
+
+
+
+                        }
+
+                        else
+                        {
+
+                            foreach (var item in Model.projectEn)
+                            {
+                                if (item.status == 0)
+                                {
+                                    <section id="content1" class="tab-content">
+                                        <div class="row content12 align-items-center">
+                                            <div class="col-lg-6 column">
+                                                <h6 class="content-heading">Provide awesome services with our tools</h6>
+                                                <p class="content-para mb-3">
+                                                    Lorem ipsum dolor sit amet,Ea consequuntur illum facere
+                                                    aperiam
+                                                    sequi optio consectetur.Ea consequuntur illum facere aperiam sequi optio consectetur
+                                                    adipisicing elitFuga, suscipit totam animi consequatur saepe blanditiis.
+                                                </p>
+                                            </div>
+                                            <div class="col-lg-6 column mt-lg-0 mt-4">
+                                                <img src="~/Style/images/about.jpg" class="img-fluid radius-image" alt="">
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                }
+
+
+
+                                <!--past--><!--ongoing-->
+                                if (item.status == 1)
+                                {
+                                    <section id="content2" class="tab-content">
+                                        <div class="row content12 align-items-center">
+                                            <div class="col-lg-6 column mt-lg-0 mt-4">
+                                                <img src="~/Style/images/about.jpg" class="img-fluid radius-image" alt="">
+                                            </div>
+                                            <div class="col-lg-6 column">
+                                                <h6 class="content-heading">Powerful Solution for your Startup Business</h6>
+                                                <p>
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                                    consequuntur
+                                                    ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                                    consequuntur
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                                    consequuntur
+                                                    ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                                    consequuntur
+                                                    ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                                    consequuntur
+                                                    ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                                    consequuntur
+                                                    ducimus neque, harum eos eligendi maiores ex cum nobis.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                }
+
+
+
+                                <!--ongoing--><!--future-->
+                                if (item.status == 2)
+                                {
+                                    <section id="content3" class="tab-content">
+                                        <div class="row content12 align-items-center">
+                                            <div class="col-lg-6 column">
+                                                <h6 class="content-heading">@item.title</h6>
+                                                <p class="content-para mb-3">
+                                                    @item.content
+                                                </p>
+                                            </div>
+                                            <div class="col-lg-6 column mt-lg-0 mt-4">
+                                                <img src="@item.photoUrl" class="img-fluid radius-image" alt="">
+                                            </div>
+                                        </div>
+                                    </section>
+                                }
+
+
+
+
+
+                            }
+
+                        }
+                    }
+
                     <!--future-->
                 </div>
             </div>
