@@ -12,5 +12,7 @@ namespace test.Models
         public int id { get; set; }
         public string fotoUrl { get; set; }
         public string aboutUs { get; set; }
+        public bool language { get; set; }
+
     }
 }

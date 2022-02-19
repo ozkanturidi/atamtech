@@ -15,6 +15,8 @@ namespace test.Models
         public string photoUrl { get; set; }
         public int status { get; set; }         // 0 means Past,   1 means Ongoing, 2 Future
 
+        public bool language { get; set; }
+
 
 
     }

@@ -1,5 +1,5 @@
 ﻿@using test.Models
-@model List<Service>
+@model test.Models.TableList
 @{
     ViewBag.Title = "Service";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -19,18 +19,45 @@
 
     </tr>
 
-    @foreach (var x in Model)
-    {
-        <tr>
 
-            <td>@x.id</td>
-            <td>@x.title</td>
-            <td><a href="/Admin/DeleteService/@x.id" class="btn btn-danger">Delete</a></td>
-            <td><a href="/Admin/bringService/@x.id" class="btn btn-success">Update</a></td>
-            <td><a href="#" class="btn btn-default">Details</a></td>
+    @{ if (test.Language.Localization.Language == "Türkçe")
+        {
+            foreach (var x in Model.serviceTr)
+            {
+                <tr>
 
-        </tr>
+                    <td>@x.id</td>
+                    <td>@x.title</td>
+                    <td><a href="/Admin/DeleteService/@x.id" class="btn btn-danger">Delete</a></td>
+                    <td><a href="/Admin/bringService/@x.id" class="btn btn-success">Update</a></td>
+                    <td><a href="#" class="btn btn-default">Details</a></td>
+
+                </tr>
+            }
+
+
+        }
+
+        else
+        {
+            foreach (var x in Model.serviceEn)
+            {
+                <tr>
+
+                    <td>@x.id</td>
+                    <td>@x.title</td>
+                    <td><a href="/Admin/DeleteService/@x.id" class="btn btn-danger">Delete</a></td>
+                    <td><a href="/Admin/bringService/@x.id" class="btn btn-success">Update</a></td>
+                    <td><a href="#" class="btn btn-default">Details</a></td>
+
+                </tr>
+            }
+        }
+
     }
+
+
+
 
 
 

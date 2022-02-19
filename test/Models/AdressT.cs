@@ -14,5 +14,6 @@ namespace test.Models
         public string mail { get; set; }
         public string phoneNumber { get; set; }
         public string location { get; set; }
+
     }
 }

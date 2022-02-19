@@ -1,5 +1,5 @@
 ﻿@using test.Models
-@model List<Collaboration>
+@model test.Models.TableList
 
 
 ﻿@{ Layout = null;}
@@ -117,6 +117,66 @@
                     <h3 class="title-style">@test.Language.Localization.Our_Collaborations</h3>
                 </div>
                 <div class="content-info-tabs text-center">
+
+                    @{ if (test.Language.Localization.Home == "Anasayfa")
+                        {
+                            foreach (var x in Model.collTr)
+                            {
+                                <div class="row content12 align-items-center">
+                                    <div class="col-lg-6 column mt-lg-0 mt-4">
+                                        <img src="~/Style/images/about.jpg" class="img-fluid radius-image" alt="">
+                                    </div>
+                                    <div class="col-lg-6 column">
+                                        <h6 class="content-heading">Collab Heading</h6> @*Bunu değiştirirken Harun a haber ver. Eğer sayfaya dinamik olmayan yazı eklenirse çevirisini yapsın*@
+                                        <p>
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                            consequuntur
+                                            ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                            consequuntur
+                                            ducimus neque, harum eos eligendi maiores ex cum nobis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                            consequuntur
+                                            ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                            consequuntur
+                                            ducimus neque, harum eos eligendi maiores ex cum nobis.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                            }
+                        }
+                        else
+                        {
+                            foreach (var x in Model.collEn)
+                            {
+                                <div class="row content12 align-items-center">
+                                    <div class="col-lg-6 column mt-lg-0 mt-4">
+                                        <img src="~/Style/images/about.jpg" class="img-fluid radius-image" alt="">
+                                    </div>
+                                    <div class="col-lg-6 column">
+                                        <h6 class="content-heading">Collab Heading</h6>
+                                        <p>
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                            consequuntur
+                                            ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                            consequuntur
+                                            ducimus neque, harum eos eligendi maiores ex cum nobis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                            consequuntur
+                                            ducimus neque, harum eos eligendi maiores ex cum nobis.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quidem odit
+                                            consequuntur
+                                            ducimus neque, harum eos eligendi maiores ex cum nobis.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            }
+
+                        }
+
+                    }
+
+
                     <div class="row content12 align-items-center">
                         <div class="col-lg-6 column mt-lg-0 mt-4">
                             <img src="~/Style/images/about.jpg" class="img-fluid radius-image" alt="">
@@ -137,6 +197,9 @@
                         </div>
 
                     </div>
+
+
+
                     <div class="row content12 align-items-center">
                         <div class="col-lg-6 column mt-lg-0 mt-4">
                             <img src="~/Style/images/about.jpg" class="img-fluid radius-image" alt="">
@@ -335,12 +398,12 @@
 
 </html>
 
-@foreach (var item in Model)
-{
-    <img src="@item.photoUrl" style="margin-bottom:20px" width="300px" height="300px" />
+@*@foreach (var item in Model)
+    {
+        <img src="@item.photoUrl" style="margin-bottom:20px" width="300px" height="300px" />
 
-    <a href="/News/NewsDetail/@item.id">@item.title</a>
-    <h2>@item.content</h2>
+        <a href="/News/NewsDetail/@item.id">@item.title</a>
+        <h2>@item.content</h2>
 
 
-}
+    }*@

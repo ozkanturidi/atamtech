@@ -1,6 +1,6 @@
 ﻿@using test.Models
 
-@model List<AboutUs> 
+@model test.Models.TableList
 
 @{ Layout = null;}
 
@@ -118,24 +118,52 @@
     </header>
     <!--//header-->
     <!--about-->
-    @foreach (var item in Model)
-    {
+    @{ if (test.Language.Localization.Home == "Anasayfa")
+        {
+            foreach (var item in Model.aboutTr)
+            {
+                <section class="about py-5" id="product">
+                    <div class="container py-md-5 py-5">
+                        <div class="title-main text-center mx-auto mb-md-5 mb-5" style="max-width:500px;">
+                            <h3 class="title-style">@test.Language.Localization.About_us</h3>
+                        </div>
+                        <div class="row about-block">
+                            <p>
+                                @item.aboutUs
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            }
+        }
+        else
+        {
+            foreach (var x in Model.aboutEn)
+            {
+                foreach (var item in Model.aboutEn)
+                {
 
 
 
-    <section class="about py-5" id="product">
-        <div class="container py-md-5 py-5">
-            <div class="title-main text-center mx-auto mb-md-5 mb-5" style="max-width:500px;">
-                <h3 class="title-style">About Us</h3>
-            </div>
-            <div class="row about-block">
-                <p>
-                  @item.aboutUs
-                </p>
-            </div>
-        </div>
-    </section>
+                    <section class="about py-5" id="product">
+                        <div class="container py-md-5 py-5">
+                            <div class="title-main text-center mx-auto mb-md-5 mb-5" style="max-width:500px;">
+                                <h3 class="title-style">@test.Language.Localization.About_us</h3>
+                            </div>
+                            <div class="row about-block">
+                                <p>
+                                    @item.aboutUs
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                }
+            }
+
+        }
+
     }
+
     <!--about-->
     <section class="logo-section py-0">
         <div class="container py-md-3 py-0">

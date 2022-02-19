@@ -9,13 +9,15 @@ namespace test.Controllers
     public class ServicesController : Controller
     {
         // GET: Services
-
+        TableList lng = new TableList();
         Context c = new Context();
         [Route("ServiceList")]
         public ActionResult ServiceList()
         {
-            var service = c.Services.ToList();
-            return View(service);
+            lng.serviceTr = c.Services.Where(x => x.language == true);
+            lng.serviceEn = c.Services.Where(x => x.language == true);
+            //var service = c.Services.ToList();
+            return View(lng);
 
         }
 

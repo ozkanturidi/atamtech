@@ -1,5 +1,5 @@
 ﻿@using test.Models
-@model List<Product>
+@model test.Models.TableList
 
 @{ Layout = null;}
 
@@ -120,24 +120,65 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-6 item">
-                    @foreach (var item in Model)
-                    {
-                        <div class="card">
-                            <div class="card-header p-0 position-relative border-0">
-                                <a href="/Product/ProductDetails/@item.id">
-                                    <img class="d-block img-responsive" src="@item.photoUrl" alt="card-image">
-                                </a>
-                            </div>
-                            <div class="card-body service-details">
-                                <a href="/Product/ProductDetails/@item.id" class="service-heading">@item.name</a>
-                                <p>
-                                    @item.content.Substring(0, 85)
-                                </p>
-                            </div>
-                        </div>
+
+                    @{ if (test.Language.Localization.Home == "Anasayfa")
+                        {
+                            foreach (var item in Model.productTr)
+                            {
+                                <div class="card">
+                                    <div class="card-header p-0 position-relative border-0">
+                                        <a href="/Product/ProductDetails/@item.id">
+                                            <img class="d-block img-responsive" src="@item.photoUrl" alt="card-image">
+                                        </a>
+                                    </div>
+                                    <div class="card-body service-details">
+                                        <a href="/Product/ProductDetails/@item.id" class="service-heading">@item.name</a>
+                                        <p>
+                                            @item.content.Substring(0, 85)
+                                        </p>
+                                    </div>
+                                </div>
 
 
+                            }
+
+
+
+
+                        }
+
+                        else
+                        {
+                            foreach (var item in Model.productEn)
+                            {
+                                <div class="card">
+                                    <div class="card-header p-0 position-relative border-0">
+                                        <a href="/Product/ProductDetails/@item.id">
+                                            <img class="d-block img-responsive" src="@item.photoUrl" alt="card-image">
+                                        </a>
+                                    </div>
+                                    <div class="card-body service-details">
+                                        <a href="/Product/ProductDetails/@item.id" class="service-heading">@item.name</a>
+                                        <p>
+                                            @item.content.Substring(0, 85)
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                            }
+                        }
                     }
+
+
+
+
+
+
+
+
+
+
                 </div>
 
             </div>
