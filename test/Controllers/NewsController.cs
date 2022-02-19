@@ -9,16 +9,23 @@ using System.Threading;
 namespace test.Controllers
 {
     public class NewsController : Controller
-    {
+    { 
+        
+        
+        NewComment nc = new NewComment();
+        TableList lng = new TableList();
         Context c = new Context();
         [Route("NewsList")]
         public ActionResult NewsList()
         {
-          
-                var news = c.News.ToList();
-                return View(news);
+            
+            lng.newsTr = c.News.Where(x => x.language == true);
+            lng.newsEn = c.News.Where(x => x.language == false);
+            
+              //  var news = c.News.ToList();
+                return View(lng);
         }
-        NewComment nc = new NewComment();
+       
 
         public ActionResult NewsDetail(int id)
         {

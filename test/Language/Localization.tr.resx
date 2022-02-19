@@ -150,6 +150,12 @@
   <data name="Home" xml:space="preserve">
     <value>Anasayfa</value>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>Türkçe</value>
+  </data>
+  <data name="Latest_News" xml:space="preserve">
+    <value>En Son Haberler</value>
+  </data>
   <data name="News" xml:space="preserve">
     <value>Haberler</value>
   </data>

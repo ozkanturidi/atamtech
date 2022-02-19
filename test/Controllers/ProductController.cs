@@ -10,13 +10,16 @@ namespace test.Controllers
     public class ProductController : Controller
     {
         Context c = new Context();
+        TableList lng = new TableList();
 
         [Route("ProductList")]
         public ActionResult ProductList()
         {
 
-            var products = c.Products.ToList();
-            return View(products);
+            lng.productTr = c.Products.Where(x => x.language == true);
+            lng.productEn = c.Products.Where(x => x.language == false);
+            //var products = c.Products.ToList();
+            return View(lng);
         }
 
         

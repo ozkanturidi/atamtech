@@ -150,6 +150,12 @@
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Latest_News" xml:space="preserve">
+    <value>Latest News</value>
+  </data>
   <data name="News" xml:space="preserve">
     <value>News</value>
   </data>

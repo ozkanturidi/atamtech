@@ -37,6 +37,7 @@ namespace test.Controllers
 
 
 
+        TableList lng = new TableList();
 
         Context c = new Context();
 
@@ -46,8 +47,12 @@ namespace test.Controllers
         public ActionResult Index()
 
         {
-            pn.Value1 = c.News.OrderByDescending(x => x.id).Take(4).ToList();
-            pn.Value2 = c.Products.ToList();
+
+            
+           pn.NewSlidTr = c.News.Where(x=> x.language == true).OrderByDescending(x => x.id).Take(4).ToList();
+           pn.NewSlidEn = c.News.Where(x=> x.language == false).OrderByDescending(x => x.id).Take(4).ToList();
+           pn.PrdcardTr = c.Products.ToList();
+           pn.PrdcardEn = c.Products.ToList();
 
 
                  
@@ -57,6 +62,9 @@ namespace test.Controllers
         [Route("Home/About")]
         public ActionResult About()
         {
+
+            lng.aboutTr = c.AboutUss.Where(x => x.language == true);
+            lng.aboutEn = c.AboutUss.Where(x => x.language == false);
             var about = c.AboutUss.ToList();
 
             return View(about);

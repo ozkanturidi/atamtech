@@ -13,7 +13,7 @@ namespace test.Models
         public string content { get; set; }
         public string title { get; set; }
         public DateTime date { get; set; }
-
+        public bool language { get; set; }
         public string fotoUrl { get; set; }
         public ICollection<Comment> Comments { get; set; }
     }

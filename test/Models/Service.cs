@@ -20,5 +20,7 @@ namespace test.Models
         public string photoUrl2 { get; set; }
         public string photoUrl3 { get; set; }
 
+        public bool language { get; set; }
+
     }
 }
