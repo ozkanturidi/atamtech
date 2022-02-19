@@ -1,5 +1,5 @@
 ﻿@using test.Models
-@model List<Collaboration>
+@model test.Models.TableList
 @{
     ViewBag.Title = "Collaboration";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -19,18 +19,43 @@
 
     </tr>
 
-    @foreach (var x in Model)
-    {
-        <tr>
+    @{ if (test.Language.Localization.Language == "Türkçe")
+        {
+            foreach (var x in Model.collTr)
+            {
+                <tr>
 
-            <td>@x.id</td>
-            <td>@x.title</td>
-            <td><a href="/Admin/DeleteColl/@x.id" class="btn btn-danger">Delete</a></td>
-            <td><a href="/Admin/bringColl/@x.id" class="btn btn-success">Update</a></td>
-            <td><a href="#" class="btn btn-default">Details</a></td>
+                    <td>@x.id</td>
+                    <td>@x.title</td>
+                    <td><a href="/Admin/DeleteColl/@x.id" class="btn btn-danger">Delete</a></td>
+                    <td><a href="/Admin/bringColl/@x.id" class="btn btn-success">Update</a></td>
+                    <td><a href="#" class="btn btn-default">Details</a></td>
 
-        </tr>
+                </tr>
+            }
+
+
+        }
+        else
+        {
+            foreach (var x in Model.collEn)
+            {
+                <tr>
+
+                    <td>@x.id</td>
+                    <td>@x.title</td>
+                    <td><a href="/Admin/DeleteColl/@x.id" class="btn btn-danger">Delete</a></td>
+                    <td><a href="/Admin/bringColl/@x.id" class="btn btn-success">Update</a></td>
+                    <td><a href="#" class="btn btn-default">Details</a></td>
+
+                </tr>
+            }
+
+        }
+
     }
+
+
 
 
 

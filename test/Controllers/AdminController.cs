@@ -403,23 +403,52 @@ namespace test.Controllers
             return RedirectToAction("Project");
         }
         //*************************************************************
+        //About Us Admin 
+
+        [HttpGet]
+        public ActionResult CreateAbout()
+        {
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CreateAbout(AboutUs ab)
+        {
+            c.AboutUss.Add(ab);
+            c.SaveChanges();
+
+            return RedirectToAction("About");
+        }
+        public ActionResult DeleteAbout(int id)
+        {
+            var ab = c.AboutUss.Find(id);
+            c.AboutUss.Remove(ab);
+            c.SaveChanges();
+
+            return RedirectToAction("About");
+        }
 
         public ActionResult bringAbout(int id)
         {
-            var p = c.AboutUss.Find(id);
+            var ab = c.AboutUss.Find(id);
 
-            return View("bringAbout", p);
+            return View("bringAbout", ab);
         }
-        public ActionResult UpdateAbout(AboutUs about)
+        public ActionResult UpdateAbout(AboutUs abo)
         {
-            var p = c.AboutUss.Find(about.id);
-            p.aboutUs = about.aboutUs;
+            var a = c.AboutUss.Find(abo.id);
+            a.fotoUrl = abo.fotoUrl;
+            a.aboutUs = abo.aboutUs;
+            
             c.SaveChanges();
 
 
-            return RedirectToAction("Project");
+            return RedirectToAction("About");
         }
 
+
+      
+        
 
     }
 }

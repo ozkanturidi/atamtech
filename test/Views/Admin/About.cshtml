@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Contact List</h2>
+<h2>About Us</h2>
 
 <br />
 
@@ -13,7 +13,9 @@
     <tr>
         <th>ID</th>
         <th>ABOUT US</th>
+        <th>DELETE</th>
         <th>UPDATE</th>
+        <th>DETAILS</th>
 
 
 
@@ -22,17 +24,19 @@
         {
             foreach (var x in Model.aboutTr)
             {
-                <tr>
+        <tr>
 
-                    <td>@x.id</td>
-                    <td>@x.aboutUs</td>
-                    <td><a href="/Admin/bringAbout/@x.id" class="btn btn-success">Update</a></td>
+            <td>@x.id</td>
+            <td>@x.aboutUs</td>
+            <td><a href="/Admin/DeleteAbout/@x.id" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Admin/bringAbout/@x.id" class="btn btn-success">Update</a></td>
+            <td><a href="#" class="btn btn-default">Details</a></td>
 
 
 
 
 
-                </tr>
+        </tr>
             }
 
         }
@@ -40,17 +44,18 @@
         {
             foreach (var x in Model.aboutEn)
             {
-                <tr>
+<tr>
 
-                    <td>@x.id</td>
-                    <td>@x.aboutUs</td>
-                    <td><a href="/Admin/bringAbout/@x.id" class="btn btn-success">Update</a></td>
+            <td>@x.id</td>
+            <td>@x.aboutUs</td>
+            <td><a href="/Admin/DeleteAbout/@x.id" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Admin/bringAbout/@x.id" class="btn btn-success">Update</a></td>
+            <td><a href="#" class="btn btn-default">Details</a></td>
 
 
 
 
-
-                </tr>
+</tr>
             }
 
         }
@@ -61,3 +66,4 @@
 
 
 </table>
+<a href="/Admin/CreateAbout/" class="btn btn-primary">New About Us</a>

@@ -16,7 +16,7 @@ namespace test.Controllers
         {
             lng.serviceTr = c.Services.Where(x => x.language == true);
             lng.serviceEn = c.Services.Where(x => x.language == true);
-            // var service = c.Services.ToList();
+            //var service = c.Services.ToList();
             return View(lng);
 
         }

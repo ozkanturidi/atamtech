@@ -65,9 +65,9 @@ namespace test.Controllers
 
             lng.aboutTr = c.AboutUss.Where(x => x.language == true);
             lng.aboutEn = c.AboutUss.Where(x => x.language == false);
-            var about = c.AboutUss.ToList();
+            //var about = c.AboutUss.ToList();
 
-            return View(about);
+            return View(lng);
         }
         [HttpGet]
         [Route("Contact")]

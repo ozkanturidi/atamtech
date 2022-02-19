@@ -19,8 +19,8 @@ namespace test.Controllers
         public ActionResult NewsList()
         {
             
-            lng.newsTr = c.News.Where(x => x.language == true);
-            lng.newsEn = c.News.Where(x => x.language == false);
+            lng.newsTr = c.News.Where(x => x.language == true); // tr true 
+            lng.newsEn = c.News.Where(x => x.language == false); // en false
             
               //  var news = c.News.ToList();
                 return View(lng);

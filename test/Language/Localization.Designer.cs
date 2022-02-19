@@ -70,6 +70,15 @@ namespace test.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to About Us.
+        /// </summary>
+        public static string About_us {
+            get {
+                return ResourceManager.GetString("About_us", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Browse More.
         /// </summary>
         public static string Browse_More {
