@@ -78,11 +78,26 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="@Url.Action("Index", "Home")">@test.Language.Localization.Home <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("ProductList", "Product")">@test.Language.Localization.Products</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="@Url.Action("ProductList", "Product")" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    @test.Language.Localization.Products<span class="fa fa-caret-down"></span>
+                                </a>
+                                @foreach (var item in Model.PrdcardTr)
+                                {
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="/Product/ProductDetails/@item.id">@item.name</a>
+                                    </div>
+                                }
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("ProjectList", "Project")">@test.Language.Localization.Projects</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="@Url.Action("ProjectList", "Project")" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    @test.Language.Localization.Projects<span class="fa fa-caret-down"></span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Link 1</a>
+                                    <a class="dropdown-item" href="#">Link 2</a>
+                                    <a class="dropdown-item" href="#">Link 3</a>
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Collist", "Collaboration")">@test.Language.Localization.Collaborations</a>
@@ -90,8 +105,13 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("About","Home")">@test.Language.Localization.About</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("ServiceList", "Services")">@test.Language.Localization.Services</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="@Url.Action("ServiceList", "Services")" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    @test.Language.Localization.Services<span class="fa fa-caret-down"></span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">item.name</a>
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Contact","Home")">@test.Language.Localization.Contact</a>
@@ -102,7 +122,6 @@
                             <li class="nav-item">
                                 @Html.ActionLink(" EN ", "ChangeLanguage", "Home", new { selectedlanguage = "en" }, new { @class = "btn nav-link" })
                             </li>
-
                         </ul>
                     </div>
                 </div>
@@ -143,75 +162,75 @@
     <section class="news py-5" id="news">
         <div class="container py-md-2 py-4">
             <div class="row">
-               <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:500px;">
-                   <h3 class="title-style">@test.Language.Localization.Latest_News</h3>
+                <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:500px;">
+                    <h3 class="title-style">@test.Language.Localization.Latest_News</h3>
                 </div>
-                    <div class="col-lg-12">
-                        <div id="news-slider" class="owl-carousel">
-                            <!-- 1 -->
-                            @{ if (test.Language.Localization.Home == "Anasayfa")
+                <div class="col-lg-12">
+                    <div id="news-slider" class="owl-carousel">
+                        <!-- 1 -->
+                        @{ if (test.Language.Localization.Home == "Anasayfa")
+                            {
+                                foreach (var item in Model.NewSlidTr)
                                 {
-                                    foreach (var item in Model.NewSlidTr)
-                                    {
-                                        <div class="news-grid">
-                                            <div class="news-grid-image">
-                                                <a href="/News/NewsDetail/@item.id">
-                                                    <img src="@item.fotoUrl" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="news-grid-txt">
-                                                <div class="news-grid-txt-1">
-                                                    <h2>@item.title</h2>
-                                                    <ul>
-                                                        <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
-                                                    </ul>
-                                                    <p>@item.content.Substring(0, 60)...</p>
-                                                </div>
-                                                <a href="/News/NewsDetail/@item.id">@test.Language.Localization.Read_More</a>
-
-                                            </div>
+                                    <div class="news-grid">
+                                        <div class="news-grid-image">
+                                            <a href="/News/NewsDetail/@item.id">
+                                                <img src="@item.fotoUrl" alt="">
+                                            </a>
                                         </div>
-                                     }
-                                 }
-                                 else
-                                 {
-                                                foreach (var item in Model.NewSlidEn)
-                                                {
-                                        <div class="news-grid">
-                                            <div class="news-grid-image">
-                                                <a href="/News/NewsDetail/@item.id">
-                                                    <img src="@item.fotoUrl" alt="">
-                                                </a>
+                                        <div class="news-grid-txt">
+                                            <div class="news-grid-txt-1">
+                                                <h2>@item.title</h2>
+                                                <ul>
+                                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
+                                                </ul>
+                                                <p>@item.content.Substring(0, 60)...</p>
                                             </div>
-                                            <div class="news-grid-txt">
-                                                <div class="news-grid-txt-1">
-                                                    <h2>@item.title</h2>
-                                                    <ul>
-                                                        <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
-                                                    </ul>
-                                                    <p>@item.content.Substring(0, 60)...</p>
-                                                </div>
-                                                <a href="/News/NewsDetail/@item.id">@test.Language.Localization.Read_More</a>
+                                            <a href="/News/NewsDetail/@item.id">@test.Language.Localization.Read_More</a>
 
-                                            </div>
                                         </div>
-                                                 }
-                                 }
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                foreach (var item in Model.NewSlidEn)
+                                {
+                                    <div class="news-grid">
+                                        <div class="news-grid-image">
+                                            <a href="/News/NewsDetail/@item.id">
+                                                <img src="@item.fotoUrl" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="news-grid-txt">
+                                            <div class="news-grid-txt-1">
+                                                <h2>@item.title</h2>
+                                                <ul>
+                                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
+                                                </ul>
+                                                <p>@item.content.Substring(0, 60)...</p>
+                                            </div>
+                                            <a href="/News/NewsDetail/@item.id">@test.Language.Localization.Read_More</a>
 
+                                        </div>
+                                    </div>
+                                }
                             }
 
+                        }
 
 
-                        </div>
-                        <div class="text-center mt-sm-3 mt-4 pt-sm-0 pt-1">
-                            <a class="btn btn-style btn-style-secondary mt-sm-3" href="@Url.Action("NewsList", "News")">
-                                @test.Language.Localization.Browse_More
-                            </a>
-                        </div>
+
                     </div>
+                    <div class="text-center mt-sm-3 mt-4 pt-sm-0 pt-1">
+                        <a class="btn btn-style btn-style-secondary mt-sm-3" href="@Url.Action("NewsList", "News")">
+                            @test.Language.Localization.Browse_More
+                        </a>
                     </div>
                 </div>
-</section>
+            </div>
+        </div>
+    </section>
     <!--news-->
     <!-- products block -->
     <section class="products py-5" id="features">
@@ -223,8 +242,8 @@
                 @{ if (test.Language.Localization.Home == "Anasayfa")
                     {
 
-                    foreach (var item in Model.PrdcardTr)
-                    {
+                        foreach (var item in Model.PrdcardTr)
+                        {
 
                             <div class="col-md-6 col-lg-4 d-flex align-items-center">
                                 <div class="product-box product-box-clr-1">
@@ -447,7 +466,9 @@
         });
     </script>
     <!--owl carousel-->
+
     <!-- //Js scripts -->
+
 </body>
 
 </html>

@@ -11,7 +11,7 @@
     --indigo: #6610f2;
     --purple: #6f42c1;
     --pink: #e83e8c;
-    --red: #dc3545;
+    --red: #dc3545dropd
     --orange: #fd7e14;
     --yellow: #ffc107;
     --green: #28a745;
@@ -3518,6 +3518,9 @@ input[type="button"].btn-block {
     left: auto;
 }
 
+.dropdown .fa {
+    padding-left: 5px;
+}
 @media (min-width: 576px) {
     .dropdown-menu-sm-left {
         right: auto;
@@ -11155,7 +11158,6 @@ a.navbar-brand:hover {
 .navbar-expand-lg .navbar-nav .nav-item.active .nav-link,
 .navbar-expand-lg .navbar-nav .nav-link:hover {
     color: #D42C24;
-    border-bottom: 1px solid rgba(212 44 36 / 74%);
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -11181,13 +11183,13 @@ a.navbar-brand:hover {
 
 a.dropdown-item {
     font-size: 16px;
-    color: var(--heading-color);
+    color: #243484;
     padding: 5px 24px;
     font-weight: 600;
 }
 
     a.dropdown-item:hover {
-        color: var(--primary-color);
+        color: #D42C24;
         background: none;
     }
 
@@ -11276,6 +11278,7 @@ nav ul li {
 .dropdown-menu {
     min-width: 12rem;
     padding: 1rem 0;
+    text-align:center;
 }
 
 .nav-fixed .navbar-expand-lg .navbar-nav .nav-link {
@@ -12506,3 +12509,4 @@ h6.content-heading {
     padding-left: 25px;
 }
 /* //contact + product details section */
+
