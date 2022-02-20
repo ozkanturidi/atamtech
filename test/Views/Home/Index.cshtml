@@ -144,32 +144,62 @@
         <div class="container py-md-2 py-4">
             <div class="row">
                <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:500px;">
-                    <h3 class="title-style">Latest News</h3>
+                   <h3 class="title-style">@test.Language.Localization.Latest_News</h3>
                 </div>
                     <div class="col-lg-12">
                         <div id="news-slider" class="owl-carousel">
                             <!-- 1 -->
-                            @foreach (var item in Model.Value1)
-                            {
-                                <div class="news-grid">
-                                    <div class="news-grid-image">
-                                        <a href="/News/NewsDetail/@item.id">
-                                        <img src="@item.fotoUrl" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="news-grid-txt">
-                                        <div class="news-grid-txt-1">
-                                            <h2>@item.title</h2>
-                                            <ul>
-                                                <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
-                                            </ul>
-                                            <p>@item.content.Substring(0, 60)...</p>
+                            @{ if (test.Language.Localization.Home == "Anasayfa")
+                                {
+                                    foreach (var item in Model.NewSlidTr)
+                                    {
+                                        <div class="news-grid">
+                                            <div class="news-grid-image">
+                                                <a href="/News/NewsDetail/@item.id">
+                                                    <img src="@item.fotoUrl" alt="">
+                                                </a>
                                             </div>
-                                            <a href="/News/NewsDetail/@item.id">@test.Language.Localization.Read_More</a>
+                                            <div class="news-grid-txt">
+                                                <div class="news-grid-txt-1">
+                                                    <h2>@item.title</h2>
+                                                    <ul>
+                                                        <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
+                                                    </ul>
+                                                    <p>@item.content.Substring(0, 60)...</p>
+                                                </div>
+                                                <a href="/News/NewsDetail/@item.id">@test.Language.Localization.Read_More</a>
 
+                                            </div>
                                         </div>
-                                    </div>
+                                     }
+                                 }
+                                 else
+                                 {
+                                                foreach (var item in Model.NewSlidEn)
+                                                {
+                                        <div class="news-grid">
+                                            <div class="news-grid-image">
+                                                <a href="/News/NewsDetail/@item.id">
+                                                    <img src="@item.fotoUrl" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="news-grid-txt">
+                                                <div class="news-grid-txt-1">
+                                                    <h2>@item.title</h2>
+                                                    <ul>
+                                                        <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
+                                                    </ul>
+                                                    <p>@item.content.Substring(0, 60)...</p>
+                                                </div>
+                                                <a href="/News/NewsDetail/@item.id">@test.Language.Localization.Read_More</a>
+
+                                            </div>
+                                        </div>
+                                                 }
+                                 }
+
                             }
+
 
 
                         </div>
@@ -190,17 +220,38 @@
                 <h3 class="title-style">@test.Language.Localization.Our_Products</h3>
             </div>
             <div class="row">
-                @foreach (var item in Model.Value2)
-                {
+                @{ if (test.Language.Localization.Home == "Anasayfa")
+                    {
 
-                    <div class="col-md-6 col-lg-4 d-flex align-items-center">
-                        <div class="product-box product-box-clr-1">
-                            <a href="/Product/ProductDetails/@item.id"><img class="d-block img-responsive" src="@item.photoUrl" alt="product-img"></a>
-                            <h4 class="title"><a href="/Product/ProductDetails/@item.id">@item.name</a></h4>
-                            <p>The FIXAR 007 is a fully autonomous, VTOL (vertical take-off and landing) fixed-wing drone</p>
-                        </div>
-                    </div>
+                    foreach (var item in Model.PrdcardTr)
+                    {
+
+                            <div class="col-md-6 col-lg-4 d-flex align-items-center">
+                                <div class="product-box product-box-clr-1">
+                                    <a href="/Product/ProductDetails/@item.id"><img class="d-block img-responsive" src="@item.photoUrl" alt="product-img"></a>
+                                    <h4 class="title"><a href="/Product/ProductDetails/@item.id">@item.name</a></h4>
+                                    <p>The FIXAR 007 is a fully autonomous, VTOL (vertical take-off and landing) fixed-wing drone</p>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        foreach (var item in Model.PrdcardEn)
+                        {
+
+                            <div class="col-md-6 col-lg-4 d-flex align-items-center">
+                                <div class="product-box product-box-clr-1">
+                                    <a href="/Product/ProductDetails/@item.id"><img class="d-block img-responsive" src="@item.photoUrl" alt="product-img"></a>
+                                    <h4 class="title"><a href="/Product/ProductDetails/@item.id">@item.name</a></h4>
+                                    <p>The FIXAR 007 is a fully autonomous, VTOL (vertical take-off and landing) fixed-wing drone</p>
+                                </div>
+                            </div>
+                        }
+                    }
+
                 }
+
             </div>
             <div class="text-center mt-sm-5 mt-4 pt-sm-0 pt-1">
                 <a class="btn btn-style btn-style-secondary mt-sm-3" href="@Url.Action("ProductList", "Product")">

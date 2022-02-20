@@ -61,6 +61,10 @@ namespace test.Models
         public string variouspayloads { get; set; }
         public string transportCase { get; set; }
 
+        //----------Localization
+
+        public bool language { get; set; }
+
 
     }
 }

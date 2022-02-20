@@ -70,6 +70,15 @@ namespace test.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to About Us.
+        /// </summary>
+        public static string About_us {
+            get {
+                return ResourceManager.GetString("About_us", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Browse More.
         /// </summary>
         public static string Browse_More {
@@ -156,6 +165,24 @@ namespace test.Language {
         public static string Home {
             get {
                 return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to English.
+        /// </summary>
+        public static string Language {
+            get {
+                return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Latest News.
+        /// </summary>
+        public static string Latest_News {
+            get {
+                return ResourceManager.GetString("Latest_News", resourceCulture);
             }
         }
         

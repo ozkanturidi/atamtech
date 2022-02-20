@@ -13,11 +13,15 @@ namespace test.Controllers
     {
 
         Context c = new Context();
+        TableList lng = new TableList();
         [Route("CollaborationList")]
         public ActionResult ColList()
         {
-            var col = c.Collaborations.ToList();
-            return View(col);
+            
+            lng.collTr = c.Collaborations.Where(x => x.language == true);
+            lng.collEn = c.Collaborations.Where(x => x.language == false);
+            
+            return View(lng);
         }
 
 

@@ -1,5 +1,5 @@
 ﻿@using test.Models
-@model List<Service>
+@model test.Models.TableList
 
 
 @{ Layout = null;}
@@ -121,28 +121,60 @@
             </div>
             <div class="row justify-content-center">
 
-                @foreach (var x in Model)
-                {
+                @{ if (test.Language.Localization.Home == "Anasayfa")
+                    {
+                        foreach (var x in Model.serviceTr)
+                        {
 
 
 
-                    <div class="col-lg-4 col-md-6 item d-flex align-items-stretch">
-                        <div class="card">
-                            <div class="card-header p-0 position-relative border-0">
-                                <a href="/Services/ServiceDetails/@x.id">
-                                    <img class="d-block img-responsive" src="@x.photoUrl" alt="card-image">
-                                </a>
+                            <div class="col-lg-4 col-md-6 item d-flex align-items-stretch">
+                                <div class="card">
+                                    <div class="card-header p-0 position-relative border-0">
+                                        <a href="/Services/ServiceDetails/@x.id">
+                                            <img class="d-block img-responsive" src="@x.photoUrl" alt="card-image">
+                                        </a>
+                                    </div>
+                                    <div class="card-body service-details">
+                                        <a href="/Services/ServiceDetails/@x.id" class="service-heading">@x.title</a>
+                                        <p>
+                                            @x.content
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-body service-details">
-                                <a href="/Services/ServiceDetails/@x.id" class="service-heading">@x.title</a>
-                                <p>
-                                    @x.content
-                                </p>
+
+                        }
+                    }
+                    else
+                    {
+
+                        foreach (var x in Model.serviceEn)
+                        {
+
+
+
+                            <div class="col-lg-4 col-md-6 item d-flex align-items-stretch">
+                                <div class="card">
+                                    <div class="card-header p-0 position-relative border-0">
+                                        <a href="/Services/ServiceDetails/@x.id">
+                                            <img class="d-block img-responsive" src="@x.photoUrl" alt="card-image">
+                                        </a>
+                                    </div>
+                                    <div class="card-body service-details">
+                                        <a href="/Services/ServiceDetails/@x.id" class="service-heading">@x.title</a>
+                                        <p>
+                                            @x.content
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+
+                        }
+                    }
 
                 }
+
 
 
             </div>

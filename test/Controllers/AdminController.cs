@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.Mvc;
 using test.Models;
@@ -10,6 +12,23 @@ namespace test.Controllers
     [Authorize]
     public class AdminController : Controller
     {
+
+        public ActionResult ChangeLanguage(string selectedlanguage)
+        {
+
+
+            if (selectedlanguage != null)
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(selectedlanguage);
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(selectedlanguage);
+                var cookie = new HttpCookie("Language");
+                cookie.Value = selectedlanguage;
+                Response.Cookies.Add(cookie);
+            }
+            return RedirectToAction("Index", "Admin");
+        }
+
+        TableList lng = new TableList();
         Context c = new Context();
 
         // GET: Admin
@@ -18,10 +37,15 @@ namespace test.Controllers
 
         //News Admin Page
 
+
+
         public ActionResult Index()
         {
-            var values = c.News.ToList();
-            return View(values);
+
+            lng.newsTr = c.News.Where(x => x.language == true);
+           lng.newsEn = c.News.Where(x => x.language == false);
+            //var values = c.News.ToList();
+            return View(lng);
         }
 
 
@@ -31,8 +55,10 @@ namespace test.Controllers
 
         public ActionResult Product()
         {
-            var values = c.Products.ToList();
-            return View(values);
+            lng.productTr = c.Products.Where(x => x.language == true);
+            lng.productEn = c.Products.Where(x => x.language == false);
+            //var values = c.Products.ToList();
+            return View(lng);
         }
 
 
@@ -41,8 +67,10 @@ namespace test.Controllers
 
         public ActionResult Service()
         {
-            var values = c.Services.ToList();
-            return View(values);
+            lng.serviceTr = c.Services.Where(x => x.language == true);
+            lng.serviceEn = c.Services.Where(x => x.language == false);
+            //var values = c.Services.ToList();
+            return View(lng);
         }
         
 
@@ -51,8 +79,10 @@ namespace test.Controllers
 
         public ActionResult Collaboration()
         {
-            var values = c.Collaborations.ToList();
-            return View(values);
+           lng.collTr = c.Collaborations.Where(x => x.language == true);
+           lng.collEn = c.Collaborations.Where(x => x.language == true);
+            //var values = c.Collaborations.ToList();
+            return View(lng);
         }
 
 
@@ -61,12 +91,15 @@ namespace test.Controllers
 
         public ActionResult Project()
         {
-            var values = c.Projects.ToList();
-            return View(values);
+           lng.projectTr = c.Projects.Where(x => x.language == true);
+           lng.projectEn = c.Projects.Where(x => x.language == false);
+            //var values = c.Projects.ToList();
+            return View(lng);
         }
 
         public ActionResult Contact()
         {
+            
             var values = c.Contacts.ToList();
             return View(values);
         }
@@ -74,8 +107,10 @@ namespace test.Controllers
 
         public ActionResult About()
         {
-            var values = c.AboutUss.ToList();
-            return View(values);
+            lng.aboutTr = c.AboutUss.Where(x => x.language == true);
+            lng.aboutEn = c.AboutUss.Where(x => x.language == false);
+            //var values = c.AboutUss.ToList();
+            return View(lng);
         }
 
         //News Admin HTTP
@@ -368,23 +403,52 @@ namespace test.Controllers
             return RedirectToAction("Project");
         }
         //*************************************************************
+        //About Us Admin 
+
+        [HttpGet]
+        public ActionResult CreateAbout()
+        {
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CreateAbout(AboutUs ab)
+        {
+            c.AboutUss.Add(ab);
+            c.SaveChanges();
+
+            return RedirectToAction("About");
+        }
+        public ActionResult DeleteAbout(int id)
+        {
+            var ab = c.AboutUss.Find(id);
+            c.AboutUss.Remove(ab);
+            c.SaveChanges();
+
+            return RedirectToAction("About");
+        }
 
         public ActionResult bringAbout(int id)
         {
-            var p = c.AboutUss.Find(id);
+            var ab = c.AboutUss.Find(id);
 
-            return View("bringAbout", p);
+            return View("bringAbout", ab);
         }
-        public ActionResult UpdateAbout(AboutUs about)
+        public ActionResult UpdateAbout(AboutUs abo)
         {
-            var p = c.AboutUss.Find(about.id);
-            p.aboutUs = about.aboutUs;
+            var a = c.AboutUss.Find(abo.id);
+            a.fotoUrl = abo.fotoUrl;
+            a.aboutUs = abo.aboutUs;
+            
             c.SaveChanges();
 
 
-            return RedirectToAction("Project");
+            return RedirectToAction("About");
         }
 
+
+      
+        
 
     }
 }

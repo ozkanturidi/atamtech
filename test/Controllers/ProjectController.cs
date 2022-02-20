@@ -10,13 +10,17 @@ namespace test.Controllers
 {
     public class ProjectController : Controller
     {
+        TableList lng = new TableList();
         Context c = new Context();
         [Route("ProjectList")]
         public ActionResult ProjectList()
         {
-            var projects = c.Projects.ToList();
-           
-            return View(projects);
+            //var projects = c.Projects.ToList();
+            lng.projectTr = c.Projects.Where(x => x.language == true);
+            lng.projectEn = c.Projects.Where(x => x.language == false);
+
+
+            return View(lng);
         }
 
         public ActionResult ProjectDetails(int id)

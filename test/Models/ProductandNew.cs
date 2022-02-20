@@ -7,8 +7,10 @@ namespace test.Models
 {
     public class ProductandNew
     {
-        public IEnumerable<New> Value1 { get; set; }
-      
-        public IEnumerable<Product> Value2 { get; set; }
+        public IEnumerable<New> NewSlidTr { get; set; }
+        public IEnumerable<New> NewSlidEn { get; set; }
+
+        public IEnumerable<Product> PrdcardTr { get; set; }
+        public IEnumerable<Product> PrdcardEn { get; set; }
     }
 }

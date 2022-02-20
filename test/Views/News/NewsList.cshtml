@@ -1,5 +1,6 @@
 ﻿@using test.Models
-@model List<New>
+@model test.Models.TableList
+
 
 @{ Layout = null;}
 
@@ -47,7 +48,7 @@
                     <div class="headerMenuTopContact">
                         <ul class="list-inline">
                             <li class="list-inline-item"><a href="tel:+7 812 363-33-87"><i class="fa fa-phone"></i> +7 812 363-33-87</a></li>
-                            <li class="list-inline-item"><a href="@Url.Action("Contact","Home")"><i class="far fa-envelope"></i> info@atamtechnology.com</a></li>
+                            <li class="list-inline-item"><a href="@Url.Action("Contact", "Home")"><i class="far fa-envelope"></i> info@atamtechnology.com</a></li>
                         </ul>
                     </div>
                 </div>
@@ -88,13 +89,13 @@
                                 <a class="nav-link" href="@Url.Action("Collist", "Collaboration")">@test.Language.Localization.Collaborations</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("About","Home")">@test.Language.Localization.About</a>
+                                <a class="nav-link" href="@Url.Action("About", "Home")">@test.Language.Localization.About</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("ServiceList", "Services")">@test.Language.Localization.Services</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("Contact","Home")">@test.Language.Localization.Contact</a>
+                                <a class="nav-link" href="@Url.Action("Contact", "Home")">@test.Language.Localization.Contact</a>
                             </li>
                             <li class="nav-item">
                                 @Html.ActionLink(" TR ", "ChangeLanguage", "Home", new { selectedlanguage = "tr" }, new { @class = "btn nav-link" })
@@ -119,35 +120,70 @@
                     </h3>
                 </div>
             </div>
-          
+
 
 
             <div class="row justify-content-center">
-
-                @foreach (var item in Model)
-                {
-                    <div class="col-lg-4 col-md-6 item d-flex align-items-stretch" >
-                        <div class="card">
-                            <div class="card-header p-0 position-relative border-0">
-                                <div class="news-grid-box">
-                                    <h1>@item.date.ToString("dd")</h1>
-                                    <p>@item.date.ToString("MMM")</p>
+                @{ if (test.Language.Localization.Home == "Anasayfa")
+                    {
+                        foreach (var item in Model.newsTr)
+                        {
+                            <div class="col-lg-4 col-md-6 item d-flex align-items-stretch">
+                                <div class="card">
+                                    <div class="card-header p-0 position-relative border-0">
+                                        <div class="news-grid-box">
+                                            <h1>@item.date.ToString("dd")</h1>
+                                            <p>@item.date.ToString("MMM")</p>
+                                        </div>
+                                        <a href="/News/NewsDetail/@item.id">
+                                            <img class="d-block img-responsive" src="@item.fotoUrl" alt="card-image">
+                                        </a>
+                                    </div>
+                                    <div class="card-body service-details">
+                                        <a href="/News/NewsDetail/@item.id" class="service-heading">@item.title</a>
+                                        <p>
+                                            @item.content.Substring(0, 75)...
+                                        </p>
+                                    </div>
                                 </div>
-                                <a href="/News/NewsDetail/@item.id">
-                                    <img class="d-block img-responsive" src="@item.fotoUrl" alt="card-image">
-                                </a>
                             </div>
-                            <div class="card-body service-details">
-                                <a href="/News/NewsDetail/@item.id" class="service-heading">@item.title</a>
-                                <p>
-                                   @item.content.Substring(0,75)...
-                                </p>
+                        }
+
+
+                    }
+
+                    else
+                    {
+
+
+                        foreach (var item in Model.newsEn)
+                        {
+                            <div class="col-lg-4 col-md-6 item d-flex align-items-stretch">
+                                <div class="card">
+                                    <div class="card-header p-0 position-relative border-0">
+                                        <div class="news-grid-box">
+                                            <h1>@item.date.ToString("dd")</h1>
+                                            <p>@item.date.ToString("MMM")</p>
+                                        </div>
+                                        <a href="/News/NewsDetail/@item.id">
+                                            <img class="d-block img-responsive" src="@item.fotoUrl" alt="card-image">
+                                        </a>
+                                    </div>
+                                    <div class="card-body service-details">
+                                        <a href="/News/NewsDetail/@item.id" class="service-heading">@item.title</a>
+                                        <p>
+                                            @item.content.Substring(0, 75)...
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        }
+                    }
+
                 }
-                </div>
-            
+
+            </div>
+
         </div>
     </div>
     <!-- //services section -->

@@ -22,7 +22,12 @@
         <a href="/Admin/Project" class="w3-bar-item w3-button">Project</a>
         <a href="/Home" class="w3-bar-item w3-button">Go to site</a>
         <a href="/Login/Logout" class="w3-bar-item w3-button">Logout</a>
-
+        <a class="w3-bar-item w3-button">
+            @Html.ActionLink(" TR ", "ChangeLanguage", "Admin", new { selectedlanguage = "tr" }, new { @class = "btn nav-link" })
+        </a>
+        <a class="nav-item">
+            @Html.ActionLink(" EN ", "ChangeLanguage", "Admin", new { selectedlanguage = "en" }, new { @class = "btn nav-link" })
+        </a>
 
 
     </div>
