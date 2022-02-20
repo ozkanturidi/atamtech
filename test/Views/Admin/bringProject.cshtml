@@ -16,6 +16,11 @@
     @Html.LabelFor(x => x.title)
     @Html.TextBoxFor(x => x.title, new { @class = "form-control" })
 
+    
+
+    @Html.LabelFor(x => x.status)
+    @Html.TextBoxFor(x => x.status, new { @class = "form-control" })
+
 
     @Html.LabelFor(x => x.photoUrl)
     @Html.TextBoxFor(x => x.photoUrl, new { @class = "form-control" })
@@ -23,7 +28,7 @@
     @Html.LabelFor(x => x.content)
     @Html.TextAreaFor(x => x.content, 15, 1, new { @class = "form-control" })
     <br />
-    <button class="btn btn-primary">Add Project</button>
+    <button class="btn btn-primary">Update Project</button>
 
 
 }
