@@ -1,7 +1,7 @@
 ﻿
 @model test.Models.AboutUs
 @{
-    
+
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -14,13 +14,16 @@
 
     <br />
 
-    @Html.LabelFor(x =>x.aboutUs)
-    @Html.TextAreaFor(x => x.aboutUs, new { @class = "form-control" })
+    @Html.LabelFor(x => x.aboutUs)
+    @Html.TextAreaFor(x => x.aboutUs,15,1, new { @class = "form-control" })
 
-   
+    <br />
+    @Html.Label("Turkish=true, English=false")
+    <br />
+    @Html.TextBoxFor(x => x.language, new { @class = "form-control" })
 
 
-   
+
     <button class="btn btn-success">Update</button>
 
 

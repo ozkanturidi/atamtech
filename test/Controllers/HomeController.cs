@@ -53,9 +53,10 @@ namespace test.Controllers
            pn.NewSlidEn = c.News.Where(x=> x.language == false).OrderByDescending(x => x.id).Take(4).ToList();
            pn.PrdcardTr = c.Products.Where(x=>x.language==true).ToList();
            pn.PrdcardEn = c.Products.Where(x => x.language == false).ToList();
+           pn.HomePageEng = c.HomePages.Where(x => x.language == false).OrderByDescending(x => x.id).Take(1).ToList();
+            pn.HomePageTr = c.HomePages.Where(x => x.language == true).OrderByDescending(x => x.id).Take(1).ToList();
 
 
-                 
             return View(pn);
         }
         [Route("About")]

@@ -20,13 +20,14 @@
     <span> | Ongoing: </span> @Html.RadioButtonFor(m => m.status, 1)
     <span> | Future: </span> @Html.RadioButtonFor(m => m.status, 2)
 
-    <br />
-    <span> | Eng: </span> @Html.RadioButtonFor(m => m.language, false)
-    <span> | Tr: </span> @Html.RadioButtonFor(m => m.language, true)
 
-    <br />
-    @Html.LabelFor(x => x.content)
-    @Html.TextAreaFor(x => x.content, new { @class = "form-control" })
-    <br />
-    <button class="btn btn-primary">Add Project</button>
+        <br />
+        <span> | Eng: </span> @Html.RadioButtonFor(m => m.language, false)
+        <span> | Tr: </span> @Html.RadioButtonFor(m => m.language, true)
+
+        <br />
+        @Html.LabelFor(x => x.content)
+        @Html.TextAreaFor(x => x.content, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-primary">Add Project</button>
 </form>

@@ -25,6 +25,8 @@ namespace test.Models
 
         public DbSet<Project> Projects{ get; set; }
 
+        public DbSet<HomePage> HomePages { get; set; }
+
 
     }
 }

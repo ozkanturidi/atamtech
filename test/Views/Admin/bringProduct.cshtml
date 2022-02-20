@@ -134,11 +134,15 @@
     @Html.TextBoxFor(x => x.variouspayloads, new { @class = "form-control" })
 
     <br />
+    <br />
+    @Html.Label("Turkish=true, English=false")
+    <br />
+    @Html.TextBoxFor(x => x.language, new { @class = "form-control" })
 
     @Html.LabelFor(x => x.transportCase)
     @Html.TextBoxFor(x => x.transportCase, new { @class = "form-control" })
 
     <br />
 
-    <button class="btn-primary">Add Product</button>
+    <button class="btn-success">Update Product</button>
 }

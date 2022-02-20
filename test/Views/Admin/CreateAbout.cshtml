@@ -16,6 +16,7 @@
     @Html.LabelFor(x => x.aboutUs)
     @Html.TextBoxFor(x => x.aboutUs, new { @class = "form-control" })
     <br />
-   
+    <span>Turkish: </span> @Html.RadioButtonFor(x => x.language, true)
+    <span> | English: </span> @Html.RadioButtonFor(x => x.language, false)
     <button class="btn btn-primary">Add Collaboration</button>
 </form>

@@ -159,6 +159,7 @@
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\Context.cs" />
+    <Compile Include="Models\HomePage.cs" />
     <Compile Include="Models\New.cs" />
     <Compile Include="Models\NewComment.cs" />
     <Compile Include="Models\Product.cs" />
@@ -277,6 +278,9 @@
     <Content Include="Views\Admin\About.cshtml" />
     <Content Include="Views\Admin\bringAbout.cshtml" />
     <Content Include="Views\Admin\CreateAbout.cshtml" />
+    <Content Include="Views\Admin\HomePage.cshtml" />
+    <Content Include="Views\Admin\bringHome.cshtml" />
+    <Content Include="Views\Admin\CreateHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

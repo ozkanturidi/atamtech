@@ -1,0 +1,66 @@
+﻿@using test.Models
+@model test.Models.TableList
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>HomePage</h2>
+<h3>@test.Language.Localization.Language</h3>
+
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+        <th>DETAILS</th>
+
+    </tr>
+
+
+    @{
+        if (test.Language.Localization.Language == "Türkçe")
+        {
+
+            foreach (var x in Model.HomepageTr)
+            {
+                <tr>
+
+                    <td>@x.id</td>
+                    <td>@x.title</td>
+                    
+                    <td><a href="/Admin/bringHome/@x.id" class="btn btn-success">Update</a></td>
+                    <td><a href="#" class="btn btn-default">Details</a></td>
+
+                </tr>
+            }
+
+        }
+        else
+        {
+            foreach (var x in Model.HomepageEn)
+            {
+                <tr>
+
+                    <td>@x.id</td>
+                    <td>@x.title</td>   
+                    <td><a href="/Admin/bringHome/@x.id" class="btn btn-success">Update</a></td>
+                    <td><a href="#" class="btn btn-default">Details</a></td>
+
+                </tr>
+            }
+
+
+        }
+    }
+
+
+
+
+
+
+</table>
+<a href="/Admin/CreateHome/" class="btn btn-primary">New HomePage</a>
