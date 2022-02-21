@@ -98,7 +98,7 @@ namespace test.Controllers
             Email(name);*/
 
 
-            return View();
+            return View(lng);
         }
 
 
