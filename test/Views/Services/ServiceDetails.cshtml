@@ -1,5 +1,5 @@
 ﻿@using test.Models
-@model List<Service>
+@model test.Models.TableList
 @{
     ViewBag.Title = "ServiceDetails";
 }
@@ -87,7 +87,7 @@
                                 </a>
 
                                 <div class="dropdown-menu productdrop" id="dropdown-menuproduct" aria-labelledby="navbarDropdown">
-                                    @foreach (var item in Model.product)
+                                    @foreach (var item in Model.productdetTr)
                                     {
                                         <a class="dropdown-item" href="/Product/ProductDetails/@item.id">@item.name</a>
                                     }

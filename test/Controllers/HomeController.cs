@@ -66,8 +66,8 @@ namespace test.Controllers
         public ActionResult About()
         {
 
-            lng.aboutTr = c.AboutUss.Where(x => x.language == true);
-            lng.aboutEn = c.AboutUss.Where(x => x.language == false);
+            lng.aboutTr = c.AboutUss.Where(x => x.language == true).ToList();
+            lng.aboutEn = c.AboutUss.Where(x => x.language == false).ToList();
             lng.productTr = c.Products.Where(x => x.language == true).ToList();
             lng.productEn= c.Products.Where(x => x.language == false).ToList();
             lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
@@ -80,9 +80,13 @@ namespace test.Controllers
         [Route("Contact")]
         public ActionResult Contact()
         {
-            
+            lng.productTr = c.Products.Where(x => x.language == true).ToList();
+            lng.productEn = c.Products.Where(x => x.language == false).ToList();
+            lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
+            lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
 
-            return View();
+
+            return View(lng);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]

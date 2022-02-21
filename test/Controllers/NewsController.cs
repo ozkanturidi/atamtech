@@ -34,8 +34,16 @@ namespace test.Controllers
         {
             //var findNew = c.News.Where(x => x.id == id).ToList();
             nc.Value1 = c.News.Where(x => x.id == id).ToList();
-            nc.Value2 = c.Comments.Where(x => x.NewId == id).ToList();
-            return View("NewsDetail",nc);
+            //nc.Value2 = c.Comments.Where(x => x.NewId == id).ToList();
+            lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
+            lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
+            lng.productTr = c.Products.Where(x => x.language == true).ToList();
+            lng.productEn = c.Products.Where(x => x.language == false).ToList();
+
+            lng.newsdtTr = c.News.Where(x => x.language == true && x.id == id).ToList();
+            lng.newsdtEn = c.News.Where(x => x.language == false && x.id == id).ToList();
+
+            return View("NewsDetail",lng);
         }
 
         [HttpGet]

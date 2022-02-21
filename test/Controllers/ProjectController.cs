@@ -18,8 +18,10 @@ namespace test.Controllers
             //var projects = c.Projects.ToList();
             lng.projectTr = c.Projects.Where(x => x.language == true);
             lng.projectEn = c.Projects.Where(x => x.language == false);
+
             lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
             lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
+
             lng.productTr = c.Products.Where(x => x.language == true).ToList();
             lng.productEn = c.Products.Where(x => x.language == false).ToList();
 
@@ -29,9 +31,18 @@ namespace test.Controllers
 
         public ActionResult ProjectDetails(int id)
         {
+            lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
+            lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
 
-            var projects = c.Projects.Where(x => x.id == id).ToList();
-            return View(projects);
+            lng.productTr = c.Products.Where(x => x.language == true).ToList();
+            lng.productEn = c.Products.Where(x => x.language == false).ToList();
+
+            lng.projectdtTr = c.Projects.Where(x => x.language == true && x.id == id).ToList();
+            lng.projectdtEn = c.Projects.Where(x => x.language == false && x.id == id).ToList();
+
+
+            //var projects = c.Projects.Where(x => x.id == id).ToList();
+            return View(lng);
 
 
         }

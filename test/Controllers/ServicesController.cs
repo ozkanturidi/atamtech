@@ -14,6 +14,9 @@ namespace test.Controllers
         [Route("ServiceList")]
         public ActionResult ServiceList()
         {
+            lng.productTr = c.Products.Where(x => x.language == true).ToList();
+            lng.productEn = c.Products.Where(x => x.language == false).ToList();
+
             lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
             lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
             //var service = c.Services.ToList();
@@ -23,9 +26,17 @@ namespace test.Controllers
 
         public ActionResult ServiceDetails(int id)
         {
-            var findsrv = c.Services.Where(x => x.id == id).ToList();
+            lng.productTr = c.Products.Where(x => x.language == true).ToList();
+            lng.productEn = c.Products.Where(x => x.language == false).ToList();
 
-            return View(findsrv);
+            lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
+            lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
+
+            lng.servicedtTr = c.Services.Where(x => x.language == true && x.id == id);
+            lng.servicedtTr = c.Services.Where(x => x.language == false && x.id == id);
+            //var findsrv = c.Services.Where(x => x.id == id).ToList();
+
+            return View(lng);
         }
 
 

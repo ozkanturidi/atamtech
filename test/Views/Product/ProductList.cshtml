@@ -82,12 +82,29 @@
                                     @test.Language.Localization.Products<span class="fa fa-caret-down"></span>
                                 </a>
 
-                                <div class="dropdown-menu productdrop" id="dropdown-menuproduct" aria-labelledby="navbarDropdown">
-                                    @foreach (var item in Model.productEn)
+                                @{ if (test.Language.Localization.Home == "Anasayfa")
                                     {
-                                        <a class="dropdown-item" href="/Product/ProductDetails/@item.id">@item.name</a>
+                                        <div class="dropdown-menu productdrop" id="dropdown-menuproduct" aria-labelledby="navbarDropdown">
+                                            @foreach (var item in Model.productTr)
+                                            {
+                                                <a class="dropdown-item" href="/Product/ProductDetails/@item.id">@item.name</a>
+                                            }
+                                        </div>
+
+
                                     }
-                                </div>
+                                    else
+                                    {
+                                        <div class="dropdown-menu productdrop" id="dropdown-menuproduct" aria-labelledby="navbarDropdown">
+                                            @foreach (var item in Model.productEn)
+                                            {
+                                                <a class="dropdown-item" href="/Product/ProductDetails/@item.id">@item.name</a>
+                                            }
+                                        </div>
+
+                                    }
+                                }
+
 
                             </li>
                             <li class="nav-item">

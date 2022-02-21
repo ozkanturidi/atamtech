@@ -18,8 +18,8 @@ namespace test.Controllers
         public ActionResult ColList()
         {
             
-            lng.collTr = c.Collaborations.Where(x => x.language == true);
-            lng.collEn = c.Collaborations.Where(x => x.language == false);
+            lng.collTr = c.Collaborations.Where(x => x.language == true).ToList();
+            lng.collEn = c.Collaborations.Where(x => x.language == false).ToList();
             lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
             lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
             lng.productTr = c.Products.Where(x => x.language == true).ToList();
@@ -31,9 +31,16 @@ namespace test.Controllers
 
         public ActionResult ColDetails(int id)
         {
-            var col = c.Collaborations.ToList();
-            col = c.Collaborations.Where(x => x.id == id).ToList();
-            return View(col);
+            lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
+            lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
+            lng.productTr = c.Products.Where(x => x.language == true).ToList();
+            lng.productEn = c.Products.Where(x => x.language == false).ToList();
+
+            lng.colldtTr = c.Collaborations.Where(x => x.language == true && x.id == id).ToList();
+            lng.colldtEn = c.Collaborations.Where(x => x.language == false && x.id == id).ToList();
+            //var col = c.Collaborations.ToList();
+            //col = c.Collaborations.Where(x => x.id == id).ToList();
+            return View(lng);
         }
     }
 }
