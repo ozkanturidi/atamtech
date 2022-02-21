@@ -12,5 +12,9 @@ namespace test.Models
 
         public IEnumerable<Product> PrdcardTr { get; set; }
         public IEnumerable<Product> PrdcardEn { get; set; }
+
+        public IEnumerable<Service> serviceTr { get; set; }
+        public IEnumerable<Service> serviceEn { get; set; }
+
     }
 }

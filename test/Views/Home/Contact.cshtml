@@ -1,4 +1,8 @@
-﻿﻿@{ Layout = null;}
+﻿@using test.Models
+
+@model test.Models.TableList
+
+﻿@{ Layout = null;}
 
 <!doctype html>
 <html lang="en">
@@ -79,7 +83,7 @@
                                 <a class="nav-link dropdown-toggle" href="@Url.Action("ProductList", "Product")" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     @test.Language.Localization.Products<span class="fa fa-caret-down"></span>
                                 </a>
-                                @foreach (var item in Model.PrdcardTr)
+                                @foreach (var item in Model.productTr)
                                 {
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="/Product/ProductDetails/@item.id">@item.name</a>

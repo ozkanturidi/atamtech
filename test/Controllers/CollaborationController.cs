@@ -20,7 +20,11 @@ namespace test.Controllers
             
             lng.collTr = c.Collaborations.Where(x => x.language == true);
             lng.collEn = c.Collaborations.Where(x => x.language == false);
-            
+            lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
+            lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
+            lng.productTr = c.Products.Where(x => x.language == true).ToList();
+            lng.productEn = c.Products.Where(x => x.language == false).ToList();
+
             return View(lng);
         }
 

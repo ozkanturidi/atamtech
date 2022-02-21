@@ -18,6 +18,10 @@ namespace test.Controllers
             //var projects = c.Projects.ToList();
             lng.projectTr = c.Projects.Where(x => x.language == true);
             lng.projectEn = c.Projects.Where(x => x.language == false);
+            lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
+            lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
+            lng.productTr = c.Products.Where(x => x.language == true).ToList();
+            lng.productEn = c.Products.Where(x => x.language == false).ToList();
 
 
             return View(lng);

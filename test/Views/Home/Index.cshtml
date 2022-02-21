@@ -109,10 +109,13 @@
                                 <a class="nav-link dropdown-toggle" href="@Url.Action("ServiceList", "Services")" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     @test.Language.Localization.Services<span class="fa fa-caret-down"></span>
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">item.name</a>
-                                </div>
-                            </li>
+                                @foreach (var item in Model.serviceEn)
+                                {
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="/Services/ServiceDetails/@item.id">@item.title</a>
+                                    </div>
+                                }
+                                </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Contact","Home")">@test.Language.Localization.Contact</a>
                             </li>
@@ -172,24 +175,26 @@
                             {
                                 foreach (var item in Model.NewSlidTr)
                                 {
-                                    <div class="news-grid">
-                                        <div class="news-grid-image">
-                                            <a href="/News/NewsDetail/@item.id">
-                                                <img src="@item.fotoUrl" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="news-grid-txt">
-                                            <div class="news-grid-txt-1">
-                                                <h2>@item.title</h2>
-                                                <ul>
-                                                    <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
-                                                </ul>
-                                                <p>@item.content.Substring(0, 60)...</p>
-                                            </div>
-                                            <a href="/News/NewsDetail/@item.id">@test.Language.Localization.Read_More</a>
+                                                <div class="news-grid">
+                                                    <div class="news-grid-image">
+                                                        <a href="/News/NewsDetail/@item.id">
+                                                            <img src="@item.fotoUrl" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="news-grid-txt">
+                                                        <div class="news-grid-txt-1 container-fluid">
+                                                            <h2>@item.title</h2>
+                                                            <ul>
+                                                                <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
+                                                            </ul>
+                                                            <p>@item.content.Substring(0, 60)...</p>
+                                                        </div>
 
-                                        </div>
-                                    </div>
+                                                        <a href="/News/NewsDetail/@item.id">@test.Language.Localization.Read_More</a>
+
+                                                    </div>
+                                                    
+                                                </div>
                                 }
                             }
                             else
@@ -203,7 +208,7 @@
                                             </a>
                                         </div>
                                         <div class="news-grid-txt">
-                                            <div class="news-grid-txt-1">
+                                            <div class="news-grid-txt-1  container-fluid">
                                                 <h2>@item.title</h2>
                                                 <ul>
                                                     <li><i class="fa fa-calendar" aria-hidden="true"></i>@item.date.ToString("dd MMMM yyyy") </li>
@@ -467,6 +472,27 @@
     </script>
     <!--owl carousel-->
 
+    <script>
+        $(document).ready(function () {
+    $('.dropdown-toggle').mouseover(function() {
+        $('.dropdown-menu').show();
+    })
+
+    $('.dropdown-toggle').mouseout(function() {
+        t = setTimeout(function() {
+            $('.dropdown-menu').hide();
+        }, 100);
+
+        $('.dropdown-menu').on('mouseenter', function() {
+            $('.dropdown-menu').show();
+            clearTimeout(t);
+        }).on('mouseleave', function() {
+            $('.dropdown-menu').hide();
+        })
+    })
+})
+
+    </script>
     <!-- //Js scripts -->
 
 </body>
