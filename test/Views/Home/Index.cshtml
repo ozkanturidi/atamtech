@@ -47,7 +47,7 @@
                     <div class="headerMenuTopContact">
                         <ul class="list-inline">
                             <li class="list-inline-item"><a href="tel:+7 812 363-33-87"><i class="fa fa-phone"></i> +7 812 363-33-87</a></li>
-                            <li class="list-inline-item"><a href="@Url.Action("Contact","Home")"><i class="far fa-envelope"></i> info@atamtechnology.com</a></li>
+                            <li class="list-inline-item"><a href="@Url.Action("Contact", "Home")"><i class="far fa-envelope"></i> info@atamtechnology.com</a></li>
                         </ul>
                     </div>
                 </div>
@@ -89,32 +89,40 @@
                                     </div>
                                 }
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="@Url.Action("ProjectList", "Project")" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    @test.Language.Localization.Projects<span class="fa fa-caret-down"></span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Link 1</a>
-                                    <a class="dropdown-item" href="#">Link 2</a>
-                                    <a class="dropdown-item" href="#">Link 3</a>
-                                </div>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("ProjectList", "Project")">
+                                    @test.Language.Localization.Projects
+                                </a>     
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Collist", "Collaboration")">@test.Language.Localization.Collaborations</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("About","Home")">@test.Language.Localization.About</a>
+                                <a class="nav-link" href="@Url.Action("About", "Home")">@test.Language.Localization.About</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="@Url.Action("ServiceList", "Services")" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     @test.Language.Localization.Services<span class="fa fa-caret-down"></span>
                                 </a>
-                                @foreach (var item in Model.serviceEn)
-                                {
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="/Services/ServiceDetails/@item.id">@item.title</a>
-                                    </div>
-                                }
+                                @{ if (test.Language.Localization.Home == "Anasayfa")
+                                    {
+                                        foreach (var item in Model.serviceTr)
+                                        {
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="/Services/ServiceDetails/@item.id">@item.title</a>
+                                            </div>
+                                        }
+                                    }
+                                    else
+                                    {
+                                                    foreach (var item in Model.serviceEn)
+                                                    {
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="/Services/ServiceDetails/@item.id">@item.title</a>
+                                            </div>
+                                                    }
+                                        }
+                                    }
                                 </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Contact","Home")">@test.Language.Localization.Contact</a>

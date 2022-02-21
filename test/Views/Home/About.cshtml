@@ -90,15 +90,10 @@
                                     </div>
                                 }
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="@Url.Action("ProjectList", "Project")" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    @test.Language.Localization.Projects<span class="fa fa-caret-down"></span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Link 1</a>
-                                    <a class="dropdown-item" href="#">Link 2</a>
-                                    <a class="dropdown-item" href="#">Link 3</a>
-                                </div>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("ProjectList", "Project")">
+                                    @test.Language.Localization.Projects
+                                </a>                      
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Collist", "Collaboration")">@test.Language.Localization.Collaborations</a>
