@@ -106,15 +106,17 @@
                                 <a class="nav-link" href="@Url.Action("About","Home")">@test.Language.Localization.About</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="@Url.Action("ServiceList", "Services")" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle servicedrop"  href="@Url.Action("ServiceList","Services")" id="navbarDropdown" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
                                     @test.Language.Localization.Services<span class="fa fa-caret-down"></span>
                                 </a>
-                                @foreach (var item in Model.serviceEn)
-                                {
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                               
+                                <div class="dropdown-menu" id="dropdown-menuservice" aria-labelledby="navbarDropdown">
+                                    @foreach (var item in Model.serviceEn)
+                                    {
                                         <a class="dropdown-item" href="/Services/ServiceDetails/@item.id">@item.title</a>
+                                    }
                                     </div>
-                                }
+                                
                                 </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Contact","Home")">@test.Language.Localization.Contact</a>
@@ -474,20 +476,20 @@
 
     <script>
         $(document).ready(function () {
-    $('.dropdown-toggle').mouseover(function() {
-        $('.dropdown-menu').show();
+    $('.servicedrop').mouseover(function() {
+        $('#dropdown-menuservice').show();
     })
 
-    $('.dropdown-toggle').mouseout(function() {
+    $('.servicedrop').mouseout(function() {
         t = setTimeout(function() {
-            $('.dropdown-menu').hide();
-        }, 100);
+            $('#dropdown-menuservice').hide();
+        }, 10000);
 
-        $('.dropdown-menu').on('mouseenter', function() {
-            $('.dropdown-menu').show();
+        $('.servicedrop').on('mouseenter', function() {
+            $('#dropdown-menuservice').show();
             clearTimeout(t);
-        }).on('mouseleave', function() {
-            $('.dropdown-menu').hide();
+        }).on('.servicedrop', function() {
+            $('#dropdown-menuservice').hide(); 
         })
     })
 })
