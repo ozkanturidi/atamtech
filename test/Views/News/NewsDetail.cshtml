@@ -79,15 +79,17 @@
                                 <a class="nav-link" href="@Url.Action("Index", "Home")">@test.Language.Localization.Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="@Url.Action("ProductList", "Product")" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle productdrop" href="@Url.Action("ProductList", "Product")" id="navbarDropdown" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
                                     @test.Language.Localization.Products<span class="fa fa-caret-down"></span>
                                 </a>
-                                @foreach (var item in Model.productTr)
-                                {
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                <div class="dropdown-menu productdrop" id="dropdown-menuproduct" aria-labelledby="navbarDropdown">
+                                    @foreach (var item in Model.productEn)
+                                    {
                                         <a class="dropdown-item" href="/Product/ProductDetails/@item.id">@item.name</a>
-                                    </div>
-                                }
+                                    }
+                                </div>
+
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("ProjectList", "Project")">
@@ -98,31 +100,38 @@
                                 <a class="nav-link" href="@Url.Action("Collist", "Collaboration")">@test.Language.Localization.Collaborations</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="@Url.Action("About","Home")">@test.Language.Localization.About</a>
+                                <a class="nav-link" href="@Url.Action("About", "Home")">@test.Language.Localization.About</a>
                             </li>
+
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="@Url.Action("ServiceList", "Services")" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle servicedrop" href="@Url.Action("ServiceList","Services")" id="navbarDropdown" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
                                     @test.Language.Localization.Services<span class="fa fa-caret-down"></span>
                                 </a>
+
                                 @{ if (test.Language.Localization.Home == "Anasayfa")
                                     {
-                                        foreach (var item in Model.serviceTr)
-                                        {
-                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                        <div class="dropdown-menu servicedrop" id="dropdown-menuservice" aria-labelledby="navbarDropdown">
+                                            @foreach (var item in Model.serviceTr)
+                                            {
                                                 <a class="dropdown-item" href="/Services/ServiceDetails/@item.id">@item.title</a>
-                                            </div>
-                                        }
+                                            }
+                                        </div>
+
                                     }
                                     else
                                     {
-                                        foreach (var item in Model.serviceEn)
-                                        {
-                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                        <div class="dropdown-menu" id="dropdown-menuservice" aria-labelledby="navbarDropdown">
+                                            @foreach (var item in Model.serviceEn)
+                                            {
                                                 <a class="dropdown-item" href="/Services/ServiceDetails/@item.id">@item.title</a>
-                                            </div>
-                                        }
+                                            }
+                                        </div>
+
                                     }
                                 }
+
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Contact","Home")">@test.Language.Localization.Contact</a>
@@ -189,95 +198,95 @@
         </section>
         <!--logo-->
         <!-- footer -->
-<footer class="footer py-3">
-    <div class="container py-md-4 py-3">
-        <div class="row sub-columns">
-            <div class="col-lg-3 col-sm-6 pl-lg-5 sub-one-left">
-                <h6>@test.Language.Localization.Our_Services</h6>
-                <ul>
-                    <li>
-                        <a href="services.html"><span class="fas fa-angle-right mr-2"></span>Website Designing</a>
-                    </li>
-                    <li>
-                        <a href="services.html"><span class="fas fa-angle-right mr-2"></span>Web Hosting</a>
-                    </li>
-                    <li>
-                        <a href="services.html"><span class="fas fa-angle-right mr-2"></span>Digital Photography</a>
-                    </li>
-                    <li>
-                        <a href="services.html"><span class="fas fa-angle-right mr-2"></span>Photoshop to HTML</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-5">
-                <h6>@test.Language.Localization.Quick_links</h6>
-                <ul>
-                    <li><a href="@Url.Action("Index", "Home")"><span class="fas fa-angle-right mr-2"></span>@test.Language.Localization.Home</a></li>
-                    <li><a href="@Url.Action("About", "Home")"><span class="fas fa-angle-right mr-2"></span>@test.Language.Localization.About</a></li>
-                    <li><a href="@Url.Action("Contact", "Home")"><span class="fas fa-angle-right mr-2"></span>@test.Language.Localization.Contact</a></li>
-                </ul>
+        <footer class="footer py-3">
+            <div class="container py-md-4 py-3">
+                <div class="row sub-columns">
+                    <div class="col-lg-3 col-sm-6 pl-lg-5 sub-one-left">
+                        <h6>@test.Language.Localization.Our_Services</h6>
+                        <ul>
+                            <li>
+                                <a href="services.html"><span class="fas fa-angle-right mr-2"></span>Website Designing</a>
+                            </li>
+                            <li>
+                                <a href="services.html"><span class="fas fa-angle-right mr-2"></span>Web Hosting</a>
+                            </li>
+                            <li>
+                                <a href="services.html"><span class="fas fa-angle-right mr-2"></span>Digital Photography</a>
+                            </li>
+                            <li>
+                                <a href="services.html"><span class="fas fa-angle-right mr-2"></span>Photoshop to HTML</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-5">
+                        <h6>@test.Language.Localization.Quick_links</h6>
+                        <ul>
+                            <li><a href="@Url.Action("Index", "Home")"><span class="fas fa-angle-right mr-2"></span>@test.Language.Localization.Home</a></li>
+                            <li><a href="@Url.Action("About", "Home")"><span class="fas fa-angle-right mr-2"></span>@test.Language.Localization.About</a></li>
+                            <li><a href="@Url.Action("Contact", "Home")"><span class="fas fa-angle-right mr-2"></span>@test.Language.Localization.Contact</a></li>
+                        </ul>
 
-            </div>
-            <div class="col-lg-2 col-sm-6 sub-two-right mt-lg-0 mt-sm-5 mt-4">
-                <h6>@test.Language.Localization.Help_Support</h6>
-                <ul>
-                    <li>
-                        <a href="#faq"><span class="fas fa-angle-right mr-2"></span>Faq</a>
-                    </li>
-                    <li>
-                        <a href="#support"><span class="fas fa-angle-right mr-2"></span>Support</a>
-                    </li>
-                    <li>
-                        <a href="#terms">
-                            <span class="fas fa-angle-right mr-2"></span>Terms
-                            of Services
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-lg-0 mt-sm-5 mt-4">
-                <ul class="social">
-                    <li>
-                        <a href="#facebook" title="facebook">
-                            <span class="fab fa-facebook-f"
-                                  aria-hidden="true"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#linkedin" title="linkedin">
-                            <span class="fab fa-linkedin-in"
-                                  aria-hidden="true"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#twitter" title="twitter">
-                            <span class="fab fa-twitter"
-                                  aria-hidden="true"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#google" title="google">
-                            <span class="fab fa-google-plus-g"
-                                  aria-hidden="true"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#instagram" title="instagram">
-                            <span class="fab fa-instagram"
-                                  aria-hidden="true"></span>
-                        </a>
-                    </li>
-                </ul>
+                    </div>
+                    <div class="col-lg-2 col-sm-6 sub-two-right mt-lg-0 mt-sm-5 mt-4">
+                        <h6>@test.Language.Localization.Help_Support</h6>
+                        <ul>
+                            <li>
+                                <a href="#faq"><span class="fas fa-angle-right mr-2"></span>Faq</a>
+                            </li>
+                            <li>
+                                <a href="#support"><span class="fas fa-angle-right mr-2"></span>Support</a>
+                            </li>
+                            <li>
+                                <a href="#terms">
+                                    <span class="fas fa-angle-right mr-2"></span>Terms
+                                    of Services
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-lg-0 mt-sm-5 mt-4">
+                        <ul class="social">
+                            <li>
+                                <a href="#facebook" title="facebook">
+                                    <span class="fab fa-facebook-f"
+                                          aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#linkedin" title="linkedin">
+                                    <span class="fab fa-linkedin-in"
+                                          aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#twitter" title="twitter">
+                                    <span class="fab fa-twitter"
+                                          aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#google" title="google">
+                                    <span class="fab fa-google-plus-g"
+                                          aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#instagram" title="instagram">
+                                    <span class="fab fa-instagram"
+                                          aria-hidden="true"></span>
+                                </a>
+                            </li>
+                        </ul>
 
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="container py-md-3 py-0">
-        <div class="d-inline-block w-100 text-center">
-            <p>Designed by IKU ASIMOV HELLO WORLD.</p>
-        </div>
-    </div>
-</footer>
+            <div class="container py-md-3 py-0">
+                <div class="d-inline-block w-100 text-center">
+                    <p>Designed by IKU ASIMOV HELLO WORLD.</p>
+                </div>
+            </div>
+        </footer>
     }
     <!-- //footer -->
     <!-- Js scripts -->
@@ -342,6 +351,51 @@
     <!--bootstrap-->
     <script src="~/Style/js/bootstrap.min.js"></script>
     <!-- //bootstrap-->
+    <!--dropdown-->
+    <script>
+        $(document).ready(function () {
+            $('.servicedrop').mouseover(function () {
+                $('#dropdown-menuservice').show();
+            })
+
+            $('.servicedrop').mouseout(function () {
+                t = setTimeout(function () {
+                    $('#dropdown-menuservice').hide();
+                }, 1000);
+
+                $('.servicedrop').on('mouseenter', function () {
+                    $('#dropdown-menuservice').show();
+                    clearTimeout(t);
+                }).on('.servicedrop', function () {
+                    $('#dropdown-menuservice').hide();
+                })
+            })
+        })
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.productdrop').mouseover(function () {
+                $('#dropdown-menuproduct').show();
+            })
+
+            $('.productdrop').mouseout(function () {
+                t = setTimeout(function () {
+                    $('#dropdown-menuproduct').hide();
+                }, 1000);
+
+                $('.productdrop').on('mouseenter', function () {
+                    $('#dropdown-menuproduct').show();
+                    clearTimeout(t);
+                }).on('.productdrop', function () {
+                    $('#dropdown-menuproduct').hide();
+                })
+            })
+        })
+
+    </script>
+    <!--dropdown-->
     <!-- //Js scripts -->
 </body>
 

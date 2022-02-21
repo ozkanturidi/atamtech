@@ -14,8 +14,8 @@ namespace test.Controllers
         [Route("ServiceList")]
         public ActionResult ServiceList()
         {
-            lng.serviceTr = c.Services.Where(x => x.language == true);
-            lng.serviceEn = c.Services.Where(x => x.language == false);
+            lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
+            lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
             //var service = c.Services.ToList();
             return View(lng);
 
