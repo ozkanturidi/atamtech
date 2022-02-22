@@ -1,5 +1,4 @@
-﻿@using test.Models
-@model List<Product>
+﻿@model test.Models.TableList
 ﻿@{ Layout = null;}
 
 <!doctype html>
@@ -83,7 +82,7 @@
                                 </a>
 
                                 <div class="dropdown-menu productdrop" id="dropdown-menuproduct" aria-labelledby="navbarDropdown">
-                                    @foreach (var item in Model.)
+                                    @foreach (var item in Model.Product)
                                     {
                                         <a class="dropdown-item" href="/Product/ProductDetails/@item.id">@item.name</a>
                                     }
@@ -150,7 +149,7 @@
     <!--//header-->
     <!-- inner banner -->
 
-    @foreach (var item in Model)
+    @foreach (var item in Model.Product)
     {
 
 
@@ -168,7 +167,7 @@
         </section>
     }
     <!-- //inner banner -->
-    @foreach (var item in Model)
+    @foreach (var item in Model.Product)
     {
         <!-- product details section -->
         <section class="product py-5" id="product">

@@ -16,6 +16,9 @@ namespace test.Controllers
         {
             lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
             lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
+            lng.productTr = c.Products.Where(x => x.language == true).ToList();
+            lng.productEn = c.Products.Where(x => x.language == false).ToList();
+
             //var service = c.Services.ToList();
             return View(lng);
 
@@ -23,9 +26,11 @@ namespace test.Controllers
 
         public ActionResult ServiceDetails(int id)
         {
-            var findsrv = c.Services.Where(x => x.id == id).ToList();
+            lng.service = c.Services.Where(x=>x.id==id).ToList();
+            lng.productTr = c.Products.Where(x => x.language == true).ToList();
+            lng.productEn = c.Products.Where(x => x.language == false).ToList();
 
-            return View(findsrv);
+            return View(lng);
         }
 
 
