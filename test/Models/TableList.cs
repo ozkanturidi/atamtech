@@ -31,7 +31,8 @@ namespace test.Models
         public IEnumerable<AboutUs> aboutTr { get; set; }
         public IEnumerable<AboutUs> aboutEn { get; set; }
 
-
+        public IEnumerable<HomePage> HomepageTr { get; set; }
+        public IEnumerable<HomePage> HomepageEn { get; set; }
 
 
     }

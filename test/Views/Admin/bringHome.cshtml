@@ -1,4 +1,4 @@
-﻿@model test.Models.New
+﻿@model test.Models.HomePage
 @{
     ViewBag.Title = "bringNew";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -6,7 +6,7 @@
 
 <h2>Haber Getirme</h2>
 
-@using (Html.BeginForm("UpdateNew", "Admin", FormMethod.Post))
+@using (Html.BeginForm("UpdateHome", "Admin", FormMethod.Post))
 {
     @Html.LabelFor(x => x.id)
     @Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = "readonly" })
@@ -22,16 +22,14 @@
     @Html.TextBoxFor(x => x.language, new { @class = "form-control" })
 
     <br />
-    @Html.LabelFor(x => x.date)
-    @Html.TextBoxFor(x => x.date, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.fotoUrl)
-    @Html.TextBoxFor(x => x.fotoUrl, new { @class = "form-control" })
+    @Html.LabelFor(x=>x.photoUrl)
+    @Html.TextBoxFor(x => x.photoUrl, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.content)
-    @Html.TextAreaFor(x => x.content, 15, 1, new { @class = "form-control" })
+    @Html.LabelFor(x => x.text)
+    @Html.TextAreaFor(x => x.text, 15, 1, new { @class = "form-control" })
     <br />
-    <button class="btn btn-success">Update new</button>
+    <button class="btn btn-success">Update Home</button>
 
 
 }

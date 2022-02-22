@@ -1,25 +1,25 @@
-﻿@model test.Models.Collaboration
+﻿@model test.Models.HomePage
 
 @{
     ViewBag.Title = "CreateColl";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Create Collaboration</h2>
+<h2>Create About US</h2>
 
 <br />
 <form class="form-group" method="post">
+    @Html.LabelFor(x => x.photoUrl)
+    @Html.TextBoxFor(x => x.photoUrl, new { @class = "form-control" })
+
+
+    @Html.LabelFor(x => x.text)
+    @Html.TextBoxFor(x => x.text, new { @class = "form-control" })
+    <br />
     @Html.LabelFor(x => x.title)
     @Html.TextBoxFor(x => x.title, new { @class = "form-control" })
 
-
-    @Html.LabelFor(x => x.photoUrl)
-    @Html.TextBoxFor(x => x.photoUrl, new { @class = "form-control" })
-    <br />
-    @Html.LabelFor(x => x.content)
-    @Html.TextAreaFor(x => x.content, new { @class = "form-control" })
-    <br />
     <span>Turkish: </span> @Html.RadioButtonFor(x => x.language, true)
     <span> | English: </span> @Html.RadioButtonFor(x => x.language, false)
-    <button class="btn btn-primary">Add Collaboration</button>
+    <button class="btn btn-primary">Add Home</button>
 </form>

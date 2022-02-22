@@ -48,6 +48,15 @@ namespace test.Controllers
             return View(lng);
         }
 
+        public ActionResult HomePage()
+        {
+            lng.HomepageTr = c.HomePages.Where(x => x.language == true);
+            lng.HomepageEn = c.HomePages.Where(x => x.language == false);
+
+            return View(lng);
+        }
+
+
 
 
 
@@ -446,9 +455,45 @@ namespace test.Controllers
             return RedirectToAction("About");
         }
 
+        public ActionResult bringHome(int id)
+        {
+            var home = c.HomePages.Find(id);
 
-      
-        
+            return View("bringHome",home);
+        }
+        public ActionResult UpdateHome(HomePage home)
+        {
+            var a = c.HomePages.Find(home.id);
+            a.title = home.title;
+            a.text = home.text;
+            a.photoUrl = home.photoUrl;
+            a.language = home.language;
+
+            c.SaveChanges();
+
+
+            return RedirectToAction("HomePage");
+        }
+
+        public ActionResult CreateHome()
+        {
+
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreateHome(HomePage home)
+        {
+            c.HomePages.Add(home);
+            c.SaveChanges();
+
+            return RedirectToAction("HomePage");
+        }
+
+
+
+
 
     }
 }

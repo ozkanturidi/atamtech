@@ -18,6 +18,10 @@
     @Html.TextBoxFor(x => x.name, new { @class = "form-control" })
 
     <br />
+
+    <span>Turkish: </span> @Html.RadioButtonFor(x => x.language, true)
+    <span> | English: </span> @Html.RadioButtonFor(x => x.language, false)
+    <br />
     @Html.LabelFor(x => x.title)
     @Html.TextBoxFor(x => x.title, new { @class = "form-control" })
 

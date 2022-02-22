@@ -13,8 +13,13 @@ namespace test.Models
         public IEnumerable<Product> PrdcardTr { get; set; }
         public IEnumerable<Product> PrdcardEn { get; set; }
 
+
+        public IEnumerable<HomePage> HomePageEng { get; set; }
+        public IEnumerable<HomePage> HomePageTr { get; set; }
+
         public IEnumerable<Service> serviceTr { get; set; }
         public IEnumerable<Service> serviceEn { get; set; }
+
 
     }
 }

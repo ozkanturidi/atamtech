@@ -16,6 +16,11 @@
     @Html.LabelFor(x => x.title)
     @Html.TextBoxFor(x => x.title, new { @class = "form-control" })
 
+    <br />
+    @Html.Label("Turkish=true, English=false")
+    <br />
+    @Html.TextBoxFor(x => x.language, new { @class = "form-control" })
+
     @Html.LabelFor(x => x.servicedetail)
     @Html.TextBoxFor(x => x.servicedetail, new { @class = "form-control" })
 
