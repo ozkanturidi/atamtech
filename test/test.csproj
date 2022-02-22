@@ -185,6 +185,8 @@
     <Content Include="Style\images\fixar007_2.png" />
     <Content Include="Style\images\img.jpg" />
     <Content Include="Style\images\img2.jpg" />
+    <Content Include="Style\js\bootstrap-hover-dropdown.js" />
+    <Content Include="Style\js\bootstrap-hover-dropdown.min.js" />
     <Content Include="Style\js\bootstrap.min.js" />
     <Content Include="Style\js\jquery-3.3.1.min.js" />
     <Content Include="Style\js\jquery.magnific-popup.min.js" />

@@ -21,9 +21,12 @@ namespace test.Controllers
             
             lng.newsTr = c.News.Where(x => x.language == true); // tr true 
             lng.newsEn = c.News.Where(x => x.language == false); // en false
-            
-              //  var news = c.News.ToList();
-                return View(lng);
+            lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
+            lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
+            lng.productTr = c.Products.Where(x => x.language == true).ToList();
+            lng.productEn = c.Products.Where(x => x.language == false).ToList();
+            //  var news = c.News.ToList();
+            return View(lng);
         }
        
 

@@ -79,25 +79,65 @@
                     <div class="collapse navbar-collapse" id="navbarToggler">
                         <ul class="navbar-nav ml-lg-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("Index", "Home")">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="@Url.Action("Index", "Home")">@test.Language.Localization.Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle productdrop" href="@Url.Action("ProductList", "Product")" id="navbarDropdown" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    @test.Language.Localization.Products<span class="fa fa-caret-down"></span>
+                                </a>
+
+                                <div class="dropdown-menu productdrop" id="dropdown-menuproduct" aria-labelledby="navbarDropdown">
+                                    @foreach (var item in Model.product)
+                                    {
+                                        <a class="dropdown-item" href="/Product/ProductDetails/@item.id">@item.name</a>
+                                    }
+                                </div>
+
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("ProductList", "Product")">Products</a>
+                                <a class="nav-link" href="@Url.Action("ProjectList", "Project")">
+                                    @test.Language.Localization.Projects
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("ProjectList", "Project")">Projects</a>
+                                <a class="nav-link" href="@Url.Action("Collist", "Collaboration")">@test.Language.Localization.Collaborations</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("Collist", "Collaboration")">Collaborations</a>
+                                <a class="nav-link" href="@Url.Action("About", "Home")">@test.Language.Localization.About</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle servicedrop" href="@Url.Action("ServiceList","Services")" id="navbarDropdown" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    @test.Language.Localization.Services<span class="fa fa-caret-down"></span>
+                                </a>
+
+                                @{ if (test.Language.Localization.Home == "Anasayfa")
+                                    {
+
+                                        <div class="dropdown-menu servicedrop" id="dropdown-menuservice" aria-labelledby="navbarDropdown">
+                                            @foreach (var item in Model.)
+                                            {
+                                                <a class="dropdown-item" href="/Services/ServiceDetails/@item.id">@item.title</a>
+                                            }
+                                        </div>
+
+                                    }
+                                    else
+                                    {
+
+                                        <div class="dropdown-menu" id="dropdown-menuservice" aria-labelledby="navbarDropdown">
+                                            @foreach (var item in Model.servicesEn)
+                                            {
+                                                <a class="dropdown-item" href="/Services/ServiceDetails/@item.id">@item.title</a>
+                                            }
+                                        </div>
+
+                                    }
+                                }
+
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("About","Home")">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("ServiceList", "Services")">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("Contact","Home")">Contact</a>
+                                <a class="nav-link" href="@Url.Action("Contact","Home")">@test.Language.Localization.Contact</a>
                             </li>
                             <li class="nav-item">
                                 @Html.ActionLink(" TR ", "ChangeLanguage", "Home", new { selectedlanguage = "tr" }, new { @class = "btn nav-link" })
@@ -118,47 +158,47 @@
 
 
 
-    <section class="inner-banner py-5">
-        <div class="breadcrumb py-lg-5">
-            <div class="container pt-4 pb-sm-4">
-                <h4 class="inner-text-title pt-5">@item.title</h4>
-                <ul class="breadcrumbs-custom-path">
-                    <li><a href="@Url.Action("ServiceList", "Services")">Services</a></li>
-                    <li class="active"><i class="fas fa-angle-right"></i>@item.title</li>
-                </ul>
+        <section class="inner-banner py-5">
+            <div class="breadcrumb py-lg-5">
+                <div class="container pt-4 pb-sm-4">
+                    <h4 class="inner-text-title pt-5">@item.title</h4>
+                    <ul class="breadcrumbs-custom-path">
+                        <li><a href="@Url.Action("ServiceList", "Services")">Services</a></li>
+                        <li class="active"><i class="fas fa-angle-right"></i>@item.title</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- //inner banner -->
-    <!-- content-6-section -->
-    <section class="content-12-main">
-        <div class="content-12 text-left py-0">
-            <div class="container py-md-0 py-5">
-                <div class="content-info-tabs text-center">
-                    <div class="row content12 align-items-center">
-                        <div class="col-lg-6 column mt-lg-0 mt-4">
-                            <img src="@item.photoUrl2" class="img-fluid radius-image" alt="">
-                        </div>
-                        <div class="col-lg-6 column">
-                            <p>
-                               @item.servicedetail
-                            </p>
-                        </div>
+        <!-- //inner banner -->
+        <!-- content-6-section -->
+        <section class="content-12-main">
+            <div class="content-12 text-left py-0">
+                <div class="container py-md-0 py-5">
+                    <div class="content-info-tabs text-center">
+                        <div class="row content12 align-items-center">
+                            <div class="col-lg-6 column mt-lg-0 mt-4">
+                                <img src="@item.photoUrl2" class="img-fluid radius-image" alt="">
+                            </div>
+                            <div class="col-lg-6 column">
+                                <p>
+                                    @item.servicedetail
+                                </p>
+                            </div>
 
-                        <div class="col-lg-6 column">
-                            <p class="content-para mb-3">
-                              @item.servicedetail2
-                            </p>
-                        </div>
-                        <div class="col-lg-6 column mt-lg-0 mt-4">
-                            <img src="@item.photoUrl3" class="img-fluid radius-image" alt="">
+                            <div class="col-lg-6 column">
+                                <p class="content-para mb-3">
+                                    @item.servicedetail2
+                                </p>
+                            </div>
+                            <div class="col-lg-6 column mt-lg-0 mt-4">
+                                <img src="@item.photoUrl3" class="img-fluid radius-image" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     }
     <!--logo-->
     <section class="logo-section py-0">
@@ -254,6 +294,11 @@
                 </div>
             </div>
         </div>
+        <div class="container py-md-3 py-0">
+            <div class="d-inline-block w-100 text-center">
+                <p>Designed by IKU ASIMOV HELLO WORLD.</p>
+            </div>
+        </div>
     </footer>
     <!-- //footer -->
     <!-- Js scripts -->
@@ -318,6 +363,51 @@
     <!--bootstrap-->
     <script src="~/Style/js/bootstrap.min.js"></script>
     <!-- //bootstrap-->
+    <!--dropdown-->
+    <script>
+        $(document).ready(function () {
+            $('.servicedrop').mouseover(function () {
+                $('#dropdown-menuservice').show();
+            })
+
+            $('.servicedrop').mouseout(function () {
+                t = setTimeout(function () {
+                    $('#dropdown-menuservice').hide();
+                }, 1000);
+
+                $('.servicedrop').on('mouseenter', function () {
+                    $('#dropdown-menuservice').show();
+                    clearTimeout(t);
+                }).on('.servicedrop', function () {
+                    $('#dropdown-menuservice').hide();
+                })
+            })
+        })
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.productdrop').mouseover(function () {
+                $('#dropdown-menuproduct').show();
+            })
+
+            $('.productdrop').mouseout(function () {
+                t = setTimeout(function () {
+                    $('#dropdown-menuproduct').hide();
+                }, 1000);
+
+                $('.productdrop').on('mouseenter', function () {
+                    $('#dropdown-menuproduct').show();
+                    clearTimeout(t);
+                }).on('.productdrop', function () {
+                    $('#dropdown-menuproduct').hide();
+                })
+            })
+        })
+
+    </script>
+    <!--dropdown-->
     <!-- //Js scripts -->
 </body>
 

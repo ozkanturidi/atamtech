@@ -77,20 +77,60 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Index", "Home")">@test.Language.Localization.Home <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("ProductList", "Product")">@test.Language.Localization.Products</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle productdrop" href="@Url.Action("ProductList", "Product")" id="navbarDropdown" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    @test.Language.Localization.Products<span class="fa fa-caret-down"></span>
+                                </a>
+
+                                <div class="dropdown-menu productdrop" id="dropdown-menuproduct" aria-labelledby="navbarDropdown">
+                                    @foreach (var item in Model.)
+                                    {
+                                        <a class="dropdown-item" href="/Product/ProductDetails/@item.id">@item.name</a>
+                                    }
+                                </div>
+
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("ProjectList", "Project")">@test.Language.Localization.Projects</a>
+                                <a class="nav-link" href="@Url.Action("ProjectList", "Project")">
+                                    @test.Language.Localization.Projects
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Collist", "Collaboration")">@test.Language.Localization.Collaborations</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("About","Home")">@test.Language.Localization.About</a>
+                                <a class="nav-link" href="@Url.Action("About", "Home")">@test.Language.Localization.About</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="@Url.Action("ServiceList", "Services")">@test.Language.Localization.Services</a>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle servicedrop" href="@Url.Action("ServiceList","Services")" id="navbarDropdown" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    @test.Language.Localization.Services<span class="fa fa-caret-down"></span>
+                                </a>
+
+                                @{ if (test.Language.Localization.Home == "Anasayfa")
+                                    {
+
+                                        <div class="dropdown-menu servicedrop" id="dropdown-menuservice" aria-labelledby="navbarDropdown">
+                                            @foreach (var item in Model.serviceTr)
+                                            {
+                                                <a class="dropdown-item" href="/Services/ServiceDetails/@item.id">@item.title</a>
+                                            }
+                                        </div>
+
+                                    }
+                                    else
+                                    {
+
+                                        <div class="dropdown-menu" id="dropdown-menuservice" aria-labelledby="navbarDropdown">
+                                            @foreach (var item in Model.serviceEn)
+                                            {
+                                                <a class="dropdown-item" href="/Services/ServiceDetails/@item.id">@item.title</a>
+                                            }
+                                        </div>
+
+                                    }
+                                }
+
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="@Url.Action("Contact","Home")">@test.Language.Localization.Contact</a>
@@ -291,6 +331,11 @@
                 </div>
             </div>
         </div>
+        <div class="container py-md-3 py-0">
+            <div class="d-inline-block w-100 text-center">
+                <p>Designed by IKU ASIMOV HELLO WORLD.</p>
+            </div>
+        </div>
     </footer>
     <!-- //footer -->
     <!-- Js scripts -->
@@ -355,6 +400,51 @@
     <!--bootstrap-->
     <script src="~/Style/js/bootstrap.min.js"></script>
     <!-- //bootstrap-->
+    <!--dropdown-->
+    <script>
+        $(document).ready(function () {
+            $('.servicedrop').mouseover(function () {
+                $('#dropdown-menuservice').show();
+            })
+
+            $('.servicedrop').mouseout(function () {
+                t = setTimeout(function () {
+                    $('#dropdown-menuservice').hide();
+                }, 1000);
+
+                $('.servicedrop').on('mouseenter', function () {
+                    $('#dropdown-menuservice').show();
+                    clearTimeout(t);
+                }).on('.servicedrop', function () {
+                    $('#dropdown-menuservice').hide();
+                })
+            })
+        })
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.productdrop').mouseover(function () {
+                $('#dropdown-menuproduct').show();
+            })
+
+            $('.productdrop').mouseout(function () {
+                t = setTimeout(function () {
+                    $('#dropdown-menuproduct').hide();
+                }, 1000);
+
+                $('.productdrop').on('mouseenter', function () {
+                    $('#dropdown-menuproduct').show();
+                    clearTimeout(t);
+                }).on('.productdrop', function () {
+                    $('#dropdown-menuproduct').hide();
+                })
+            })
+        })
+
+    </script>
+    <!--dropdown-->
     <!-- //Js scripts -->
 </body>
 

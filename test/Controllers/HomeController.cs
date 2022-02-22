@@ -53,8 +53,13 @@ namespace test.Controllers
            pn.NewSlidEn = c.News.Where(x=> x.language == false).OrderByDescending(x => x.id).Take(4).ToList();
            pn.PrdcardTr = c.Products.Where(x=>x.language==true).ToList();
            pn.PrdcardEn = c.Products.Where(x => x.language == false).ToList();
+
            pn.HomePageEng = c.HomePages.Where(x => x.language == false).OrderByDescending(x => x.id).Take(1).ToList();
             pn.HomePageTr = c.HomePages.Where(x => x.language == true).OrderByDescending(x => x.id).Take(1).ToList();
+
+           pn.serviceTr = c.Services.Where(x => x.language == true).ToList();
+           pn.serviceEn = c.Services.Where(x => x.language == false).ToList();
+            
 
 
             return View(pn);
@@ -66,6 +71,10 @@ namespace test.Controllers
 
             lng.aboutTr = c.AboutUss.Where(x => x.language == true);
             lng.aboutEn = c.AboutUss.Where(x => x.language == false);
+            lng.productTr = c.Products.Where(x => x.language == true).ToList();
+            lng.productEn= c.Products.Where(x => x.language == false).ToList();
+            lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
+            lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
             //var about = c.AboutUss.ToList();
 
             return View(lng);
@@ -84,12 +93,15 @@ namespace test.Controllers
         {
             c.Contacts.Add(cont);
             c.SaveChanges();
-
+            lng.productTr = c.Products.Where(x => x.language == true).ToList();
+            lng.productEn = c.Products.Where(x => x.language == false).ToList();
+            lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
+            lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
             /*var name = Request["mail"];
             Email(name);*/
-            
 
-            return View();
+
+            return View(lng);
         }
 
 
