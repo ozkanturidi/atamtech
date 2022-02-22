@@ -164,6 +164,7 @@ namespace test.Controllers
             n.date = ne.date;
             n.content = ne.content;
             n.fotoUrl = ne.fotoUrl;
+            n.language = ne.language;
             c.SaveChanges();
 
 
@@ -221,6 +222,7 @@ namespace test.Controllers
             p.content = prd.content;
             p.photoUrl = prd.photoUrl;
             p.shortdef = prd.shortdef;
+            p.language = prd.language;
 
             //Operations
 
@@ -312,6 +314,7 @@ namespace test.Controllers
             s.title = serv.title;      
             s.content = serv.content;
             s.photoUrl = serv.photoUrl;
+            s.language = serv.language;
             c.SaveChanges();
 
 
@@ -359,6 +362,7 @@ namespace test.Controllers
             col.title = colla.title;
             col.content = colla.content;
             col.photoUrl = colla.photoUrl;
+            col.language = colla.language;
             c.SaveChanges();
 
 
@@ -406,6 +410,7 @@ namespace test.Controllers
             p.title = pro.title;
             p.content = pro.content;
             p.photoUrl = pro.photoUrl;
+            p.language = pro.language;
             c.SaveChanges();
 
 
@@ -448,6 +453,7 @@ namespace test.Controllers
             var a = c.AboutUss.Find(abo.id);
             a.fotoUrl = abo.fotoUrl;
             a.aboutUs = abo.aboutUs;
+            a.language = abo.language;
             
             c.SaveChanges();
 

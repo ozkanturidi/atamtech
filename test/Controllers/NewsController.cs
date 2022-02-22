@@ -33,9 +33,13 @@ namespace test.Controllers
         public ActionResult NewsDetail(int id)
         {
             //var findNew = c.News.Where(x => x.id == id).ToList();
-            nc.Value1 = c.News.Where(x => x.id == id).ToList();
-            nc.Value2 = c.Comments.Where(x => x.NewId == id).ToList();
-            return View("NewsDetail",nc);
+            lng.news = c.News.Where(x => x.id == id).ToList();
+            lng.productTr = c.Products.Where(x => x.language == true).ToList();
+            lng.productEn = c.Products.Where(x => x.language == false).ToList();
+            lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
+            lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
+
+            return View("NewsDetail",lng);
         }
 
         [HttpGet]

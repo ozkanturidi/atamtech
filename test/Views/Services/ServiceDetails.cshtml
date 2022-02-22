@@ -1,5 +1,4 @@
-﻿@using test.Models
-@model List<Service>
+﻿@model test.Models.TableList
 @{
     ViewBag.Title = "ServiceDetails";
 }
@@ -21,13 +20,13 @@
     <meta name="author" content="IKU ASIMOV HELLO WORLD">
 
     @*@@if (lang == "en")
-    {
-    <meta name="language" content="English">
-    }
-    else
-    {
-    <meta name="language" content="Turkish">
-    }*@
+        {
+        <meta name="language" content="English">
+        }
+        else
+        {
+        <meta name="language" content="Turkish">
+        }*@
 
     <!-- google-fonts -->
     <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -86,12 +85,29 @@
                                     @test.Language.Localization.Products<span class="fa fa-caret-down"></span>
                                 </a>
 
-                                <div class="dropdown-menu productdrop" id="dropdown-menuproduct" aria-labelledby="navbarDropdown">
-                                    @foreach (var item in Model.product)
+                                @{ if (test.Language.Localization.Home == "Anasayfa")
                                     {
-                                        <a class="dropdown-item" href="/Product/ProductDetails/@item.id">@item.name</a>
+
+                                        <div class="dropdown-menu productdrop" id="dropdown-menuproduct" aria-labelledby="navbarDropdown">
+                                            @foreach (var item in Model.productTr)
+                                            {
+                                                <a class="dropdown-item" href="/Product/ProductDetails/@item.id">@item.name</a>
+                                            }
+                                        </div>
+
                                     }
-                                </div>
+                                    else
+                                    {
+
+                                        <div class="dropdown-menu" id="dropdown-menuproduct" aria-labelledby="navbarDropdown">
+                                            @foreach (var item in Model.productEn)
+                                            {
+                                                <a class="dropdown-item" href="/Product/ProductDetails/@item.id">@item.name</a>
+                                            }
+                                        </div>
+
+                                    }
+                                }
 
                             </li>
                             <li class="nav-item">
@@ -111,29 +127,12 @@
                                     @test.Language.Localization.Services<span class="fa fa-caret-down"></span>
                                 </a>
 
-                                @{ if (test.Language.Localization.Home == "Anasayfa")
+                                <div class="dropdown-menu productdrop" id="dropdown-menuproduct" aria-labelledby="navbarDropdown">
+                                    @foreach (var item in Model.service)
                                     {
-
-                                        <div class="dropdown-menu servicedrop" id="dropdown-menuservice" aria-labelledby="navbarDropdown">
-                                            @foreach (var item in Model.)
-                                            {
-                                                <a class="dropdown-item" href="/Services/ServiceDetails/@item.id">@item.title</a>
-                                            }
-                                        </div>
-
+                                        <a class="dropdown-item" href="/Services/ServiceDetails/@item.id">@item.title</a>
                                     }
-                                    else
-                                    {
-
-                                        <div class="dropdown-menu" id="dropdown-menuservice" aria-labelledby="navbarDropdown">
-                                            @foreach (var item in Model.servicesEn)
-                                            {
-                                                <a class="dropdown-item" href="/Services/ServiceDetails/@item.id">@item.title</a>
-                                            }
-                                        </div>
-
-                                    }
-                                }
+                                </div>
 
                             </li>
                             <li class="nav-item">
@@ -153,7 +152,7 @@
     </header>
     <!--//header-->
     <!-- inner banner -->
-    @foreach (var item in Model)
+    @foreach (var item in Model.service)
     {
 
 

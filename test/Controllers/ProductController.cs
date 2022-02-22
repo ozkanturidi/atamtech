@@ -25,14 +25,15 @@ namespace test.Controllers
             return View(lng);
         }
 
-        
+
         public ActionResult ProductDetails(int id)
         {
-            var products = c.Products.ToList();
-            products = c.Products.Where(x => x.id == id).ToList();
-            return View(products);
-        }
 
+            lng.Product = c.Products.Where(x => x.id == id).ToList();
+            lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
+            lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
+            return View(lng);
+        }
 
 
 

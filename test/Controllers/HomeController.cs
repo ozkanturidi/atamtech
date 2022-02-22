@@ -53,8 +53,8 @@ namespace test.Controllers
            pn.NewSlidEn = c.News.Where(x=> x.language == false).OrderByDescending(x => x.id).Take(4).ToList();
            pn.PrdcardTr = c.Products.Where(x=>x.language==true).ToList();
            pn.PrdcardEn = c.Products.Where(x => x.language == false).ToList();
-
-           pn.HomePageEng = c.HomePages.Where(x => x.language == false).OrderByDescending(x => x.id).Take(1).ToList();
+           pn.PrdCard = c.Products.ToList();
+            pn.HomePageEng = c.HomePages.Where(x => x.language == false).OrderByDescending(x => x.id).Take(1).ToList();
             pn.HomePageTr = c.HomePages.Where(x => x.language == true).OrderByDescending(x => x.id).Take(1).ToList();
 
            pn.serviceTr = c.Services.Where(x => x.language == true).ToList();
@@ -83,9 +83,12 @@ namespace test.Controllers
         [Route("Contact")]
         public ActionResult Contact()
         {
-            
+            lng.productTr = c.Products.Where(x => x.language == true).ToList();
+            lng.productEn = c.Products.Where(x => x.language == false).ToList();
+            lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
+            lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
 
-            return View();
+            return View(lng);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -93,15 +96,12 @@ namespace test.Controllers
         {
             c.Contacts.Add(cont);
             c.SaveChanges();
-            lng.productTr = c.Products.Where(x => x.language == true).ToList();
-            lng.productEn = c.Products.Where(x => x.language == false).ToList();
-            lng.serviceTr = c.Services.Where(x => x.language == true).ToList();
-            lng.serviceEn = c.Services.Where(x => x.language == false).ToList();
+            
             /*var name = Request["mail"];
             Email(name);*/
 
 
-            return View(lng);
+            return View();
         }
 
 
