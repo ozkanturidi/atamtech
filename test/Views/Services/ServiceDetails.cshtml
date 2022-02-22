@@ -127,12 +127,29 @@
                                     @test.Language.Localization.Services<span class="fa fa-caret-down"></span>
                                 </a>
 
-                                <div class="dropdown-menu productdrop" id="dropdown-menuproduct" aria-labelledby="navbarDropdown">
-                                    @foreach (var item in Model.service)
+                                @{ if (test.Language.Localization.Home == "Anasayfa")
                                     {
-                                        <a class="dropdown-item" href="/Services/ServiceDetails/@item.id">@item.title</a>
+
+                                        <div class="dropdown-menu servicedrop" id="dropdown-menuservice" aria-labelledby="navbarDropdown">
+                                            @foreach (var item in Model.serviceTr)
+                                            {
+                                                <a class="dropdown-item" href="/Services/ServiceDetails/@item.id">@item.title</a>
+                                            }
+                                        </div>
+
                                     }
-                                </div>
+                                    else
+                                    {
+
+                                        <div class="dropdown-menu" id="dropdown-menuservice" aria-labelledby="navbarDropdown">
+                                            @foreach (var item in Model.serviceEn)
+                                            {
+                                                <a class="dropdown-item" href="/Services/ServiceDetails/@item.id">@item.title</a>
+                                            }
+                                        </div>
+
+                                    }
+                                }
 
                             </li>
                             <li class="nav-item">
