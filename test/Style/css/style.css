@@ -4698,7 +4698,7 @@ input[type="button"].btn-block {
         color: #d42c24 !important;
     }
 #headerMenuBottom {
-    padding-top: 10px;
+    padding-top: 12px;
     padding-bottom: 10px;
     position: relative;
 }
@@ -5066,6 +5066,7 @@ input[type="button"].btn-block {
     left: -17px;
     top: -20px;
     padding: 10px;
+    width:60px;
     transition: .5s;
     border-radius: 8px 0px;
     box-shadow:0 4px 4px 0 rgba(0, 0, 0, 0.50)
@@ -11802,7 +11803,7 @@ h4.inner-text-title {
 }
 
     .breadcrumbs-custom-path a:hover {
-        color: #9FADBD;
+        color: #d42c24;
     }
 
 @media (max-width: 800px) {
