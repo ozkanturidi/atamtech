@@ -96,7 +96,7 @@
                                     else
                                     {
 
-                                        <div class="dropdown-menu" id="dropdown-menuproduct" aria-labelledby="navbarDropdown">
+                                        <div class="dropdown-menu productdrop" id="dropdown-menuproduct" aria-labelledby="navbarDropdown">
                                             @foreach (var item in Model.productEn)
                                             {
                                                 <a class="dropdown-item" href="/Product/ProductDetails/@item.id">@item.name</a>
@@ -138,7 +138,7 @@
                                     else
                                     {
 
-                                        <div class="dropdown-menu" id="dropdown-menuservice" aria-labelledby="navbarDropdown">
+                                        <div class="dropdown-menu servicedrop" id="dropdown-menuservice" aria-labelledby="navbarDropdown">
                                             @foreach (var item in Model.serviceEn)
                                             {
                                                 <a class="dropdown-item" href="/Services/ServiceDetails/@item.id">@item.title</a>
