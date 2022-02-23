@@ -194,10 +194,50 @@
 
                                 if (item.status == 0)
                                 {
-                                    <section id="content1" class="tab-content">
+                                        <section id="content1" class="tab-content">
+                                            <div class="row content12 align-items-center">
+                                                <h6 class="content-heading text-center">@item.title</h6>
+                                                <div class="col-lg-6 column mt-lg-0 mt-4">
+                                                    <img src="@item.photoUrl" class="img-fluid radius-image" alt="">
+                                                </div>
+                                                <div class="col-lg-6 column">
+
+                                                    <p>
+                                                        @item.content
+                                                    </p>
+                                                </div>
+
+                                                <div class="col-lg-6 column">
+                                                    <p class="content-para mb-3">
+                                                        @item.content
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-6 column mt-lg-0 mt-4">
+                                                    <img src="@item.photoUrl" class="img-fluid radius-image" alt="">
+                                                </div>
+                                            </div>
+                                        </section>
+                                }
+
+
+                                <!--past-->
+                                <!--ongoing-->
+                                if (item.status == 1)
+                                {
+                                    <section id="content2" class="tab-content">
                                         <div class="row content12 align-items-center">
+                                            <h6 class="content-heading text-center">@item.title</h6>
+                                            <div class="col-lg-6 column mt-lg-0 mt-4">
+                                                <img src="@item.photoUrl" class="img-fluid radius-image" alt="">
+                                            </div>
                                             <div class="col-lg-6 column">
-                                                <h6 class="content-heading">@item.title</h6>
+                                              
+                                                <p>
+                                                    @item.content
+                                                </p>
+                                            </div>
+
+                                            <div class="col-lg-6 column">
                                                 <p class="content-para mb-3">
                                                     @item.content
                                                 </p>
@@ -210,34 +250,25 @@
                                 }
 
 
-                                <!--past-->
+
                                 <!--ongoing-->
-                                if (item.status == 1)
-                                {
-                                    <section id="content2" class="tab-content">
-                                        <div class="row content12 align-items-center">
-                                            <div class="col-lg-6 column mt-lg-0 mt-4">
-                                                <img src="@item.photoUrl" class="img-fluid radius-image" alt="">
-                                            </div>
-                                            <div class="col-lg-6 column">
-                                                <h6 class="content-heading">@item.title</h6>
-                                                <p>
-                                                    @item.content
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </section>
-                                }
-
-
-
-                                <!--ongoing--><!--future-->
+                    <!--future-->
                                 if (item.status == 2)
                                 {
                                     <section id="content3" class="tab-content">
                                         <div class="row content12 align-items-center">
+                                            <h6 class="content-heading text-center">@item.title</h6>
+                                            <div class="col-lg-6 column mt-lg-0 mt-4">
+                                                <img src="@item.photoUrl" class="img-fluid radius-image" alt="">
+                                            </div>
                                             <div class="col-lg-6 column">
-                                                <h6 class="content-heading">@item.title</h6>
+
+                                                <p>
+                                                    @item.content
+                                                </p>
+                                            </div>
+
+                                            <div class="col-lg-6 column">
                                                 <p class="content-para mb-3">
                                                     @item.content
                                                 </p>
@@ -262,19 +293,29 @@
                             {
                                 if (item.status == 0)
                                 {
-                                    <section id="content1" class="tab-content">
-                                        <div class="row content12 align-items-center">
-                                            <div class="col-lg-6 column">
-                                                <h6 class="content-heading">@item.title</h6>
-                                                <p class="content-para mb-3">
-                                                    @item.content
-                                                </p>
-                                            </div>
-                                            <div class="col-lg-6 column mt-lg-0 mt-4">
-                                                <img src="@item.photoUrl" class="img-fluid radius-image" alt="">
-                                            </div>
-                                        </div>
-                                    </section>
+                <section id="content1" class="tab-content">
+                    <div class="row content12 align-items-center">
+                        <h6 class="content-heading text-center">@item.title</h6>
+                        <div class="col-lg-6 column mt-lg-0 mt-4">
+                            <img src="@item.photoUrl" class="img-fluid radius-image" alt="">
+                        </div>
+                        <div class="col-lg-6 column">
+
+                            <p>
+                                @item.content
+                            </p>
+                        </div>
+
+                        <div class="col-lg-6 column">
+                            <p class="content-para mb-3">
+                                @item.content
+                            </p>
+                        </div>
+                        <div class="col-lg-6 column mt-lg-0 mt-4">
+                            <img src="@item.photoUrl" class="img-fluid radius-image" alt="">
+                        </div>
+                    </div>
+                </section>
 
                                 }
 
@@ -283,19 +324,29 @@
                                 <!--past--><!--ongoing-->
                                 if (item.status == 1)
                                 {
-                                    <section id="content2" class="tab-content">
-                                        <div class="row content12 align-items-center">
-                                            <div class="col-lg-6 column mt-lg-0 mt-4">
-                                                <img src="@item.photoUrl" class="img-fluid radius-image" alt="">
-                                            </div>
-                                            <div class="col-lg-6 column">
-                                                <h6 class="content-heading">@item.title</h6>
-                                                <p>
-                                                    @item.content
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </section>
+                <section id="content2" class="tab-content">
+                    <div class="row content12 align-items-center">
+                        <h6 class="content-heading text-center">@item.title</h6>
+                        <div class="col-lg-6 column mt-lg-0 mt-4">
+                            <img src="@item.photoUrl" class="img-fluid radius-image" alt="">
+                        </div>
+                        <div class="col-lg-6 column">
+
+                            <p>
+                                @item.content
+                            </p>
+                        </div>
+
+                        <div class="col-lg-6 column">
+                            <p class="content-para mb-3">
+                                @item.content
+                            </p>
+                        </div>
+                        <div class="col-lg-6 column mt-lg-0 mt-4">
+                            <img src="@item.photoUrl" class="img-fluid radius-image" alt="">
+                        </div>
+                    </div>
+                </section>
 
                                 }
 
@@ -304,19 +355,29 @@
                                 <!--ongoing--><!--future-->
                                 if (item.status == 2)
                                 {
-                                    <section id="content3" class="tab-content">
-                                        <div class="row content12 align-items-center">
-                                            <div class="col-lg-6 column">
-                                                <h6 class="content-heading">@item.title</h6>
-                                                <p class="content-para mb-3">
-                                                    @item.content
-                                                </p>
-                                            </div>
-                                            <div class="col-lg-6 column mt-lg-0 mt-4">
-                                                <img src="@item.photoUrl" class="img-fluid radius-image" alt="">
-                                            </div>
-                                        </div>
-                                    </section>
+                <section id="content3" class="tab-content">
+                    <div class="row content12 align-items-center">
+                        <h6 class="content-heading text-center">@item.title</h6>
+                        <div class="col-lg-6 column mt-lg-0 mt-4">
+                            <img src="@item.photoUrl" class="img-fluid radius-image" alt="">
+                        </div>
+                        <div class="col-lg-6 column">
+
+                            <p>
+                                @item.content
+                            </p>
+                        </div>
+
+                        <div class="col-lg-6 column">
+                            <p class="content-para mb-3">
+                                @item.content
+                            </p>
+                        </div>
+                        <div class="col-lg-6 column mt-lg-0 mt-4">
+                            <img src="@item.photoUrl" class="img-fluid radius-image" alt="">
+                        </div>
+                    </div>
+                </section>
                                 }
 
 

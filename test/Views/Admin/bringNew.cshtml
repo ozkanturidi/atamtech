@@ -28,8 +28,14 @@
     @Html.LabelFor(x => x.fotoUrl)
     @Html.TextBoxFor(x => x.fotoUrl, new { @class = "form-control" })
     <br />
+    @Html.LabelFor(x => x.fotoUrl2)
+    @Html.TextBoxFor(x => x.fotoUrl2, new { @class = "form-control" })
+    <br />
     @Html.LabelFor(x => x.content)
-    @Html.TextAreaFor(x => x.content, 15, 1, new { @class = "form-control" })
+    @Html.TextAreaFor(x => x.content, 15,1,new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.content2)
+    @Html.TextAreaFor(x => x.content2, 15, 1, new { @class = "form-control" })
     <br />
     <button class="btn btn-success">Update new</button>
 

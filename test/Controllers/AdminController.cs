@@ -163,6 +163,8 @@ namespace test.Controllers
             n.title = ne.title;
             n.date = ne.date;
             n.content = ne.content;
+            n.content2 = ne.content2;
+            n.fotoUrl2 = ne.fotoUrl2;
             n.fotoUrl = ne.fotoUrl;
             n.language = ne.language;
             c.SaveChanges();
@@ -411,6 +413,8 @@ namespace test.Controllers
             p.content = pro.content;
             p.photoUrl = pro.photoUrl;
             p.language = pro.language;
+            p.content2 = pro.content2;
+            p.photoUrl2 = pro.photoUrl2;
             c.SaveChanges();
 
 
