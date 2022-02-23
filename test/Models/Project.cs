@@ -11,8 +11,11 @@ namespace test.Models
         [Key]
         public int id { get; set; }
         public string content { get; set; }
+        public string content2 { get; set; }
+
         public string title { get; set; }
         public string photoUrl { get; set; }
+        public string photoUrl2 { get; set; }
         public int status { get; set; }         // 0 means Past,   1 means Ongoing, 2 Future
 
         public bool language { get; set; }

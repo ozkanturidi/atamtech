@@ -11,10 +11,13 @@ namespace test.Models
         [Key]
         public int id { get; set; }
         public string content { get; set; }
+        public string content2 { get; set; }
         public string title { get; set; }
         public DateTime date { get; set; }
         public bool language { get; set; }
         public string fotoUrl { get; set; }
+
+        public string fotoUrl2 { get; set; }
         public ICollection<Comment> Comments { get; set; }
     }
 }

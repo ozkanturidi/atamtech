@@ -11834,7 +11834,7 @@ h4.inner-text-title {
     position: relative;
     overflow: hidden;
     background: var(--bg-color);
-    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.70);
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.10);
     transition: all 0.3s ease-in-out;
     text-align: center;
     border: 1px solid var(--bg-color);
@@ -12331,7 +12331,7 @@ section.logo-section.py-0 {
     background: var(--bg-color);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.50);
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.10);
 }
 
 .service-section span.label-style, 

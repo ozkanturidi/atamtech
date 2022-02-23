@@ -36,6 +36,11 @@
     @Html.LabelFor(x => x.content)
     @Html.TextAreaFor(x => x.content, 15, 1, new { @class = "form-control" })
     <br />
+    @Html.LabelFor(x => x.photoUrl2)
+    @Html.TextBoxFor(x => x.photoUrl2, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.content2)
+    @Html.TextAreaFor(x => x.content2, 15, 1, new { @class = "form-control" })
     <button class="btn btn-success">Update Project</button>
 
 

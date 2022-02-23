@@ -22,12 +22,21 @@
     @Html.LabelFor(x => x.fotoUrl)
     @Html.TextBoxFor(x => x.fotoUrl, new { @class = "form-control" })
     <br />
+    @Html.LabelFor(x => x.fotoUrl2)
+    @Html.TextBoxFor(x => x.fotoUrl2, new { @class = "form-control" })
+    <br />
+
     @Html.LabelFor(x => x.content)
     @Html.TextAreaFor(x => x.content, new { @class = "form-control" })
     <br />
+
+    @Html.LabelFor(x => x.content2)
+    @Html.TextAreaFor(x => x.content2, new { @class = "form-control" })
+    <br />
+
     <span>Turkish: </span> @Html.RadioButtonFor(x => x.language, true)
     <span> | English: </span> @Html.RadioButtonFor(x => x.language, false)
-    
+
 
     <button class="btn btn-primary">Add New</button>
 </form>
