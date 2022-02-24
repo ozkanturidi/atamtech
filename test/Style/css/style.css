@@ -11351,6 +11351,9 @@ nav ul li {
 }
 
 @media only screen and (max-width: 991px) {
+    .dropdown .fa {
+        color: transparent;
+    }
     .navbar form.search-box input {
         color: #111;
     }
@@ -11461,6 +11464,8 @@ nav ul li {
         padding-right:0;
         padding-left:0;
     }
+
+   
 }
 
 @media only screen and (max-width: 991px) {
